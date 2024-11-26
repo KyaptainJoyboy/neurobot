@@ -1,2 +1,2 @@
-# pauli-aid
-Archive for the Pauli-Aid
+# Pauli-Aid
+This is the Github Repository for the Paulinnovate project "Pauli-Aid".

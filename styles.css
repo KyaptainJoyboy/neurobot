@@ -1,4 +1,4 @@
-
+/* Root Variables */
 :root {
     --primary-color: #4CAF50;
     --secondary-color: #2196F3;
@@ -7,6 +7,7 @@
     --text-color: #333;
 }
 
+/* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -15,12 +16,47 @@ body {
     color: var(--text-color);
 }
 
+h2, h3 {
+    color: var(--primary-color);
+}
+
+input[type="text"], input[type="email"], input[type="password"], select {
+    width: 96%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#status-message {
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Layout and Container Styles */
 .container {
     max-width: 480px;
     margin: 0 auto;
     padding: 20px;
 }
 
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Header Section */
 header {
     background-color: var(--primary-color);
     color: white;
@@ -34,6 +70,7 @@ header h1 {
     font-size: 24px;
 }
 
+/* Navigation Styles */
 nav {
     background-color: var(--secondary-color);
     padding: 10px 0;
@@ -65,6 +102,7 @@ nav a:hover {
     cursor: pointer;
 }
 
+/* Content Styles */
 .content {
     background-color: white;
     border-radius: 10px;
@@ -73,16 +111,17 @@ nav a:hover {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.content h2{
+.content h2 {
     text-align: center;
     margin-top: 0;
     margin-bottom: 20px;
 }
 
-h2, h3 {
-    color: var(--primary-color);
+.center-text {
+    text-align: center;
 }
 
+/* Button Styles */
 .btn {
     background-color: var(--accent-color);
     color: var(--text-color);
@@ -111,14 +150,7 @@ h2, h3 {
     text-align: center;
 }
 
-input[type="text"], input[type="email"], input[type="password"], select {
-    width: 96%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
+/* Feature Section */
 .feature {
     background-color: #E8F5E9;
     border-radius: 10px;
@@ -138,6 +170,7 @@ input[type="text"], input[type="email"], input[type="password"], select {
     text-align: center;
 }
 
+/* Mood Tracker */
 .mood-tracker {
     display: flex;
     justify-content: space-around;
@@ -156,6 +189,15 @@ input[type="text"], input[type="email"], input[type="password"], select {
     transform: scale(1.2);
 }
 
+/* Affirmation Display */
+#affirmation-display {
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+    color: var(--primary-color);
+}
+
+/* Breathing Circle */
 #breathing-circle {
     width: 100px;
     height: 100px;
@@ -171,6 +213,7 @@ input[type="text"], input[type="email"], input[type="password"], select {
     color: var(--primary-color);
 }
 
+/* Grounding Prompt */
 #grounding-prompt {
     font-size: 18px;
     margin-bottom: 10px;
@@ -180,30 +223,4 @@ input[type="text"], input[type="email"], input[type="password"], select {
 #grounding-feedback {
     font-style: italic;
     color: var(--primary-color);
-}
-
-#status-message {
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-.success {
-    background-color: #d4edda;
-    color: #155724;
-}
-
-.error {
-    background-color: #f8d7da;
-    color: #721c24;
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 10px;
-    }
-    
-    nav a {
-        padding: 8px 12px;
-        margin: 0 2px;
-    }
 }

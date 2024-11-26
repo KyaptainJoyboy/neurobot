@@ -37,6 +37,9 @@ header h1 {
 nav {
     background-color: var(--secondary-color);
     padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 nav a {
@@ -53,7 +56,6 @@ nav a:hover {
 }
 
 #logout {
-    float: right;
     cursor: pointer;
 }
 
@@ -85,7 +87,7 @@ h2, h3 {
 }
 
 input[type="text"], input[type="email"], input[type="password"], select {
-    width: 100%;
+    width: 96%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ddd;

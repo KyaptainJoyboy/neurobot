@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAULI AID - Student Support</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>PAULI AID</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="student.html">Student Support</a>
+        <a href="teacher.html">Teacher Support</a>
+        <a href="account.html">Account</a>
+        <a id="logout" onclick="logout()">Logout</a>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <h2>Student Support</h2>
+            <div id="user-info"></div>
+            <div id="status-message"></div>
+            <div class="feature">
+                <h3>Daily Mood Tracking</h3>
+                <p>How are you feeling today?</p>
+                <div class="mood-tracker">
+                    <button class="mood-btn" onclick="trackMood('😄')">😄</button>
+                    <button class="mood-btn" onclick="trackMood('🙂')">🙂</button>
+                    <button class="mood-btn" onclick="trackMood('😐')">😐</button>
+                    <button class="mood-btn" onclick="trackMood('🙁')">🙁</button>
+                    <button class="mood-btn" onclick="trackMood('😢')">😢</button>
+                </div>
+                <div id="mood-history"></div>
+            </div>
+            <div class="feature breathing-exercise">
+                <h3>Breathing Exercise</h3>
+                <p>Take a moment to relax with this simple breathing exercise.</p>
+                <div id="breathing-circle"></div>
+                <div id="breathing-text">Click to start</div>
+                <button onclick="startBreathingExercise()" class="btn">Start Exercise</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Existing JavaScript code...
+    </script>
+</body>
+</html>

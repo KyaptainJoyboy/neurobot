@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAULI AID - Teacher Support</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>PAULI AID</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="student.html">Student Support</a>
+        <a href="teacher.html">Teacher Support</a>
+        <a href="account.html">Account</a>
+        <a id="logout" onclick="logout()">Logout</a>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <h2>Teacher Support</h2>
+            <div id="user-info"></div>
+            <div id="status-message"></div>
+            <div class="feature">
+                <h3>Task Management</h3>
+                <input type="text" id="new-task" placeholder="Enter a new task">
+                <button onclick="addTask()" class="btn">Add Task</button>
+                <ul id="task-list"></ul>
+            </div>
+            <div class="feature grounding-exercise">
+                <h3>5-4-3-2-1 Grounding Exercise</h3>
+                <p>This exercise can help you manage stress and anxiety quickly.</p>
+                <div id="grounding-prompt"></div>
+                <input type="text" id="grounding-input" placeholder="Enter your response">
+                <button onclick="submitGroundingResponse()" class="btn">Submit</button>
+                <div id="grounding-feedback"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Existing JavaScript code...
+    </script>
+</body>
+</html>

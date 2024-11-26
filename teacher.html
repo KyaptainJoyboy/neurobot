@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>PAULI AID</h1>
+        <h1>PAULI-AID</h1>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -26,7 +26,9 @@
             <div class="feature">
                 <h3>Task Management</h3>
                 <input type="text" id="new-task" placeholder="Enter a new task">
-                <button onclick="addTask()" class="btn">Add Task</button>
+                <div class="btn-group">
+                    <button onclick="addTask()" class="btn">Add Task</button>
+                </div>
                 <ul id="task-list"></ul>
             </div>
             <div class="feature grounding-exercise">
@@ -34,7 +36,9 @@
                 <p>This exercise can help you manage stress and anxiety quickly.</p>
                 <div id="grounding-prompt"></div>
                 <input type="text" id="grounding-input" placeholder="Enter your response">
-                <button onclick="submitGroundingResponse()" class="btn">Submit</button>
+                <div class="btn-group">
+                    <button onclick="submitGroundingResponse()" class="btn">Submit</button>
+                </div>
                 <div id="grounding-feedback"></div>
             </div>
         </div>

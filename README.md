@@ -1,7 +1,7 @@
 
-# PAULI-AID
+# PAULI AID
 
-PAULI-AID is a mental health support system for students and teachers, designed to run on a Raspberry Pi with a 3.5-inch touchscreen display.
+PAULI AID is a mental health support system for students and teachers, designed to run on a Raspberry Pi with a 3.5-inch touchscreen display.
 
 You can now directly access the website here:
 https://chesugotgit.github.io/pauli-aid/

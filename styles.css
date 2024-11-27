@@ -74,9 +74,13 @@ header h1 {
 nav {
     background-color: var(--secondary-color);
     padding: 10px 0;
+    max-width: 90%;
+    margin: 15px auto;
+    border-radius: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav a {

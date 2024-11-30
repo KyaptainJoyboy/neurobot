@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAULI AID - Student Support</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="functions.js" defer></script>
+    <script src="animations.js" defer></script>
 </head>
 <body>
     <header>
@@ -16,10 +17,11 @@
         <a href="student.html" class="active">Student Support</a>
         <a href="teacher.html">Teacher Support</a>
         <a href="account.html">Account</a>
+        <a href="wiki.html">Health Wiki</a>
         <a id="logout" onclick="logout()">Logout</a>
     </nav>
     <div class="container">
-        <div class="content">
+        <div class="section-box">
             <h2>Student Support</h2>
             <div id="user-info"></div>
             <div id="status-message"></div>
@@ -41,11 +43,9 @@
                 <div id="breathing-circle"></div>
                 <div id="breathing-text">Click to start</div>
                 <button onclick="startBreathingExercise()" class="btn">Start Exercise</button>
+                <button onclick="resetBreathingExercise()" class="btn">Reset Exercise</button>
             </div>
         </div>
     </div>
-    <script>
-        // Existing JavaScript code...
-    </script>
 </body>
 </html>

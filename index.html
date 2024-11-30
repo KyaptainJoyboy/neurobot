@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAULI AID - Home</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="functions.js" defer></script>
+    <script src="animations.js" defer></script>
 </head>
 <body>
     <header>
@@ -15,10 +17,11 @@
         <a href="student.html">Student Support</a>
         <a href="teacher.html">Teacher Support</a>
         <a href="account.html">Account</a>
+        <a href="wiki.html">Health Wiki</a>
         <a id="logout" onclick="logout()">Logout</a>
     </nav>
     <div class="container">
-        <div class="content">
+        <div class="section-box">
             <h2>Welcome to PAULI AID</h2>
             <p class="text">Your personal assistant for mental health and well-being.</p>
             <div class="feature">
@@ -28,44 +31,17 @@
                     <a href="student.html" class="btn">Student Support</a>
                     <a href="teacher.html" class="btn">Teacher Support</a>
                     <a href="account.html" class="btn">Account</a>
+                    <a href="wiki.html" class="btn">Mental Health Wiki</a>
             </div>
         </div>
             <div class="feature">
                 <h3>Daily Affirmation</h3>
                 <p>"Every day is a new opportunity to grow and be better."</p>
-                <div class="btn-group">
                     <button onclick="showNewAffirmation()" class="btn">New Affirmation</button>
+                    <div id="affirmation-display" class="text">The world is your stage!</div>
                 </div>
-                <div id="affirmation-display"></div>
             </div>
         </div>
     </div>
-    <script>
-        function logout() {
-            localStorage.removeItem('user');
-            window.location.href = 'account.html';
-        }
-
-        // Affirmation feature
-        function showNewAffirmation() {
-            const affirmations = [
-                "You are capable of amazing things.",
-                "Believe in yourself and all that you are.",
-                "Your potential is limitless.",
-                "The world is your stage.",
-                "You can shine brighter.",
-            ];
-            const randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)];
-            document.getElementById('affirmation-display').innerText = randomAffirmation;
-        }
-
-        // Check if user is logged in
-        const user = JSON.parse(localStorage.getItem('user'));
-        if (user) {
-            document.getElementById('logout').style.display = 'block';
-        } else {
-            document.getElementById('logout').style.display = 'none';
-        }
-    </script>
 </body>
 </html>

@@ -16,6 +16,62 @@ body {
     color: var(--text-color);
 }
 
+/* Animations */
+@keyframes global-slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes global-slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes global-slide-left-to-right {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes global-slide-right-to-left {
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+        background-color: var(--primary-color);
+    }
+    50% {
+        transform: scale(1.5);
+        background-color: #FFC107;
+    }
+}
+
 h2, h3 {
     color: var(--primary-color);
 }
@@ -43,6 +99,12 @@ input[type="text"], input[type="email"], input[type="password"], select {
     color: #721c24;
 }
 
+.error-message {
+    color: #721c24;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
 /* Layout and Container Styles */
 .container {
     max-width: 480px;
@@ -54,6 +116,15 @@ input[type="text"], input[type="email"], input[type="password"], select {
     .container {
         padding: 10px;
     }
+
+    .btn-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .feature {
+        margin-top: 15px;
+    }
 }
 
 /* Header Section */
@@ -63,11 +134,13 @@ header {
     text-align: center;
     padding: 20px 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    animation: global-slide-down 0.5s ease-in-out forwards;
 }
 
 header h1 {
     margin: 0;
     font-size: 24px;
+    animation: global-slide-down 0.5s ease-in-out forwards;
 }
 
 /* Navigation Styles */
@@ -81,6 +154,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: global-slide-down 0.6s ease-in-out forwards;
 }
 
 nav a {
@@ -90,6 +164,8 @@ nav a {
     margin: 0 5px;
     border-radius: 20px;
     transition: background-color 0.3s;
+    transition: 0.3s;
+    transform: scale(1);
 }
 
 nav a.active {
@@ -100,6 +176,7 @@ nav a.active {
 
 nav a:hover {
     background-color: rgba(255,255,255,0.2);
+    transform: scale(1.1);
 }
 
 #logout {
@@ -107,7 +184,7 @@ nav a:hover {
 }
 
 /* Content Styles */
-.content {
+.section-box {
     background-color: white;
     border-radius: 10px;
     padding: 20px;
@@ -115,7 +192,7 @@ nav a:hover {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.content h2 {
+.section-box h2 {
     text-align: center;
     margin-top: 0;
     margin-bottom: 20px;
@@ -132,6 +209,7 @@ nav a:hover {
 }
 
 /* Button Styles */
+
 /* This is the default button, separate from .btn-group */
 .btn {
     background-color: var(--accent-color);
@@ -144,8 +222,6 @@ nav a:hover {
     width: 100%;
     text-align: center;
     text-decoration: none;
-
-    /* Enforce Consistent Styling */
     font-family: 'Arial', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -155,6 +231,7 @@ nav a:hover {
 /* Change button color on mouse cursor hover */
 .btn:hover {
     background-color: #FFD54F;
+    transform: scale(1.1);
 }
 
 /* Set Parameters for buttons under .btn-group */
@@ -176,11 +253,11 @@ nav a:hover {
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    transform: scale(1);
+    transition: 0.3s;
     width: 100%;
     text-align: center;
     text-decoration: none;
-
-    /* Enforce Consistent Styling */
     font-family: 'Arial', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -189,6 +266,7 @@ nav a:hover {
 
 .btn-group .btn:hover {
     background-color: #FFD54F;
+    transform: scale(1.1);
 }
 
 /* Feature Section */
@@ -202,7 +280,6 @@ nav a:hover {
     align-items: center;
     margin-top: 10px;
     border: 2px solid #4CAF50;
-    border-radius: 10px;
 }
 
 .feature h3 {
@@ -238,20 +315,28 @@ nav a:hover {
 
 /* Affirmation Display */
 #affirmation-display {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
     margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-style: italic;
     color: var(--primary-color);
+    font-style: italic;
 }
 
 /* Breathing Circle */
 #breathing-circle {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-color: var(--primary-color);
     margin: 0 auto;
     transition: transform 4s ease-in-out, background-color 4s ease-in-out;
+}
+
+.breathing {
+    animation: breathe 4s ease-in-out infinite;
 }
 
 #breathing-text {
@@ -270,4 +355,8 @@ nav a:hover {
 #grounding-feedback {
     font-style: italic;
     color: var(--primary-color);
+}
+
+#register-form {
+    display: none;
 }

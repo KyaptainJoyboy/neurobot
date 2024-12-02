@@ -1,3 +1,7 @@
+## 2024 - 12 - 2
+- Added About and Wiki Sections
+    - Added initial information
+
 ## 2024 - 11 - 30
 - Added initial implemention of JavaScript files
     - database.js for future storing of user information (logins, registrations)
@@ -13,4 +17,4 @@
 - General Improvements
     - Renamed ".content" to ".section-box" to better reflect what it does
     - Added a reset button to Breathing Exercises
-    - Restructed styles.css (again)
+    - Restructured styles.css (again)

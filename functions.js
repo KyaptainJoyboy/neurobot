@@ -200,3 +200,50 @@ function showNewAffirmation() {
     const randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)];
     affirmationDisplay.textContent = randomAffirmation;
 }
+
+// Topic Search Functions
+function searchTopics() {
+    const query = document.getElementById('search').value;
+    fetch(`/api/articles/search?query=${encodeURIComponent(query)}`)
+        .then(response => response.json())
+        .then(data => {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = ''; // Clear previous results
+            if (data.length > 0) {
+                data.forEach(article => {
+                    const articleDiv = document.createElement('div');
+                    articleDiv.className = 'article';
+                    articleDiv.innerHTML = `<h3>${article[0]}</h3><p>${article[1]}</p>`;
+                    resultsDiv.appendChild(articleDiv);
+                });
+            } else {
+                resultsDiv.innerHTML = '<p>No articles found.</p>';
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching articles:', error);
+        });
+}
+
+// Fetch and display all articles on page load
+window.onload = function() {
+    fetch('/api/articles')
+        .then(response => response.json())
+        .then(data => {
+            const articleResultsDiv = document.getElementById('article-results');
+            articleResultsDiv.innerHTML = ''; // Clear previous articles
+            if (data.length > 0) {
+                data.forEach(article => {
+                    const articleDiv = document.createElement('div');
+                    articleDiv.className = 'article';
+                    articleDiv.innerHTML = `<h3>${article[0]}</h3><p>${article[1]}</p>`;
+                    articleResultsDiv.appendChild(articleDiv);
+                });
+            } else {
+                articleResultsDiv.innerHTML = '<p>No articles available.</p>';
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching articles:', error);
+        });
+};

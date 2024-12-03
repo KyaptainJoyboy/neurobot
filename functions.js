@@ -1,4 +1,3 @@
-// Constants & Global Variables
 const affirmations = [
     "You are capable of amazing things.",
     "Believe in yourself and all that you are.",
@@ -9,7 +8,7 @@ const affirmations = [
     "You are stronger than you think."
 ];
 
-let breathCount = 0; // Track the number of breaths
+let breathCount = 0; // Reset # of breaths
 
 // --- Search Topics Function ---
 function searchTopics() {

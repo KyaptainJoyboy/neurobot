@@ -3,48 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAULI AID - Student Support</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>PAULI AID : Student</title>
+    <link rel="stylesheet" href="globalstyles.css">
+    <link rel="stylesheet" href="student.css">
     <script src="functions.js" defer></script>
     <script src="animations.js" defer></script>
 </head>
-<body>
+<body class="student">
     <header>
         <h1>PAULI AID</h1>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
+    <nav class="nav-bar">
+        <a href="home.html">Home</a>
         <a href="student.html" class="active">Student Support</a>
         <a href="teacher.html">Teacher Support</a>
-        <a href="account.html">Account</a>
         <a href="wiki.html">Health Wiki</a>
         <a href="about.html">About</a>
-        <a id="logout" onclick="logout()">Logout</a>
+        <a href="account.html">Account</a>
     </nav>
+
     <div class="container">
-        <div class="section-box">
-            <h2>Student Support</h2>
-            <div id="user-info"></div>
-            <div id="status-message"></div>
-            <div class="feature">
-                <h3>Daily Mood Tracking</h3>
-                <p class="text">How are you feeling today?</p>
-                <div class="mood-tracker">
+        <h2>Student Support</h2>
+        <p>Explore our features!</p>
+        <div class="grid-container">
+            <div class="grid-container-item">
+                <h3>Daily Mood Tracker</h3>
+                <p>How are you feeling today?</p>
+                <div class="mood-btn-group">
                     <button class="mood-btn" onclick="trackMood('😄')">😄</button>
                     <button class="mood-btn" onclick="trackMood('🙂')">🙂</button>
                     <button class="mood-btn" onclick="trackMood('😐')">😐</button>
                     <button class="mood-btn" onclick="trackMood('🙁')">🙁</button>
                     <button class="mood-btn" onclick="trackMood('😢')">😢</button>
                 </div>
-                <div id="mood-history"></div>
             </div>
-            <div class="feature breathing-exercise">
-                <h3>Breathing Exercise</h3>
-                <p class="text">Take a moment to relax with this simple breathing exercise.</p>
+            <div class="grid-container-item">
+                <h3>Breathing Exercises</h3>
+                <p>Let's take a moment to relax!</p>
                 <div id="breathing-circle"></div>
-                <div id="breathing-text">Click to start</div>
-                <button onclick="startBreathingExercise()" class="btn">Start Exercise</button>
-                <button onclick="resetBreathingExercise()" class="btn">Reset Exercise</button>
+                <div id="breathing-text">
+                    <p>Click to start!</p>
+                </div>
+                <div class="btn-group">
+                    <button onclick="startBreathingExercise()" class="btn">Start Exercise!</button>
+                    <button onclick="resetBreathingExercise()" class="btn">Reset Exercise!</button>
+                </div>
+            </div>
+            <div class="grid-container-item">
+                <h3>Stress Management</h3>
+                <p>Learn about Stress Management!</p>
+            </div>
+            <div class="grid-container-item">
+                <h3>Self-Care Scheduler</h3>
+                <p>Make sure to take breaks!</p>
+            </div>
+            <div class="grid-container-item">
+                <h3>Journal</h3>
+                <p>Let's reflect!</p>
+            </div>
+            <div class="grid-container-item">
+                <h3>Meditation</h3>
+                <p>Stay on track!</p>
+            </div>
+            <div class="grid-container-item">
+                <h3>Resources</h3>
+                <p>Knowledge is power!</p>
+            </div>
+            <div class="grid-container-item">
+                <h3>Wellness Quests</h3>
+                <p>Your path to balance!</p>
+            </div>
+            <div class="grid-container-item">
+                <h3>Affirmations</h3>
+                <p>Uplift your day!</p>
+            </div>
+            <div class="grid-container-item">
+                <h3>Educational</h3>
+                <p>Learn and Grow!</p>
             </div>
         </div>
     </div>

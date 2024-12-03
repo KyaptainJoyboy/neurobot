@@ -1,0 +1,125 @@
+body.index {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.index header {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: global-slide-down 0.5s ease-in-out;
+}
+
+.index h1 {
+    text-align: center;
+    font-size: 24px;
+    animation: global-slide-down 0.65s ease-in-out;
+}
+
+.index h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.index h3 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.index p {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.index p.italic {
+    font-style: italic;
+    text-decoration: italic;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+body.index .container {
+    background-color: white;
+    border-radius: 10px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.index .container h3 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+body.index .grid-container {
+    display: grid;
+    grid-auto-rows: max-content 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap:  20px;
+}
+
+body.index .center-text {
+    grid-column: 1;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+body.index .grid-container-item {
+    background-color: #e8f5e9;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid #4CAF50;
+    height: fit-content;
+}
+
+body.index .grid-container-feature {
+    background-color: #e8f5e9;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid #4CAF50;
+}
+
+.btn-group-index {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.btn-group-index .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFC107;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-group-index .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}

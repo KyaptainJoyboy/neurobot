@@ -3,48 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mental Health Wiki</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="functions.js"></script>
-    <script src="animations.js"></script>
+    <title>PAULI AID : About</title>
+    <link rel="stylesheet" href="globalstyles.css">
+    <link rel="stylesheet" href="wiki.css">
+    <script src="functions.js" defer></script>
+    <script src="animations.js" defer></script>
 </head>
-<body>
+<body class="wiki">
     <header>
-        <h1>Mental Health Wiki</h1>
+        <h1>PAULI AID</h1>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
+    <nav class="nav-bar">
+        <a href="home.html">Home</a>
         <a href="student.html">Student Support</a>
         <a href="teacher.html">Teacher Support</a>
-        <a href="account.html">Account</a>
         <a href="wiki.html" class="active">Health Wiki</a>
         <a href="about.html">About</a>
-        <a id="logout" onclick="logout()">Logout</a>
+        <a href="account.html">Account</a>
     </nav>
 
-    <div class="container">
-        <div class="section-box">
-        <h2>Welcome to the Wiki!</h2>
-        <p class="text">What do you want to look for?</p>
-        <div class="feature">
-            <h3>Search for Topics</h3>
-            <input type="text" id="search" placeholder="Search...">
-            <div class="btn-group">
-                <button onclick="searchTopics()" class="btn">Search!</button>
-            </div>
-            <div id="affirmation-display" class="text">What you searched will show up here</div>
-        </div>
-        <div class="feature">
-            <h3>Mental Health News</h3>
-            <div id="news-articles" class="container">
-                <ul>
-                    <li><a href="https://www.nimh.nih.gov/news/science-news/2023/mental-health-awareness-month" target="_blank"></a>Mental Health Awareness Month : What You Need to Know</li>
-                    <li><a href="https://www.mentalhealthamerica.net/news" target="_blank">Latest News from Mental Health America</a></li>
-                    <li><a href="https://www.apa.org/news" target="_blank">American Psychology Association News</a></li>
-                </ul>
-            </div>
-        </div>
-        </div>
+    <div class="grid-container">
+        <div class="grid-container-item">Item 1</div>
+        <div class="grid-container-item">Item 2</div>
+        <div class="grid-container-item">Item 3</div>
+        <div class="grid-container-item">Item 4</div>
     </div>
 </body>
 </html>

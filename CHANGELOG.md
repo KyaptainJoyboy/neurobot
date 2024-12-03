@@ -1,3 +1,13 @@
+## 2024 - 12 -3
+- Redesigned the entire website - chesu
+    - This is to hopefully make the process of adding new features easier.
+    - Made all features have a grid layout to maximize space.
+    - Renamed styles.css to globalstyles.css but separated all page specific
+    elements to their own styles file.
+    - Added on boarding page to greet users on page load.
+    - Added initial implementation of upcoming features.
+    - Fully integrated features from the old website.
+
 ## 2024 - 12 - 2
 - Added About and Wiki Sections
     - Added initial information

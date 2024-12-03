@@ -1,0 +1,170 @@
+/* ///////////////////
+Student Support Styles
+/////////////////// */
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+        background-color: var(--primary-color);
+    }
+    50% {
+        transform: scale(1.5);
+        background-color: #FFC107;
+    }
+}
+
+body.student {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.student header {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: global-slide-down 0.5s ease-in-out;
+}
+
+.student h1 {
+    text-align: center;
+    font-size: 24px;    
+    animation: global-slide-down 0.65s ease-in-out;
+}
+
+.student h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.student h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.student p {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+body.student .container {
+    background-color: white;
+    border-radius: 10px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.student .container h3 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+body.student .grid-container {
+    display: grid;
+    grid-auto-rows: max-content 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap:  20px;
+}
+
+body.student .center-text {
+    grid-column: 1;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+body.student .grid-container-item {
+    background-color: #e8f5e9;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid #4CAF50;
+    height: fit-content;
+}
+
+body.student .grid-container-feature {
+    background-color: #e8f5e9;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid #4CAF50;
+}
+
+.mood-btn-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.mood-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.mood-btn:hover {
+    transform: scale(1.2);
+}
+
+#breathing-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    transition: transform 4s ease-in-out, background-color 4s ease-in-out;
+}
+
+.breathing {
+    animation: breathe 4s ease-in-out infinite;
+}
+
+#breathing-text {
+    margin-top: 10px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.grid-container-item .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.grid-container-item .btn-group .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFC107;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-container-item .btn-group .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}

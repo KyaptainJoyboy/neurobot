@@ -3,45 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAULI AID - Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>PAULI AID : About</title>
+    <link rel="stylesheet" href="globalstyles.css">
+    <link rel="stylesheet" href="index.css">
     <script src="functions.js" defer></script>
     <script src="animations.js" defer></script>
 </head>
-<body>
+<body class="index">
     <header>
         <h1>PAULI AID</h1>
     </header>
-    <nav>
-        <a href="index.html" class="active">Home</a>
+    <nav class="nav-bar">
+        <a href="home.html">Home</a>
         <a href="student.html">Student Support</a>
         <a href="teacher.html">Teacher Support</a>
-        <a href="account.html">Account</a>
         <a href="wiki.html">Health Wiki</a>
         <a href="about.html">About</a>
-        <a id="logout" onclick="logout()">Logout</a>
+        <a href="account.html">Account</a>
     </nav>
+
     <div class="container">
-        <div class="section-box">
-            <h2>Welcome to PAULI AID</h2>
-            <p class="text">Your personal assistant for mental health and well-being.</p>
-            <div class="feature">
-                <h3>Quick Navigation</h3>
-                <p class="text">Where do you want to go?</p>
-                <div class="btn-group">
-                    <a href="student.html" class="btn">Student Support</a>
-                    <a href="teacher.html" class="btn">Teacher Support</a>
-                    <a href="account.html" class="btn">Account</a>
-                    <a href="wiki.html" class="btn">Mental Health Wiki</a>
+        <h2>Welcome to PAULI AID!</h2>
+        <p>Your smart assistant for mental health.</p>
+        <div class="grid-container">
+            <div class="grid-container-item">
+                <h2>Innovative!</h2>
+                <p>Always pushing forward!</p>
             </div>
-        </div>
-            <div class="feature">
-                <h3>Daily Affirmation</h3>
-                <p>"Every day is a new opportunity to grow and be better."</p>
-                    <button onclick="showNewAffirmation()" class="btn">New Affirmation</button>
-                    <div id="affirmation-display" class="text">The world is your stage!</div>
+            <div class="grid-container-item">
+                <h2>Use the project</h2>
+                <p class="italic">Shh...It's optional!</p>
+                <div>
+                    <p>Placeholder</p>
                 </div>
             </div>
+            <div class="grid-container-item">
+                <h2>Contact Us!</h2>
+                <p>Wanna talk?</p>
+                <div>
+                    <p>Placeholder</p>
+                </div>
+            </div>
+        </div>
+        <h2>And many more!</h2>
+        <div class="btn-group-index">
+            <a href="home.html" class="btn">Get started!</a>
         </div>
     </div>
 </body>

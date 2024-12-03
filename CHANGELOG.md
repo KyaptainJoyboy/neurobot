@@ -1,4 +1,8 @@
-## 2024 - 12 -3
+## 2024 - 12 - 3
+- Moved all css files into their own folder for cleanliness.
+- Other tweaks.
+
+## 2024 - 12 - 3
 - Redesigned the entire website - chesu
     - This is to hopefully make the process of adding new features easier.
     - Made all features have a grid layout to maximize space.

@@ -1,0 +1,93 @@
+/* ////////
+About Page Styles
+//////// */
+body.account {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.account header {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: global-slide-down 0.5s ease-in-out;
+}
+
+.account h1 {
+    text-align: center;
+    font-size: 24px;
+    animation: global-slide-down 0.65s ease-in-out;
+}
+
+.account h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.account h3 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.account p {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+body.account .container {
+    background-color: white;
+    border-radius: 10px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.account .container h3 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+body.account .grid-container {
+    display: grid;
+    grid-auto-rows: max-content 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap:  20px;
+}
+
+body.account .center-text {
+    grid-column: 1;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+body.account .grid-container-item {
+    background-color: #e8f5e9;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid #4CAF50;
+    height: fit-content;
+}
+
+body.account .grid-container-feature {
+    background-color: #e8f5e9;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid #4CAF50;
+}

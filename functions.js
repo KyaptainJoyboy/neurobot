@@ -230,7 +230,7 @@ window.onload = function() {
         .then(response => response.json())
         .then(data => {
             const articleResultsDiv = document.getElementById('article-results');
-            articleResultsDiv.innerHTML = ''; // Clear previous articles
+            articleResultsDiv.innerHTML = '';
             if (data.length > 0) {
                 data.forEach(article => {
                     const articleDiv = document.createElement('div');
@@ -246,3 +246,22 @@ window.onload = function() {
             console.error('Error fetching articles:', error);
         });
 };
+
+// Dropdown function
+function toggleDropdown() {
+    document.getElementById("dropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }

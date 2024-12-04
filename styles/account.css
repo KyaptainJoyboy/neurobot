@@ -1,5 +1,5 @@
 /* ////////
-About Page Styles
+Account Page Styles
 //////// */
 body.account {
     font-family: Arial, sans-serif;
@@ -80,6 +80,13 @@ body.account .grid-container-item {
     text-align: center;
     border: 2px solid #4CAF50;
     height: fit-content;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.account .grid-container-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 body.account .grid-container-feature {

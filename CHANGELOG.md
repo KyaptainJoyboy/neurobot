@@ -1,3 +1,9 @@
+## 2024 -12 - 4
+- Added Tooltips - chesu
+    - Displays a short explanation of what a feature is for.
+- Something I don't even know what to call - chesu
+    - Basically made everything the same (again)
+
 ## 2024 - 12 - 3
 - Moved all css files into their own folder for cleanliness.
 - Other tweaks.

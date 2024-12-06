@@ -31,11 +31,11 @@
                 <h3>Daily Mood Tracker</h3>
                 <p>How are you feeling today?</p>
                 <div class="mood-btn-group">
-                    <button class="mood-btn" onclick="trackMood('😄')">😄</button>
-                    <button class="mood-btn" onclick="trackMood('🙂')">🙂</button>
-                    <button class="mood-btn" onclick="trackMood('😐')">😐</button>
-                    <button class="mood-btn" onclick="trackMood('🙁')">🙁</button>
-                    <button class="mood-btn" onclick="trackMood('😢')">😢</button>
+                    <button class="mood-btn" onclick="addMood('Very Happy')">😄</button>
+                    <button class="mood-btn" onclick="addMood('Happy')">🙂</button>
+                    <button class="mood-btn" onclick="addMood('Neutral')">😐</button>
+                    <button class="mood-btn" onclick="addMood('Sad')">🙁</button>
+                    <button class="mood-btn" onclick="addMood('Very Sad')">😢</button>
                 </div>
             </div>
             <div class="grid-container-item">
@@ -72,7 +72,7 @@
                     <button onclick="toggleContainer(this)" class="dropbtn">Articles</button>
                     <div class="dropdown-content">
                         <h3>Stress Management: How to Reduce, Prevent, and Cope with Stress</h3>
-                        <a href="https://www.apa.org/topics/stress" target="_blank">This article offers evidence-based strategies such as exercising, relaxing, connecting with others, managing time, and practicing mindfulness. It provides practical tips that anyone can incorporate into their daily routine to help manage stress.</a>
+                        <a href="https://www.apa.org/topics/stress" target="_blank" rel="noopener noreferrer">This article offers evidence-based strategies such as exercising, relaxing, connecting with others, managing time, and practicing mindfulness. It provides practical tips that anyone can incorporate into their daily routine to help manage stress.</a>
                         <h3>Stress Management Skills</h3>
                         <a href="https://mcpress.mayoclinic.org/mental-health/stress-management-skills-7-low-and-no-cost-strategies-to-feel-better/">This article offers evidence-based strategies such as exercising, relaxing, connecting with others, managing time, and practicing mindfulness. It provides practical tips that anyone can incorporate into their daily routine to help manage stress.</a>
                     </div>
@@ -100,6 +100,10 @@
                     <div class="info-icon" data-tooltip="Reflect on your day and express your thoughts in a safe space.">ℹ</div>
                 </h3>
                 <p>Let's reflect!</p>
+                <div class="btn-group">
+                    <button onclick="addJournalEntry()" class="btn">New Journal Entry</button>
+                    <button onclick="viewJournal()" class="btn">View Journal Entries</button>
+                </div>
             </div>
             <div class="grid-container-item">
                 <h3>
@@ -107,6 +111,16 @@
                     <div class="info-icon" data-tooltip="Find peace with guided meditations designed to ease your mind.">ℹ</div>
                 </h3>
                 <p>Stay on track!</p>
+                <div class="dropdown">
+                    <button onclick="toggleContainer(this)" class="dropbtn">Guide</button>
+                    <div class="dropdown-content">
+                        <h3>How to meditate?</h3>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/inpok4MKVLM?si=2Oe8fPiPmEp7_bvJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div id="timer" class="btn-group">
+                    <button onclick="startTimer()" class="btn">Start Timer</button>
+                </div>
             </div>
             <div class="grid-container-item">
                 <h3>

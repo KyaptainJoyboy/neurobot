@@ -1,4 +1,11 @@
 ## 2024 - 12 - 6
+- Several Miscellaneous Improvements
+    - Basic Account System
+        - Doesn't support logins or registers, just enough
+        to test out account features due to time constraints.
+    - Some features fully implemented
+
+## 2024 - 12 - 6
 - Created Dropdown buttons - chesu
     - Displays content under the botton when clicked
 

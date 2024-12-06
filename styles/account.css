@@ -1,6 +1,6 @@
-/* ////////
-Account Page Styles
-//////// */
+/* ///////////////////
+Account Support Styles
+/////////////////// */
 body.account {
     font-family: Arial, sans-serif;
     margin: 0px;
@@ -19,7 +19,7 @@ body.account {
 
 .account h1 {
     text-align: center;
-    font-size: 24px;
+    font-size: 24px;    
     animation: global-slide-down 0.65s ease-in-out;
 }
 
@@ -31,6 +31,7 @@ body.account {
 }
 
 .account h3 {
+    color: var(--primary-color);
     text-align: center;
     margin-top: 0px;
     margin-bottom: 20px;
@@ -61,8 +62,9 @@ body.account .container h3 {
 body.account .grid-container {
     display: grid;
     grid-auto-rows: max-content 1fr;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap:  20px;
+    overflow: visible;
 }
 
 body.account .center-text {
@@ -73,6 +75,7 @@ body.account .center-text {
 }
 
 body.account .grid-container-item {
+    position: relative;
     background-color: #e8f5e9;
     border-radius: 20px;
     padding: 20px;
@@ -81,8 +84,12 @@ body.account .grid-container-item {
     text-align: center;
     border: 2px solid #4CAF50;
     height: fit-content;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: margin-top 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.account .grid-container-item-highlight {
+    border: 2px solid var(--primary-color);
 }
 
 body.account .grid-container-item:hover {
@@ -98,4 +105,89 @@ body.account .grid-container-feature {
     margin-bottom: 20px;
     text-align: center;
     border: 2px solid #4CAF50;
+}
+
+.grid-container-item .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.grid-container-item .btn {
+    display: inline-block;
+    border: none;
+    padding: 10px 20px;
+    background-color: #FFC107;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-container-item .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container-item .dropbtn {
+    margin-top: 10px;
+    gap: 10px;
+    width: 100%;
+    display: inline-block;
+    border: none;
+    padding: 10px 20px;
+    background-color: #FFC107;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-container-item .dropbtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+  
+.grid-container-item .dropdown-content {
+    display: none;
+    padding: 20px 20px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+  
+.grid-container-item .dropdown .dropdown-content a {
+    color: black;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.grid-container-item .dropdown-content h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+  
+.grid-container .dropdown a:hover {color: aqua;}
+
+#timer {
+    font-size: 24px;
+    margin-bottom: 10px;
 }

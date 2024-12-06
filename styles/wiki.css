@@ -62,7 +62,7 @@ body.wiki .container h3 {
 body.wiki .grid-container {
     display: grid;
     grid-auto-rows: max-content 1fr;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap:  20px;
 }
 

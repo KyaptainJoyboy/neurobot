@@ -21,5 +21,49 @@
         <a href="about.html">About</a>
         <a href="account.html" class="active">Account</a>
     </nav>
+
+    <div class="container">
+        <h3>Account</h3>
+        <div class="grid-container">
+            <div class="grid-container-item">
+                <h3>
+                    Account Details
+                </h3>
+            </div>
+
+            <div class="grid-container-item">
+                <h3>
+                    Account Commands
+                </h3>
+                <div class="btn-group">
+                    <button onclick="resetAccount()" class="btn">Retrieve Account Information</button>
+                    <button onclick="resetAccount()" class="btn">Reset Account</button>
+                    <button onclick="clearJournal()" class="btn">Clear Journal Entries</button>
+                    <div>
+                        <label for="simulateMood">Select Mood</label>
+                        <select id="simulateMood">
+                            <option value="Very Sad">Very Sad</option>
+                            <option value="Sad">Sad</option>
+                            <option value="Neutral">Neutral</option>
+                            <option value="Happy">Happy</option>
+                            <option value="Very Happy">Very Happy</option>
+                        </select>
+                        <label for="simulateDays">Number of Days</label>
+                        <input type="number" id="simulateDays" min="1" max="5" value="5">
+                        <div class="btn-group">
+                            <button id="simulateButton" class="btn">Simulate Moods</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-container-item">
+                <h3>
+                    Account History
+                </h3>
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>

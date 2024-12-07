@@ -1,13 +1,56 @@
-/* Set Global Variables */
+/* -----------------
+Global Styling
+----------------- */
+
+/* -----------------
+Global Colors
+----------------- */
 :root {
-    --primary-color: #4CAF50;
-    --secondary-color: #2196F3;
-    --accent-color: #FFC107;
-    --background-color: #F0F4F8;
-    --text-color: #333;
+    --primary-color: #4CAF50; /* Original green */
+    --secondary-color: #2196F3; /* Original blue */
+    --accent-color: #FFC107; /* Original yellow */
+    --background-color: #F0F4F8; /* Soft light gray */
+    --text-color: #333; /* Dark text color */
+
+    /* New colors */
+    --primary-light: #81C784; /* Light green for softer tones */
+    --primary-dark: #388E3C; /* Darker green for depth */
+    --secondary-light: #64B5F6; /* Light blue for a calmer feel */
+    --secondary-dark: #1565C0; /* Darker blue for contrast */
+    --accent-light: #FFEB3B; /* Lighter yellow for gentler highlights */
+    --accent-dark: #FFA000; /* Darker yellow for emphasis */
+    --background-light: #FFFFFF; /* White for a clean, minimal look */
+    --background-dark: #E0E0E0; /* Light gray for alternative backgrounds */
+    --text-light: #555555; /* Softer text color for ease on eyes */
+    --error-color: #F44336; /* Modern red for error messages */
+    --success-color: #8BC34A; /* Fresh green for success indicators */
+    --warning-color: #FF9800; /* Modern orange for warnings */
+
+    /* Modern greys */
+    --grey-lightest: #FAFAFA; /* Very light grey for subtle backgrounds */
+    --grey-lighter: #E0E0E0; /* Light grey for borders or dividers */
+    --grey-light: #BDBDBD; /* Soft grey for background sections */
+    --grey: #9E9E9E; /* Neutral mid-tone grey for general use */
+    --grey-dark: #616161; /* Dark grey for less prominent text or accents */
+    --grey-darker: #424242; /* Darker grey for deep accents or header text */
+    --grey-darkest: #212121; /* Almost black grey for high contrast elements */
+
+    /* Background colors */
+    --bg-primary-light: #d1ead0; /* Very light greenish white for a soft, almost white look */
+    --bg-primary-dark: #cbf1cd; /* Soft, muted green close to a pale mint for a subtle dark contrast */
+    --bg-secondary-light: #E3F2FD; /* Light blue for a serene, peaceful look */
+    --bg-secondary-dark: #BBDEFB; /* Slightly darker blue for areas needing focus */
+    --bg-accent-light: #FFF8E1; /* Light yellow for warmth without overwhelming */
+    --bg-accent-dark: #FFECB3; /* Darker yellow for sections needing more emphasis */
+    --bg-neutral-light: #F5F5F5; /* A very soft light grey for neutral sections */
+    --bg-neutral-dark: #E1E1E1; /* Slightly darker grey for quiet background areas */
+    --bg-soft-dark: #D6D6D6; /* Soft mid-grey for subtle background blocks */
+    --bg-darkest: #C1C1C1; /* Darker grey for deeper background contrasts */
 }
 
-/* Set Global Animations */
+/* -----------------
+Global Animations
+----------------- */
 @keyframes global-slide-up {
     from {
         opacity: 0;
@@ -52,9 +95,9 @@
     }
 }
 
-/* //////////
-Global Styles
-////////// */
+/* -----------------
+Navigation Bar Styling
+----------------- */
 
 .nav-bar {
     background-color: var(--secondary-color);
@@ -90,11 +133,20 @@ Global Styles
     transform: scale(1.1);
 }
 
+.nav-bar, .nav-bar a, .nav-bar a.active, .nav-bar a:hover {
+    font-family: Helvetica, sans-serif;
+}
+
+/* -----------------
+Button Styling
+----------------- */
+
 .btn-group {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 10px;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 .btn-group .btn {
@@ -145,7 +197,9 @@ Global Styles
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
-/* Info Icon */
+/* -----------------
+Info Icons and Tooltips
+----------------- */
 .info-icon {
     position: absolute;
     top: 10px;
@@ -162,7 +216,6 @@ Global Styles
     cursor: pointer;
 }
 
-/* Tooltip Styling */
 .info-icon::after {
     content: attr(data-tooltip);
     position: absolute;
@@ -182,12 +235,15 @@ Global Styles
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-/* Tooltip Visibility on Hover */
 .info-icon:hover::after {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(5px);
 }
+
+/* -----------------
+Embeds Styling
+----------------- */
 
 .embed-container {
     width: 80%;

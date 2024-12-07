@@ -1,6 +1,11 @@
-/* ///////////////////
-Teacher Support Styles
-/////////////////// */
+/* -----------------
+Teacher Support Styling
+----------------- */
+
+/* -----------------
+Global Settings
+----------------- */
+
 body.teacher {
     font-family: Arial, sans-serif;
     margin: 0px;
@@ -8,6 +13,10 @@ body.teacher {
     background-color: var(--background-color);
     color: var(--text-color);
 }
+
+/* -----------------
+Header Styling
+----------------- */
 
 .teacher header {
     background-color: var(--primary-color);
@@ -43,6 +52,10 @@ body.teacher {
     margin-bottom: 20px;
 }
 
+/* -----------------
+Container Styling
+----------------- */
+
 body.teacher .container {
     background-color: white;
     border-radius: 10px;
@@ -58,6 +71,10 @@ body.teacher .container h3 {
     margin-top: 0px;
     margin-bottom: 20px;
 }
+
+/* -----------------
+Grid Container Styling
+----------------- */
 
 body.teacher .grid-container {
     display: grid;
@@ -92,15 +109,9 @@ body.teacher .grid-container-item:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-body.teacher .grid-container-feature {
-    background-color: #e8f5e9;
-    border-radius: 20px;
-    padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    border: 2px solid #4CAF50;
-}
+/* -----------------
+Button Styling
+----------------- */
 
 .grid-container-item .btn-group {
     display: flex;
@@ -130,6 +141,10 @@ body.teacher .grid-container-feature {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* -----------------
+Button and Dropdown Styling
+----------------- */
 
 .grid-container-item .dropbtn {
     margin-top: 10px;
@@ -180,4 +195,6 @@ body.teacher .grid-container-feature {
     margin-bottom: 20px;
 }
   
-.grid-container .dropdown a:hover {background-color: #ddd;}
+.grid-container .dropdown a:hover {
+    background-color: #ddd;
+}

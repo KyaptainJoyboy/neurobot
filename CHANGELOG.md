@@ -1,3 +1,9 @@
+## 2024 - 12 - 7 -> Released on 2024 - 12 - 8
+- Added more colors to the global color pallette for more customization
+- Home Page now reflects the final look of the website
+    - Fonts, colors, and more.
+- Divided all selectors in the CSS files into sections for better readability
+
 ## 2024 - 12 - 6
 - Several Miscellaneous Improvements
     - Basic Account System

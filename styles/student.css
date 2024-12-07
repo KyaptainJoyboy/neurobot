@@ -1,6 +1,10 @@
-/* ///////////////////
-Student Support Styles
-/////////////////// */
+/* -----------------
+Student Support Styling
+----------------- */
+
+/* -----------------
+Animations
+----------------- */
 
 @keyframes breathe {
     0%, 100% {
@@ -13,6 +17,10 @@ Student Support Styles
     }
 }
 
+/* -----------------
+Global Settings
+----------------- */
+
 body.student {
     font-family: Arial, sans-serif;
     margin: 0px;
@@ -20,6 +28,10 @@ body.student {
     background-color: var(--background-color);
     color: var(--text-color);
 }
+
+/* -----------------
+Header Styling
+----------------- */
 
 .student header {
     background-color: var(--primary-color);
@@ -55,6 +67,10 @@ body.student {
     margin-bottom: 20px;
 }
 
+/* -----------------
+Container Styling
+----------------- */
+
 body.student .container {
     background-color: white;
     border-radius: 10px;
@@ -70,6 +86,10 @@ body.student .container h3 {
     margin-top: 0px;
     margin-bottom: 20px;
 }
+
+/* -----------------
+Grid Container Styling
+----------------- */
 
 body.student .grid-container {
     display: grid;
@@ -115,6 +135,10 @@ body.student .grid-container-feature {
     border: 2px solid #4CAF50;
 }
 
+/* -----------------
+Mood Buttons Styling
+----------------- */
+
 .mood-btn-group {
     display: flex;
     justify-content: space-around;
@@ -132,6 +156,10 @@ body.student .grid-container-feature {
 .mood-btn:hover {
     transform: scale(1.2);
 }
+
+/* -----------------
+Breathing Circle Styling
+----------------- */
 
 #breathing-circle {
     width: 60px;
@@ -151,6 +179,10 @@ body.student .grid-container-feature {
     color: var(--primary-color);
     text-align: center;
 }
+
+/* -----------------
+Button Styling
+----------------- */
 
 .grid-container-item .btn-group {
     display: flex;
@@ -180,8 +212,11 @@ body.student .grid-container-feature {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* -----------------
+Button and Dropdown Styling
+----------------- */
+
 .grid-container-item .dropbtn {
-    margin-top: 10px;
     gap: 10px;
     width: 100%;
     display: inline-block;
@@ -214,7 +249,7 @@ body.student .grid-container-feature {
     transition: all 0.3s ease;
 }
   
-.grid-container-item .dropdown .dropdown-content a {
+.grid-container-item .btn-group .dropdown-content a {
     color: black;
     text-decoration: none;
     margin-top: 10px;
@@ -230,9 +265,12 @@ body.student .grid-container-feature {
     margin-bottom: 20px;
 }
   
-.grid-container .dropdown a:hover {color: aqua;}
+.grid-container .btn-group a:hover {color: aqua;}
+
+/* -----------------
+Timer Styling
+----------------- */
 
 #timer {
     font-size: 24px;
-    margin-bottom: 10px;
 }

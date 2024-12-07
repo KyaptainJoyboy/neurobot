@@ -1,3 +1,11 @@
+/* -----------------
+Landing Page Styling
+----------------- */
+
+/* -----------------
+Global Settings
+----------------- */
+
 body.index {
     font-family: Arial, sans-serif;
     margin: 0px;
@@ -5,6 +13,10 @@ body.index {
     background-color: var(--background-color);
     color: var(--text-color);
 }
+
+/* -----------------
+Header Styling
+----------------- */
 
 .index header {
     background-color: var(--primary-color);
@@ -46,6 +58,10 @@ body.index {
     margin-bottom: 20px;
 }
 
+/* -----------------
+Container Styling
+----------------- */
+
 body.index .container {
     background-color: white;
     border-radius: 10px;
@@ -62,6 +78,10 @@ body.index .container h3 {
     margin-bottom: 20px;
 }
 
+/* -----------------
+Grid Container Styling
+----------------- */
+
 body.index .grid-container {
     display: grid;
     grid-auto-rows: max-content 1fr;
@@ -75,6 +95,10 @@ body.index .center-text {
     font-weight: bold;
     margin-bottom: 20px;
 }
+
+/* -----------------
+Grid Item Styling
+----------------- */
 
 body.index .grid-container-item {
     background-color: #e8f5e9;
@@ -94,15 +118,9 @@ body.index .grid-container-item:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-body.index .grid-container-feature {
-    background-color: #e8f5e9;
-    border-radius: 20px;
-    padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    border: 2px solid #4CAF50;
-}
+/* -----------------
+Button Styling
+----------------- */
 
 .btn-group-index {
     display: flex;

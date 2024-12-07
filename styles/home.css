@@ -1,42 +1,44 @@
+/* -----------------
+Home Page Styling
+----------------- */
+
+/* -----------------
+Global Settings
+----------------- */
+
 body.home {
     font-family: Arial, sans-serif;
     margin: 0px;
     padding: 0px;
-    background-color: var(--background-color);
+    background-color: var(--grey-lightest);
     color: var(--text-color);
 }
 
+/* -----------------
+Header Styling
+----------------- */
+
 .home header {
-    background-color: var(--primary-color);
+    background-color: var(--primary-light);
     text-align: center;
     padding: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     animation: global-slide-down 0.5s ease-in-out;
 }
 
-.home h1 {
+.home h1, h2, h3{
+    color: var(--grey-darker);
     text-align: center;
     font-size: 24px;
     animation: global-slide-down 0.65s ease-in-out;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-.home h2 {
-    color: var(--primary-color);
+.home p, .news-box p {
+    color: var(--text-color); 
     text-align: center;
-    margin-top: 0px;
     margin-bottom: 20px;
-}
-
-.home h3 {
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 20px;
-}
-
-.home p {
-    text-align: center;
-    color: var(--primary-color);
-    margin-bottom: 20px;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 .home p.italic {
@@ -46,8 +48,12 @@ body.home {
     margin-bottom: 20px;
 }
 
+/* -----------------
+Container Styling
+----------------- */
+
 body.home .container {
-    background-color: white;
+    background-color: var(--background-color);
     border-radius: 10px;
     width: 95%;
     margin: 0 auto;
@@ -61,6 +67,10 @@ body.home .container h3 {
     margin-top: 0px;
     margin-bottom: 20px;
 }
+
+/* -----------------
+Grid Layout Styling
+----------------- */
 
 body.home .grid-container {
     display: grid;
@@ -76,8 +86,12 @@ body.home .center-text {
     margin-bottom: 20px;
 }
 
+/* -----------------
+Grid Item Styling
+----------------- */
+
 body.home .grid-container-item {
-    background-color: #e8f5e9;
+    background-color: var(--bg-primary-light);
     border-radius: 20px;
     padding: 20px;
     margin-top: 10px;
@@ -94,37 +108,22 @@ body.home .grid-container-item:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-body.home .grid-container-feature {
-    background-color: #e8f5e9;
-    border-radius: 20px;
-    padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    border: 2px solid #4CAF50;
-}
+/* -----------------
+News Box Styling
+----------------- */
 
 .news-box {
-    background-color: white;
+    background-color: var(--bg-primary-light);
     border-radius: 10px;
-    border: 1px solid #4CAF50;
     padding: 10px;
     max-width: 800px;
     margin: 20px auto;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     color: #333;
     font-family: Arial, sans-serif;
 }
 
-.news-box h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    text-align: center;
-    color: #2c3e50;
-}
-
 .news-item {
-    background: #c5ffc7;
+    background: var(--primary-light);
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -142,6 +141,7 @@ body.home .grid-container-feature {
     font-size: 20px;
     margin-bottom: 10px;
     color: #34495e;
+    font-family: 'Helvetica', sans-serif;
 }
 
 .news-item p {
@@ -149,6 +149,11 @@ body.home .grid-container-feature {
     line-height: 1.6;
     color: #555;
     text-align: left;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.news-item li {
+    font-family: 'Comfortaa', sans-serif;
 }
 
 .date {
@@ -157,11 +162,16 @@ body.home .grid-container-feature {
     margin-top: 10px;
     color: #7f8c8d;
     text-align: right;
+    font-family: Helvetica, sans-serif;
 }
 
 .news-item:last-child {
     margin-bottom: 0;
 }
+
+/* -----------------
+Source Box Styling
+----------------- */
 
 .source-box {
     background-color: #24292f;
@@ -192,8 +202,12 @@ body.home .grid-container-feature {
     height: 20px;
 }
 
+/* -----------------
+Notice Box Styling
+----------------- */
+
 .notice-box {
-    background: var(--background-color);
+    background: var(--grey-lighter);
     border: 1px solid #4CAF50;
     border-radius: 10px;
     padding: 15px 20px;
@@ -208,6 +222,10 @@ body.home .grid-container-feature {
     font-size: 1em;
     line-height: 1.5;
 }
+
+/* -----------------
+Button and Dropdown Styling
+----------------- */
 
 .grid-container-item .dropbtn {
     margin-top: 10px;

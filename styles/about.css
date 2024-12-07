@@ -1,16 +1,25 @@
-/* ////////
-About Page Styles
-//////// */
+/* -----------------
+About Page Styling
+----------------- */
+
+/* -----------------
+Global Settings
+----------------- */
+
 body.info {
     font-family: Arial, sans-serif;
     margin: 0px;
     padding: 0px;
-    background-color: var(--background-color);
+    background-color: var(--grey-lightest);
     color: var(--text-color);
 }
 
+/* -----------------
+Header Styling
+----------------- */
+
 .info header {
-    background-color: var(--primary-color);
+    background-color: var(--primary-light);
     text-align: center;
     padding: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -18,32 +27,39 @@ body.info {
 }
 
 .info h1 {
+    color: var(--text-color);
     text-align: center;
     font-size: 24px;
     animation: global-slide-down 0.65s ease-in-out;
 }
 
 .info h2 {
-    color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
     margin-top: 0px;
     margin-bottom: 20px;
 }
 
 .info h3 {
+    color: var(--text-color);
     text-align: center;
     margin-top: 0px;
     margin-bottom: 20px;
 }
 
 .info p {
+    color: var(--text-color);
     text-align: center;
     color: var(--primary-color);
     margin-bottom: 20px;
 }
 
+/* -----------------
+Container Styling
+----------------- */
+
 body.info .container {
-    background-color: white;
+    background-color: var(--background-color);
     border-radius: 10px;
     width: 95%;
     margin: 0 auto;
@@ -57,6 +73,10 @@ body.info .container h3 {
     margin-top: 0px;
     margin-bottom: 20px;
 }
+
+/* -----------------
+Grid Layout Styling
+----------------- */
 
 body.info .grid-container {
     display: grid;
@@ -72,8 +92,12 @@ body.info .center-text {
     margin-bottom: 20px;
 }
 
+/* -----------------
+Grid Item Stylings
+----------------- */
+
 body.info .grid-container-item {
-    background-color: #e8f5e9;
+    background-color: var(--primary-light);
     border-radius: 20px;
     padding: 20px;
     margin-top: 10px;
@@ -88,14 +112,4 @@ body.info .grid-container-item {
 body.info .grid-container-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-body.info .grid-container-feature {
-    background-color: #e8f5e9;
-    border-radius: 20px;
-    padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    border: 2px solid #4CAF50;
 }

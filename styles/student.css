@@ -75,7 +75,7 @@ body.student .container {
     background-color: white;
     border-radius: 10px;
     width: 95%;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     animation: global-slide-up 0.5s ease-in-out;
@@ -95,6 +95,14 @@ body.student .grid-container {
     display: grid;
     grid-auto-rows: max-content 1fr;
     grid-template-columns: repeat(4, 1fr);
+    gap:  20px;
+    overflow: visible;
+}
+
+body.student .grid-container-voice {
+    display: grid;
+    grid-auto-rows: max-content 1fr;
+    grid-template-columns: repeat(1, 1fr);
     gap:  20px;
     overflow: visible;
 }
@@ -191,7 +199,7 @@ Button Styling
     margin-top: 10px;
 }
 
-.grid-container-item .btn {
+.grid-container-item .btn, .AI-btn {
     display: inline-block;
     border: none;
     padding: 10px 20px;
@@ -207,7 +215,7 @@ Button Styling
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.grid-container-item .btn:hover {
+.grid-container-item .btn:hover, .AI-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }

@@ -309,3 +309,45 @@ function resetBreathingExercise() {
   breathingCircle.classList.remove('breathing');
   breathingText.textContent = 'Click to start';
 }
+
+// --- Dropdown Button Function ---
+function toggleContainer(button) {
+  const container = button.nextElementSibling; // Get the container next to the button
+  container.style.display = (container.style.display === 'block') ? 'none' : 'block'; // Toggle visibility
+}
+
+// Voice Assistant Button and AI Integration
+const VoiceButton = getElementById('voiceAssistant');
+const responseElement = document.getElementById('response');
+
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const recognition = new SpeechRecognition();
+
+recognition.onstart = () => {
+    console.log('Voice recognition started...');
+};
+
+recognition.onresult = (event) => {
+    const userQuery = event.results[0][0].transcript;
+    console.log('User Query:', userQuery);
+
+    fetch('/query', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: userQuery }),
+    })
+    .then(res => res.json())
+    .then(data => {
+        responseElement.innerText = data.response;
+        speak(data.response);
+    })
+    .catch(err => console.error('Error:', err));
+};
+
+button.addEventListener('click', () => recognition.start());
+
+function speak(text) {
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(text);
+    synth.speak(utterance);
+}

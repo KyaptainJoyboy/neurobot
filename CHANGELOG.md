@@ -1,4 +1,8 @@
 ## 2024 - 12 - 9
+- Made animations on some pages global
+    - All selectors use the same animation, unless stated otherwise.
+
+## 2024 - 12 - 9
 - Sync Push, no major changes made.
 
 ## 2024 - 12 - 9

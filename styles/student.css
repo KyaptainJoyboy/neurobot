@@ -25,8 +25,24 @@ body.student {
     font-family: Arial, sans-serif;
     margin: 0px;
     padding: 0px;
-    background-color: var(--background-color);
+    background-color: var(--grey-lightest);
     color: var(--text-color);
+}
+
+/* -----------------
+Set Animations Globally
+For separating, declare animations separately.
+----------------- */
+
+* {
+    animation: global-slide-up 0.5s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, all 0.3s ease;
+}
+
+/* Separated Animations */
+
+header, h1, h3, p {
+    animation: global-slide-down 0.65s ease-in-out;
 }
 
 /* -----------------
@@ -34,25 +50,22 @@ Header Styling
 ----------------- */
 
 .student header {
-    background-color: var(--primary-color);
+    background-color: var(--primary-light);
     text-align: center;
     padding: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    animation: global-slide-down 0.5s ease-in-out;
 }
 
 .student h1, h2, h3 {
     color: var(--grey-darker);
     text-align: center;
     font-size: 24px;    
-    animation: global-slide-down 0.65s ease-in-out;
     font-family: 'Segoe UI', sans-serif;
 }
 
 .student p {
     color: var(--text-color);
     text-align: center;
-    color: var(--text-color);
     margin-bottom: 20px;
     font-family: 'Comfortaa', sans-serif;
 }
@@ -62,13 +75,12 @@ Container Styling
 ----------------- */
 
 body.student .container {
-    background-color: white;
+    background-color: var(--background-color);
     border-radius: 10px;
     width: 95%;
     margin: 20px auto;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: global-slide-up 0.5s ease-in-out;
 }
 
 /* -----------------
@@ -100,7 +112,7 @@ body.student .center-text {
 
 body.student .grid-container-item {
     position: relative;
-    background-color: #e8f5e9;
+    background-color: var(--bg-primary-light);
     border-radius: 20px;
     padding: 20px;
     margin-top: 10px;
@@ -108,7 +120,6 @@ body.student .grid-container-item {
     text-align: center;
     border: 2px solid #4CAF50;
     height: fit-content;
-    transition: margin-top 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
 }
 
@@ -149,7 +160,6 @@ Breathing Circle Styling
     border-radius: 50%;
     background-color: var(--primary-color);
     margin: 0 auto;
-    transition: transform 4s ease-in-out, background-color 4s ease-in-out;
 }
 
 .breathing {
@@ -186,7 +196,6 @@ Button Styling
     text-decoration: none;
     cursor: pointer;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .grid-container-item .btn:hover, .AI-btn:hover {
@@ -213,7 +222,6 @@ Button and Dropdown Styling
     text-decoration: none;
     cursor: pointer;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .grid-container-item .dropbtn:hover {

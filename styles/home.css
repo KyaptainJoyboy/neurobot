@@ -15,6 +15,22 @@ body.home {
 }
 
 /* -----------------
+Set Animations Globally
+For separating, declare animations separately.
+----------------- */
+
+* {
+    animation: global-slide-up 0.5s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, all 0.3s ease;
+}
+
+/* Separated Animations */
+
+header, h1, h2, h3, p, .news-box, .news-item, .notice-box, .date {
+    animation: global-slide-down 0.65s ease-in-out;
+}
+
+/* -----------------
 Header Styling
 ----------------- */
 
@@ -23,14 +39,12 @@ Header Styling
     text-align: center;
     padding: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    animation: global-slide-down 0.5s ease-in-out;
 }
 
 .home h1, h2, h3{
     color: var(--grey-darker);
     text-align: center;
     font-size: 24px;
-    animation: global-slide-down 0.65s ease-in-out;
     font-family: 'Segoe UI', sans-serif;
 }
 
@@ -59,7 +73,6 @@ body.home .container {
     margin: 0 auto;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: global-slide-up 0.5s ease-in-out;
 }
 
 body.home .container h3 {
@@ -99,8 +112,6 @@ body.home .grid-container-item {
     text-align: center;
     border: 2px solid #4CAF50;
     height: fit-content;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: global-slide-down 0.65s ease-in-out;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
 }
 
@@ -129,7 +140,6 @@ News Box Styling
     border-radius: 8px;
     margin-bottom: 15px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
 }
 
@@ -168,10 +178,6 @@ News Box Styling
 
 .news-item:last-child {
     margin-bottom: 0;
-}
-
-.news-box, .news-item, .news-item h4, .news-item p, .date {
-    animation: global-slide-down 0.65s ease-in-out;
 }
 
 /* -----------------
@@ -248,7 +254,6 @@ Button and Dropdown Styling
     text-decoration: none;
     cursor: pointer;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .grid-container-item .dropbtn:hover {

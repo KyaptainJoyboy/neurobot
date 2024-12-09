@@ -71,7 +71,6 @@ body.student .container {
     animation: global-slide-up 0.5s ease-in-out;
 }
 
-
 /* -----------------
 Grid Container Styling
 ----------------- */
@@ -116,16 +115,6 @@ body.student .grid-container-item {
 body.student .grid-container-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-body.student .grid-container-feature {
-    background-color: #e8f5e9;
-    border-radius: 20px;
-    padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    border: 2px solid #4CAF50;
 }
 
 /* -----------------
@@ -267,3 +256,17 @@ Timer Styling
 #timer {
     font-size: 24px;
 }
+
+/* -----------------
+Chart Styling
+----------------- */
+
+#chartContainer {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  canvas {
+    border: 1px solid #ccc;
+  }

@@ -1,4 +1,7 @@
 ## 2024 - 12 - 9
+- Sync Push, no major changes made.
+
+## 2024 - 12 - 9
 - Student Support page design changes
 
 ## 2024 - 12 - 9

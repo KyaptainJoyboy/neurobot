@@ -309,3 +309,37 @@ function resetBreathingExercise() {
   breathingCircle.classList.remove('breathing');
   breathingText.textContent = 'Click to start';
 }
+
+// AI Voice
+document.getElementById('start-button').addEventListener('click', function() {
+  const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+  recognition.lang = 'en-US';
+  recognition.interimResults = false;
+  
+  recognition.start();
+  
+  recognition.onresult = async function(event) {
+    const transcript = event.results[0][0].transcript;
+    document.getElementById('transcription').innerText = transcript;
+
+    const response = await queryOllama(transcript);
+    document.getElementById('response').innerText = response;
+  };
+
+  recognition.onerror = function(event) {
+    console.error('Speech recognition error:', event.error);
+  };
+});
+
+async function queryOllama(userInput) {
+  const response = await fetch('http://localhost:11434/query', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ input: userInput })
+  });
+
+  const data = await response.json();
+  return data.response;
+}

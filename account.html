@@ -6,6 +6,7 @@
     <title>PAULI AID : Account</title>
     <link rel="stylesheet" href="styles/globalstyles.css">
     <link rel="stylesheet" href="styles/account.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="functions.js" defer></script>
     <script src="animations.js" defer></script>
 </head>
@@ -63,6 +64,15 @@
                 </h3>
             </div>
 
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="moodgraph-grid-container">  
+            <div class="grid-container-item-moodgraph">
+                <h3>Mood Graph</h3>
+                <canvas id="moodChart"></canvas>
+            </div>
         </div>
     </div>
 </body>

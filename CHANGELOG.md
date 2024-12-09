@@ -1,3 +1,11 @@
+## 2024 - 12 - 9
+- Several Improvements to existing functions
+- Mood Graph added to Account section
+    - Displays a graph of mood over time.
+- Reimplemented breathing exercises
+    - Apparently this got sucked into the void sometime ago.
+- Other changes
+
 ## 2024 - 12 - 7 -> Released on 2024 - 12 - 8
 - Added more colors to the global color pallette for more customization
 - Home Page now reflects the final look of the website

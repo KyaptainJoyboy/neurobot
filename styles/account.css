@@ -60,7 +60,7 @@ body.account .container {
     background-color: white;
     border-radius: 10px;
     width: 95%;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     animation: global-slide-up 0.5s ease-in-out;
@@ -80,6 +80,14 @@ body.account .grid-container {
     display: grid;
     grid-auto-rows: max-content 1fr;
     grid-template-columns: repeat(3, 1fr);
+    gap:  20px;
+    overflow: visible;
+}
+
+body.account .moodgraph-grid-container {
+    display: grid;
+    grid-auto-rows: max-content 1fr;
+    grid-template-columns: repeat(1, 1fr);
     gap:  20px;
     overflow: visible;
 }
@@ -109,11 +117,25 @@ body.account .grid-container-item {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
 }
 
-body.account .grid-container-item-highlight {
+body.account .moodgraph-grid-container .grid-container-item-moodgraph {
+    position: relative;
+    background-color: #e8f5e9;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid #4CAF50;
+    height: fit-content;
+    transition: margin-top 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.account .grid-container-item-highlight, .grid-container-item-moodgraph-highlight {
     border: 2px solid var(--primary-color);
 }
 
-body.account .grid-container-item:hover {
+body.account .grid-container-item:hover, .grid-container-item-moodgraph:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }

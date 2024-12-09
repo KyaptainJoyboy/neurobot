@@ -1,4 +1,7 @@
 ## 2024 - 12 - 9
+- Student Support page design changes
+
+## 2024 - 12 - 9
 - Several Improvements to existing functions
 - Mood Graph added to Account section
     - Displays a graph of mood over time.

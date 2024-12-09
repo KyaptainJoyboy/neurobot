@@ -41,30 +41,20 @@ Header Styling
     animation: global-slide-down 0.5s ease-in-out;
 }
 
-.student h1 {
+.student h1, h2, h3 {
+    color: var(--grey-darker);
     text-align: center;
     font-size: 24px;    
     animation: global-slide-down 0.65s ease-in-out;
-}
-
-.student h2 {
-    color: var(--primary-color);
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 20px;
-}
-
-.student h3 {
-    color: var(--primary-color);
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 20px;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .student p {
+    color: var(--text-color);
     text-align: center;
-    color: var(--primary-color);
+    color: var(--text-color);
     margin-bottom: 20px;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 /* -----------------
@@ -81,11 +71,6 @@ body.student .container {
     animation: global-slide-up 0.5s ease-in-out;
 }
 
-body.student .container h3 {
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 20px;
-}
 
 /* -----------------
 Grid Container Styling

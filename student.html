@@ -102,13 +102,22 @@
                     </div>
                 </div>
             </div>
-            <div class="grid-container-item">
-                <span class="info-icon" data-tooltip="Plan and prioritize your self-care activities to stay balanced.">ℹ</span>
-                <h2>
-                    Self-Care Scheduler
-                </h2>
-                <p>Make sure to take breaks!</p>
-            </div>
+<div class="grid-container-item">
+    <span class="info-icon" data-tooltip="Plan and prioritize your self-care activities to stay balanced.">ℹ</span>
+    <h2>
+        Self-Care Scheduler
+    </h2>
+    <p>Make sure to take breaks!</p>
+    <div id="timer-container">
+        <div id="timer-display">25:00</div>
+        <div class="btn-group">
+            <input type="number" id="custom-time-input" class="custom-time-input" placeholder="Custom Time (minutes)" min="1" max="120">
+            <button onclick="startTimer()" class="btn">Start</button>
+            <button onclick="resetTimer()" class="btn">Reset</button>
+            <button onclick="stopTimer()" class="btn">Stop</button>
+        </div>
+    </div>
+</div>
             <div class="grid-container-item">
                 <span class="info-icon" data-tooltip="Reflect on your day and express your thoughts in a safe space.">ℹ</span>
                 <h2>

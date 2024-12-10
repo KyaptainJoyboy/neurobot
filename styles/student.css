@@ -182,7 +182,7 @@ Button Styling
     margin-top: 10px;
 }
 
-.grid-container-item .btn, .AI-btn {
+.grid-container-item .btn, .AI-btn, .timer-btn {
     display: inline-block;
     border: none;
     padding: 10px 20px;
@@ -197,9 +197,32 @@ Button Styling
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.grid-container-item .btn:hover, .AI-btn:hover {
+.grid-container-item .btn:hover, .AI-btn:hover, .timer-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* -----------------
+Custom Time Input Styling
+----------------- */
+
+.grid-container-item .custom-time-input {
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+    border: 2px solid #FFC107;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    color: #FFC107;
+    background-color: transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.grid-container-item .custom-time-input:focus {
+    border-color: #FFC107;
+    color: #FFC107;
+    outline: none;
 }
 
 /* -----------------

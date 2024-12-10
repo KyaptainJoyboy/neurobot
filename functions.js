@@ -274,40 +274,80 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // --- Breathing Exercise Functions ---
 function startBreathingExercise() {
-  const breathingCircle = document.getElementById('breathing-circle');
-  const breathingText = document.getElementById('breathing-text');
-  
-  // Start the breathing animation
-  breathingCircle.classList.add('breathing');
-  breathingText.textContent = 'Inhale...';
-  // Start breathing cycle
-  loopBreathingCycle(breathingCircle, breathingText);
+    const breathingCircle = document.getElementById('breathing-circle');
+    const breathingText = document.getElementById('breathing-text');
+    
+    // Start the breathing animation
+    breathingCircle.classList.add('breathing');
+    breathingText.textContent = 'Inhale...';
+    // Start breathing cycle
+    loopBreathingCycle(breathingCircle, breathingText);
 }
 function loopBreathingCycle(breathingCircle, breathingText) {
-  setTimeout(() => {
-      breathingText.textContent = 'Exhale...';
-      setTimeout(() => {
-          breathCount++;
-          if (breathCount < 5) {
-              breathingText.textContent = 'Inhale...';
-              loopBreathingCycle(breathingCircle, breathingText);
-          } else {
-              breathingCircle.classList.remove('breathing');
-              breathingText.textContent = 'Great Job! Take a short break.';
-              breathCount = 0;
-              setTimeout(() => {
-                  breathingText.textContent = 'Click to start';
-              }, 3000);
-          }
-      }, 2000);
-  }, 2000);
+    setTimeout(() => {
+        breathingText.textContent = 'Exhale...';
+        setTimeout(() => {
+            breathCount++;
+            if (breathCount < 5) {
+                breathingText.textContent = 'Inhale...';
+                loopBreathingCycle(breathingCircle, breathingText);
+            } else {
+                breathingCircle.classList.remove('breathing');
+                breathingText.textContent = 'Great Job! Take a short break.';
+                breathCount = 0;
+                setTimeout(() => {
+                    breathingText.textContent = 'Click to start';
+                }, 3000);
+            }
+        }, 2000);
+    }, 2000);
 }
 function resetBreathingExercise() {
-  const breathingCircle = document.getElementById('breathing-circle');
-  const breathingText = document.getElementById('breathing-text');
-  
-  breathingCircle.classList.remove('breathing');
-  breathingText.textContent = 'Click to start';
+    const breathingCircle = document.getElementById('breathing-circle');
+    const breathingText = document.getElementById('breathing-text');
+    
+    breathingCircle.classList.remove('breathing');
+    breathingText.textContent = 'Click to start';
+}
+
+// --- Timer Functions ---
+let timerInterval;
+let remainingTime = 25 * 60; // Default 25 minutes in seconds
+
+function startTimer() {
+    const customTimeInput = document.getElementById('custom-time-input');
+    if (customTimeInput.value) {
+        remainingTime = parseInt(customTimeInput.value, 10) * 60; // Convert minutes to seconds
+    }
+    if (timerInterval) return; // Prevent multiple intervals
+    document.getElementById('timer-display').innerText = formatTime(remainingTime);
+    timerInterval = setInterval(() => {
+        if (remainingTime > 0) {
+            remainingTime--;
+            document.getElementById('timer-display').innerText = formatTime(remainingTime);
+        } else {
+            stopTimer();
+        }
+    }, 1000);
+}
+
+function resetTimer() {
+    clearInterval(timerInterval);
+    timerInterval = null;
+    remainingTime = 25 * 60; // Reset to 25 minutes
+    document.getElementById('timer-display').innerText = formatTime(remainingTime);
+    document.getElementById('custom-time-input').value = ''; // Clear the custom time input
+}
+
+function stopTimer() {
+    clearInterval(timerInterval);
+    timerInterval = null;
+}
+
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${minutes < 10 ? '0' : ''}${minutes}:${secs < 10 ? '0' : ''}${secs}`;
 }
 
 // --- Dropdown Button Function ---

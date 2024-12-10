@@ -10,7 +10,7 @@ body.teacher {
     font-family: Arial, sans-serif;
     margin: 0px;
     padding: 0px;
-    background-color: var(--background-color);
+    background-color: var(--grey-lightest);
     color: var(--text-color);
 }
 
@@ -21,6 +21,7 @@ For separating, declare animations separately.
 
 * {
     animation: global-slide-up 0.5s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, all 0.3s ease;
 }
 
 /* Separated Animations */
@@ -33,36 +34,25 @@ header, h1, h2, h3, p {
 Header Styling
 ----------------- */
 
-.teacher header {
-    background-color: var(--primary-color);
+header {
+    background-color: var(--primary-light);
     text-align: center;
     padding: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.teacher h1 {
-    text-align: center;
-    font-size: 24px;    
+.teacher h1, h2, h3 {
+    color: var(--grey-darker);
+    text-align: center; 
+    font-family: 'Segoe UI', sans-serif;
 }
 
-.teacher h2 {
-    color: var(--primary-color);
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 20px;
-}
-
-.teacher h3 {
-    color: var(--primary-color);
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 20px;
-}
 
 .teacher p {
+    color: var(--text-color);
     text-align: center;
-    color: var(--primary-color);
     margin-bottom: 20px;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 /* -----------------
@@ -70,18 +60,12 @@ Container Styling
 ----------------- */
 
 body.teacher .container {
-    background-color: white;
+    background-color: var(--background-color);
     border-radius: 10px;
     width: 95%;
     margin: 0 auto;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-body.teacher .container h3 {
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 20px;
 }
 
 /* -----------------
@@ -104,7 +88,7 @@ body.teacher .center-text {
 
 body.teacher .grid-container-item {
     position: relative;
-    background-color: #e8f5e9;
+    background-color: var(--bg-primary-light);
     border-radius: 20px;
     padding: 20px;
     margin-top: 10px;
@@ -112,7 +96,6 @@ body.teacher .grid-container-item {
     text-align: center;
     border: 2px solid #4CAF50;
     height: fit-content;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
 }
 
@@ -146,7 +129,6 @@ Button Styling
     text-decoration: none;
     cursor: pointer;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .grid-container-item .btn:hover {
@@ -174,7 +156,6 @@ Button and Dropdown Styling
     text-decoration: none;
     cursor: pointer;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .grid-container-item .dropbtn:hover {

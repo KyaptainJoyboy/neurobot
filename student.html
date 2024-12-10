@@ -110,9 +110,11 @@
     <p>Make sure to take breaks!</p>
     <div id="timer-container">
         <div id="timer-display">25:00</div>
-        <div class="btn-group">
+        <div>
             <input type="number" id="custom-time-input" class="custom-time-input" placeholder="Custom Time (minutes)" min="1" max="120">
-            <button onclick="startTimer()" class="btn">Start</button>
+        </div>
+        <div class="btn-group">
+            <button onclick="startSelfCareTimer()" class="btn">Start</button>
             <button onclick="resetTimer()" class="btn">Reset</button>
             <button onclick="stopTimer()" class="btn">Stop</button>
         </div>
@@ -143,7 +145,7 @@
                     </div>
                 </div>
                 <div id="timer" class="btn-group">
-                    <button onclick="startTimer()" class="btn">Start Timer</button>
+                    <button id="meditationButton" onclick="startMeditationTimer()" class="btn">Start Timer</button>
                 </div>
             </div>
             <div class="grid-container-item">

@@ -237,6 +237,11 @@ Button Styling
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
 }
 
+.grid-container-item .btn.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
 .grid-container-item .btn:hover, .AI-btn:hover, .timer-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -248,7 +253,7 @@ Custom Time Input Styling
 
 .grid-container-item .custom-time-input {
     display: inline-block;
-    width: 100px;
+    width: max-content;
     padding: 10px;
     border: 2px solid #FFC107;
     border-radius: 10px;
@@ -269,7 +274,7 @@ Custom Time Input Styling
 Button and Dropdown Styling
 ----------------- */
 
-.grid-container-item .dropbtn {
+.grid-container-item .dropbtn, .overlay-btn {
     gap: 10px;
     width: 100%;
     display: inline-block;
@@ -286,7 +291,7 @@ Button and Dropdown Styling
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.grid-container-item .dropbtn:hover {
+.grid-container-item .dropbtn:hover, .overlay-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
@@ -322,6 +327,16 @@ Button and Dropdown Styling
 /* -----------------
 Timer Styling
 ----------------- */
+
+#timer-display {
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 20px;
+}
+
+#custom-time-input {
+    width: 95%;
+}
 
 #timer {
     font-size: 24px;

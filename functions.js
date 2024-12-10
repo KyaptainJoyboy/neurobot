@@ -317,33 +317,6 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Website initialized with User Data", userData);
 });
 
-// Function to generate a new daily challenge
-function generateNewChallenge() {
-    console.log("generateNewChallenge function called");
-    const challenges = [
-        "Take a 10-minute walk outside.",
-        "Practice deep breathing for 5 minutes.",
-        "Write down three things you are grateful for.",
-        "Call a friend or family member.",
-        "Read a chapter of a book.",
-        "Do a 10-minute yoga session.",
-        "Drink a glass of water.",
-        "Meditate for 10 minutes.",
-        "Write a positive affirmation.",
-        "Do a random act of kindness."
-    ];
-
-    const randomIndex = Math.floor(Math.random() * challenges.length);
-    const newChallenge = challenges[randomIndex];
-    const challengeDisplayElement = document.getElementById('challenge-display');
-    if (challengeDisplayElement) {
-        console.log("challenge-display element found in the DOM");
-        challengeDisplayElement.innerText = newChallenge;
-    } else {
-        console.error("challenge-display element not found in the DOM");
-    }
-}
-
 // --- Breathing Exercise Functions ---
 function startBreathingExercise() {
     const breathingCircle = document.getElementById('breathing-circle');
@@ -386,7 +359,9 @@ function resetBreathingExercise() {
 let timerInterval;
 let remainingTime = 25 * 60; // Default 25 minutes in seconds
 
-function startTimer() {
+
+// Function to start Self-care Scheduler Timer
+function startSelfCareTimer() {
     const customTimeInput = document.getElementById('custom-time-input');
     if (customTimeInput.value) {
         remainingTime = parseInt(customTimeInput.value, 10) * 60; // Convert minutes to seconds
@@ -422,33 +397,38 @@ function formatTime(seconds) {
     return `${minutes < 10 ? '0' : ''}${minutes}:${secs < 10 ? '0' : ''}${secs}`;
 }
 
+// Function to start Meditation Timer
+function startMeditationTimer() {
+  const timerButton = document.getElementById('meditationButton');
+  const totalTime = 5 * 60; // Fixed 5 minutes in seconds
+  let remainingTime = totalTime;
+
+  // Disable the button to prevent multiple clicks
+  timerButton.disabled = true;
+  timerButton.classList.add('disabled'); // Add a CSS class if needed for styling
+
+  // Update the button text with the remaining time
+  timerButton.innerText = formatTime(remainingTime);
+
+  const timerInterval = setInterval(() => {
+      remainingTime--;
+
+      // Update the button text during the countdown
+      timerButton.innerText = formatTime(remainingTime);
+
+      if (remainingTime <= 0) {
+          clearInterval(timerInterval);
+
+          // Reset button after the timer ends
+          timerButton.innerText = 'Start Meditation';
+          timerButton.disabled = false;
+          timerButton.classList.remove('disabled');
+      }
+  }, 1000);
+}
+
 // --- Dropdown Button Function ---
 function toggleContainer(button) {
   const container = button.nextElementSibling; // Get the container next to the button
   container.style.display = (container.style.display === 'block') ? 'none' : 'block'; // Toggle visibility
 }
-
-// AI Input
-document.getElementById('queryForm').addEventListener('submit', async (event) => {
-  event.preventDefault();
-  
-  const query = document.getElementById('userQuery').value;
-  const responseDiv = document.getElementById('response');
-
-  try {
-      const response = await fetch('/ask-query', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ query }),
-      });
-
-      const data = await response.json();
-      responseDiv.innerText = `Assistant: ${data.reply}`; // Adjust based on the response structure
-  } catch (error) {
-      console.error('Error:', error);
-      responseDiv.innerText = 'Error interacting with the model';
-  }
-});
-``

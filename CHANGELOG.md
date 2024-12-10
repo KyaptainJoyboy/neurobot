@@ -1,3 +1,9 @@
+## 2024 - 12 - 10 Released on 2024 - 12 - 11
+- Removed all previous additions and changes made trying to integrate AI.
+    - This integration takes a lot more than I initially thought, and I don't want to keep adding to this list with things that aren't working. 
+    This will revisited in the future when I have more time.
+- Small changes to a few functions
+
 ## 2024 - 12 - 9
 - Made animations on some pages global
     - All selectors use the same animation, unless stated otherwise.

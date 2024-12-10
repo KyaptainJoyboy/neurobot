@@ -316,38 +316,27 @@ function toggleContainer(button) {
   container.style.display = (container.style.display === 'block') ? 'none' : 'block'; // Toggle visibility
 }
 
-// Voice Assistant Button and AI Integration
-const VoiceButton = getElementById('voiceAssistant');
-const responseElement = document.getElementById('response');
+// AI Input
+document.getElementById('queryForm').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  
+  const query = document.getElementById('userQuery').value;
+  const responseDiv = document.getElementById('response');
 
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-const recognition = new SpeechRecognition();
+  try {
+      const response = await fetch('/ask-query', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ query }),
+      });
 
-recognition.onstart = () => {
-    console.log('Voice recognition started...');
-};
-
-recognition.onresult = (event) => {
-    const userQuery = event.results[0][0].transcript;
-    console.log('User Query:', userQuery);
-
-    fetch('/query', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: userQuery }),
-    })
-    .then(res => res.json())
-    .then(data => {
-        responseElement.innerText = data.response;
-        speak(data.response);
-    })
-    .catch(err => console.error('Error:', err));
-};
-
-button.addEventListener('click', () => recognition.start());
-
-function speak(text) {
-    const synth = window.speechSynthesis;
-    const utterance = new SpeechSynthesisUtterance(text);
-    synth.speak(utterance);
-}
+      const data = await response.json();
+      responseDiv.innerText = `Assistant: ${data.reply}`; // Adjust based on the response structure
+  } catch (error) {
+      console.error('Error:', error);
+      responseDiv.innerText = 'Error interacting with the model';
+  }
+});
+``

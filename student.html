@@ -25,10 +25,12 @@
     <div class="container">
         <div class="grid-container-voice">
             <div class="grid-container-item">
-                <h2>Voice Powered Assistant</h2>
+                <h2>Artificial Assistant</h2>
                 <p>Try out our personal voice assistant to help you out!</p>
-                <p id="transcription">Click the button!</p>
-                <button class="btn" id="voiceAssistant">Talk!</button>
+                <form id="queryForm">
+                    <input type="text" id="userQuery" placeholder="Ask me something!" required>
+                </form>
+                <button type="submit" class="btn">Ask!</button>
                 <div id="response"></div>
             </div>
         </div>

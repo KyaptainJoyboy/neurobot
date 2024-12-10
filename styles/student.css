@@ -1,4 +1,4 @@
-/* -----------------
+ /* -----------------
 Student Support Styling
 ----------------- */
 
@@ -92,6 +92,46 @@ body.student .grid-container {
     grid-template-columns: repeat(4, 1fr);
     gap:  20px;
     overflow: visible;
+}
+
+/* -----------------
+Daily Challenge Styling
+----------------- */
+
+#daily-challenge {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#daily-challenge .btn {
+    margin-bottom: 10px;
+}
+
+#challenge-text {
+    font-size: 18px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Challenge Display Container */
+.challenge-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.challenge-box {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 body.student .grid-container-voice {

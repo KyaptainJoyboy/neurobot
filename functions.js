@@ -267,10 +267,82 @@ function clearJournal() {
 
 // --- Initialization ---
 document.addEventListener("DOMContentLoaded", () => {
+  // Function to generate a new daily challenge
+  function wellnessQuest() {
+    console.log("wellnessQuest function called");
+    const challenges = [
+      "Take a 10-minute walk outside.",
+      "Practice deep breathing for 5 minutes.",
+      "Write down three things you are grateful for.",
+      "Call a friend or family member.",
+      "Read a chapter of a book.",
+      "Do a 10-minute yoga session.",
+      "Drink a glass of water.",
+      "Meditate for 10 minutes.",
+      "Write a positive affirmation.",
+      "Do a random act of kindness."
+    ];
+
+    const randomIndex = Math.floor(Math.random() * challenges.length);
+    const newChallenge = challenges[randomIndex];
+    const challengeTextElement = document.getElementById('challenge-text');
+    if (challengeTextElement) {
+      console.log("challenge-text element found in the DOM");
+      challengeTextElement.innerText = newChallenge;
+    } else {
+      console.error("challenge-text element not found in the DOM");
+    }
+  }
+
+  // Event listener for the wellness quest button
+  const wellnessQuestBtn = document.getElementById('wellness-quest-btn');
+  if (wellnessQuestBtn) {
+    console.log("wellness-quest-btn found in the DOM");
+    wellnessQuestBtn.addEventListener('click', wellnessQuest);
+  } else {
+    console.error("wellness-quest-btn not found in the DOM");
+  }
+
+  // Event listener for the new challenge button
+  const newChallengeBtn = document.getElementById('new-challenge-btn');
+  if (newChallengeBtn) {
+    console.log("new-challenge-btn found in the DOM");
+    newChallengeBtn.addEventListener('click', generateNewChallenge);
+  } else {
+    console.error("new-challenge-btn not found in the DOM");
+  }
+
   userData = loadUserData();
   renderMoodGraph();
   console.log("Website initialized with User Data", userData);
 });
+
+// Function to generate a new daily challenge
+function generateNewChallenge() {
+    console.log("generateNewChallenge function called");
+    const challenges = [
+        "Take a 10-minute walk outside.",
+        "Practice deep breathing for 5 minutes.",
+        "Write down three things you are grateful for.",
+        "Call a friend or family member.",
+        "Read a chapter of a book.",
+        "Do a 10-minute yoga session.",
+        "Drink a glass of water.",
+        "Meditate for 10 minutes.",
+        "Write a positive affirmation.",
+        "Do a random act of kindness."
+    ];
+
+    const randomIndex = Math.floor(Math.random() * challenges.length);
+    const newChallenge = challenges[randomIndex];
+    const challengeDisplayElement = document.getElementById('challenge-display');
+    if (challengeDisplayElement) {
+        console.log("challenge-display element found in the DOM");
+        challengeDisplayElement.innerText = newChallenge;
+    } else {
+        console.error("challenge-display element not found in the DOM");
+    }
+}
 
 // --- Breathing Exercise Functions ---
 function startBreathingExercise() {

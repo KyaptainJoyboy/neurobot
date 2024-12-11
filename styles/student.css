@@ -251,9 +251,7 @@ Button Styling
 Custom Time Input Styling
 ----------------- */
 
-.grid-container-item .custom-time-input {
-    display: inline-block;
-    width: max-content;
+#custom-time-input{
     padding: 10px;
     border: 2px solid #FFC107;
     border-radius: 10px;
@@ -274,7 +272,7 @@ Custom Time Input Styling
 Button and Dropdown Styling
 ----------------- */
 
-.grid-container-item .dropbtn, .overlay-btn {
+.grid-container-item .dropbtn {
     gap: 10px;
     width: 100%;
     display: inline-block;
@@ -291,7 +289,7 @@ Button and Dropdown Styling
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.grid-container-item .dropbtn:hover, .overlay-btn:hover {
+.grid-container-item .dropbtn:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
@@ -335,7 +333,7 @@ Timer Styling
 }
 
 #custom-time-input {
-    width: 95%;
+    width: 92%;
 }
 
 #timer {

@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAULI AID : Student</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="styles/globalstyles.css">
     <link rel="stylesheet" href="styles/student.css">
     <script src="functions.js"></script>
     <script src="animations.js" defer></script>
 </head>
+
 <body class="student">
     <header>
         <h1>PAULI AID</h1>
@@ -26,48 +28,16 @@
     <div class="container">
         <div class="grid-container-voice">
             <div class="grid-container-item">
-                <h2>Artificial Assistant</h2>
-                <p>Try out our personal voice assistant to help you out!</p>
-                <form id="queryForm">
-                    <input type="text" id="userQuery" placeholder="Ask me something!" required>
-                </form>
-                <button type="submit" class="btn">Ask!</button>
-                <div id="response"></div>
+                <h2>Student Support</h2>
+                <p>Try out all of our features!</p>
+                <p>This page is designed to include all the features to make sure your learning journey stays healthy.</p>
             </div>
         </div>
     </div>
 
     <div class="container">
-        <h2>Student Support</h2>
-        <p>Or would you like specific features?</p>
+        <h2>Mental Health Support</h2>
         <div class="grid-container">
-            <div class="grid-container-item">
-                <span class="info-icon" data-tooltip="Track your mood daily to monitor emotional changes and patterns.">ℹ</span>
-                <h2>Daily Mood Tracker</h2>
-                <p>How are you feeling today?</p>
-                <div class="mood-btn-group">
-                    <button class="mood-btn" onclick="addMood('Very Happy')">😄</button>
-                    <button class="mood-btn" onclick="addMood('Happy')">🙂</button>
-                    <button class="mood-btn" onclick="addMood('Neutral')">😐</button>
-                    <button class="mood-btn" onclick="addMood('Sad')">🙁</button>
-                    <button class="mood-btn" onclick="addMood('Very Sad')">😢</button>
-                </div>
-            </div>
-            <div class="grid-container-item">
-                <span class="info-icon" data-tooltip="Relax your body and mind with guided breathing techniques.">ℹ</span>
-                <h2>
-                    Breathing Exercises
-                </h2>
-                <p>Let's take a moment to relax!</p>
-                <div id="breathing-circle"></div>
-                <div id="breathing-text">
-                    <p>Click to start!</p>
-                </div>
-                <div class="btn-group">
-                    <button class="btn" onclick="startBreathingExercise()">Start Exercise!</button>
-                    <button class="btn" onclick="resetBreathingExercise()">Reset Exercise!</button>
-                </div>
-            </div>
             <div class="grid-container-item">
                 <span class="info-icon" data-tooltip="Learn strategies to handle stress effectively and regain calm.">ℹ</span>
                 <h2>
@@ -86,51 +56,23 @@
                 <div class="btn-group">
                     <button onclick="toggleContainer(this)" class="dropbtn">Articles</button>
                     <div class="dropdown-content">
-                        <h2>Stress Management: How to Reduce, Prevent, and Cope with Stress</h2>
+                        <h3>Stress Management: How to Reduce, Prevent, and Cope with Stress</h3>
                         <a href="https://www.apa.org/topics/stress" target="_blank" rel="noopener noreferrer">This article offers evidence-based strategies such as exercising, relaxing, connecting with others, managing time, and practicing mindfulness. It provides practical tips that anyone can incorporate into their daily routine to help manage stress.</a>
-                        <h2>Stress Management Skills</h2>
+                        <h3>Stress Management Skills</h3>
                         <a href="https://mcpress.mayoclinic.org/mental-health/stress-management-skills-7-low-and-no-cost-strategies-to-feel-better/">This article offers evidence-based strategies such as exercising, relaxing, connecting with others, managing time, and practicing mindfulness. It provides practical tips that anyone can incorporate into their daily routine to help manage stress.</a>
                     </div>
                 </div>
                 <div class="btn-group">
                     <button onclick="toggleContainer(this)" class="dropbtn">Tips</button>
                     <div class="dropdown-content">
-                        <h2>Take a walk!</h2>
+                        <h3>Take a walk!</h3>
                         <p>Physical movement, even something as simple as a walk, can significantly reduce stress. It helps you disconnect from stressful situations, gives you a change of scenery, and allows your mind to reset. Whether it's a short stroll or a longer walk in a park, this can help rejuvenate your body and mind.</p>
-                        <h2>Connect with Others</h2>
+                        <h3>Connect with Others</h3>
                         <p>Reaching out to a friend or family member can be incredibly beneficial when you're feeling stressed. Social interaction can offer support, provide a mental distraction, and help you put your problems into perspective. Even just talking to someone you trust can reduce stress levels significantly.</p>
                     </div>
                 </div>
             </div>
-<div class="grid-container-item">
-    <span class="info-icon" data-tooltip="Plan and prioritize your self-care activities to stay balanced.">ℹ</span>
-    <h2>
-        Self-Care Scheduler
-    </h2>
-    <p>Make sure to take breaks!</p>
-    <div id="timer-container">
-        <div id="timer-display">25:00</div>
-        <div>
-            <input type="number" id="custom-time-input" class="custom-time-input" placeholder="Custom Time (minutes)" min="1" max="120">
-        </div>
-        <div class="btn-group">
-            <button onclick="startSelfCareTimer()" class="btn">Start</button>
-            <button onclick="resetTimer()" class="btn">Reset</button>
-            <button onclick="stopTimer()" class="btn">Stop</button>
-        </div>
-    </div>
-</div>
-            <div class="grid-container-item">
-                <span class="info-icon" data-tooltip="Reflect on your day and express your thoughts in a safe space.">ℹ</span>
-                <h2>
-                    Journal
-                </h2>
-                <p>Let's reflect!</p>
-                <div class="btn-group">
-                    <button onclick="addJournalEntry()" class="btn">New Journal Entry</button>
-                    <button onclick="viewJournal()" class="btn">View Journal Entries</button>
-                </div>
-            </div>
+
             <div class="grid-container-item">
                 <span class="info-icon" data-tooltip="Find peace with guided meditations designed to ease your mind.">ℹ</span>
                 <h2>
@@ -148,34 +90,193 @@
                     <button id="meditationButton" onclick="startMeditationTimer()" class="btn">Start Timer</button>
                 </div>
             </div>
+
             <div class="grid-container-item">
-                <span class="info-icon" data-tooltip="Access helpful tools and articles for better mental health.">ℹ</span>
+                <span class="info-icon" data-tooltip="Relax your body and mind with guided breathing techniques.">ℹ</span>
                 <h2>
-                    Resources
+                    Breathing Exercises
                 </h2>
-                <p>Knowledge is power!</p>
+                <p>Let's take a moment to relax!</p>
+                <div id="breathing-circle"></div>
+                <div id="breathing-text">
+                    <p>Click to start!</p>
+                </div>
+                <div class="btn-group">
+                    <button class="btn" onclick="startBreathingExercise()">Start Exercise!</button>
+                    <button class="btn" onclick="resetBreathingExercise()">Reset Exercise!</button>
+                </div>
             </div>
-<div class="grid-container-item">
-    <span class="info-icon" data-tooltip="Engage in fun, actionable tasks to boost your overall well-being.">ℹ</span>
-    <h2>
-        Wellness Quests
-    </h2>
-    <p>Your path to balance!</p>
-    <div class="challenge-container">
-        <div id="challenge-display" class="challenge-box"></div>
+            
+            <div class="grid-container-item">
+                <span class="info-icon" data-tooltip="Relax your body and mind with guided breathing techniques.">ℹ</span>
+                <h2>
+                    Mood Boosting Games
+                </h2>
+                <p>It's time to play!</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="daily-challenge">
-        <button id="new-challenge-btn" class="btn">New Challenge</button>
-        <p id="challenge-text">Click the button to get a new daily challenge!</p>
-    </div>
-</div>
+
+    <div class="container">
+        <h2>Emotional Well-being</h2>
+        <div class="grid-container">
+            <div class="grid-container-item">
+                <span class="info-icon" data-tooltip="Track your mood daily to monitor emotional changes and patterns.">ℹ</span>
+                <h2>Daily Mood Tracker</h2>
+                <p>How are you feeling today?</p>
+                <div class="mood-btn-group">
+                    <button class="mood-btn" onclick="addMood('Very Happy')">😄</button>
+                    <button class="mood-btn" onclick="addMood('Happy')">🙂</button>
+                    <button class="mood-btn" onclick="addMood('Neutral')">😐</button>
+                    <button class="mood-btn" onclick="addMood('Sad')">🙁</button>
+                    <button class="mood-btn" onclick="addMood('Very Sad')">😢</button>
+                </div>
+            </div>
+
             <div class="grid-container-item">
                 <span class="info-icon" data-tooltip="Build confidence with daily positive reminders and statements.">ℹ</span>
                 <h2>
                     Affirmations
                 </h2>
                 <p>Uplift your day!</p>
+                <div class="text-container">
+                    <p id="affirmation-display">Affirmations appear here.</p>
+                </div>
+                <div class="btn-group">
+                    <button class="btn" onclick="showNewAffirmation()">Affirmation!</button>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Self-care and Personal Growth</h2>
+        <div class="grid-container">
+            <div class="grid-container-item">
+                <span class="info-icon" data-tooltip="Plan and prioritize your self-care activities to stay balanced.">ℹ</span>
+                <h2>
+                    Self-Care Scheduler
+                </h2>
+                <p>Make sure to take breaks!</p>
+                <div id="timer-container">
+                    <div id="timer-display">25:00</div>
+                    <div class="self-care-timer">
+                        <input type="number" id="custom-time-input" class="custom-time-input" placeholder="Custom Time (minutes)" min="1" max="120">
+                    </div>
+                    <div class="btn-group">
+                        <button onclick="startSelfCareTimer()" class="btn">Start</button>
+                        <button onclick="resetTimer()" class="btn">Reset</button>
+                        <button onclick="stopTimer()" class="btn">Stop</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-container-item">
+                <span class="info-icon" data-tooltip="Engage in fun, actionable tasks to boost your overall well-being.">ℹ</span>
+                <h2>
+                    Wellness Quests
+                </h2>
+                <p>Your path to balance!</p>
+                <div class="text-container">
+                    <p id="challenge-display">Your challenge will appear here.</p>
+                </div>
+                <div id="daily-challenge">
+                    <div class="btn-group">
+                        <button id="new-challenge-btn" class="btn">New Challenge</button>
+                    </div>
+                    <p id="challenge-text">Click the button to get a new daily challenge!</p>
+                </div>
+            </div>
+
+            <div class="grid-container-item">
+                <span class="info-icon" data-tooltip="A list of radios for relaxation.">ℹ</span>
+                <h2>Mood Boost Music</h2>
+                <p>Relax to the beat!</p>
+                <div class="btn-group">
+                    <button onclick="toggleContainer(this)" class="btn">Lo-fi Radio</button>
+                    <div class="dropdown-content">
+                        <h3>Lo-fi Radio</h3>
+                        <a href="https://chillhop.com/radio/#" target="_blank" rel="noopener noreferrer">Chillhop Music is the leading platform and label in lofi hip hop and jazzy hip hop. The best and chillest beats for working, studying and relaxing.</a>
+                    </div>
+                    <button onclick="toggleContainer(this)" class="btn">Ambient Rain</button>
+                    <div class="dropdown-content">
+                        <h3>Ambient Rain</h3>
+                        <a href="https://www.rainymood.com/" target="_blank" rel="noopener noreferrer">Welcome to Rainy Mood, the internet's most popular rain experience. Millions of people use Rainy Mood while sleeping, studying, and relaxing.</a>
+                    </div>
+                    <button onclick="toggleContainer(this)" class="btn">Coding Cat</button>
+                    <div class="dropdown-content">
+                        <h3>Coding Cat</h3>
+                        <a href="https://hostrider.com/" target="_blank" rel="noopener noreferrer">Coding Cat is Nyan's Cat Cousin, and a Lofi Radio to relax.</a>
+                    </div>
+                    <button onclick="toggleContainer(this)" class="btn">Other Radios</button>
+                    <div class="dropdown-content">
+                        <h3>Halo Radio</h3>
+                        <a href="https://halome.nu/" target="_blank" rel="noopener noreferrer">HaloMe is a radio that plays Halo's Menu Screen music.</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-container-item">
+                <span class="info-icon" data-tooltip="Note the things that make you happy.">ℹ</span>
+                <h2>Reflection Questions</h2>
+                <p>Tip: Use the Journal!</p>
+                <div class="text-container">
+                    <p id="reflection-display">Press the button!</p>
+                </div>
+                <div class="btn-group">
+                    <button class="btn" onclick="ReflectionQuestion()">New Question</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Reflection and Creativity</h2>
+        <div class="grid-container">
+            <div class="grid-container-item">
+                <span class="info-icon" data-tooltip="Reflect on your day and express your thoughts in a safe space.">ℹ</span>
+                <h2>
+                    Journal
+                </h2>
+                <p>Let's reflect!</p>
+                <div class="btn-group">
+                    <button onclick="addJournalEntry()" class="btn">New Journal Entry</button>
+                    <button onclick="viewJournal()" class="btn">View Journal Entries</button>
+                </div>
+            </div>
+
+            <div class="grid-container-item">
+                <span class="info-icon" data-tooltip="Save quotes that intrigued you.">ℹ</span>
+                <h2>
+                    Quotes
+                </h2>
+                <p>Got a cool quote?</p>
+                <div class="btn-group">
+                    <button onclick="addQuoteEntry()" class="btn">New Quote Entry</button>
+                    <button onclick="viewQuotes()" class="btn">View Quote Entries</button>
+                </div>
+            </div>
+
+            <div class="grid-container-item">
+                <span class="info-icon" data-tooltip="Save quotes that intrigued you.">ℹ</span>
+                <h2>
+                    Creative Prompts
+                </h2>
+                <p>Make something cool!</p>
+                <div class="btn-group">
+                    <div class="text-container">
+                        <p id="prompt">Click the button to generate a prompt!</p>
+                    </div>
+                    <button onclick="generatePrompt()" class="btn">Generate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Knowledge and Skill Development</h2>
+        <div class="grid-container">
             <div class="grid-container-item">
                 <span class="info-icon" data-tooltip="Explore lessons and tips to improve mental and emotional resilience.">ℹ</span>
                 <h2>
@@ -185,5 +286,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>

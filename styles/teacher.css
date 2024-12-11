@@ -63,7 +63,7 @@ body.teacher .container {
     background-color: var(--background-color);
     border-radius: 10px;
     width: 95%;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

@@ -8,6 +8,24 @@ const affirmations = [
   "Every day is a new opportunity to grow and be better.",
   "You are stronger than you think."
 ];
+
+const questions = [
+  "What did you accomplish today?",
+  "What are you looking forward to tomorrow?",
+  "What did you learn today?",
+  "What are you grateful for today?",
+  "What can you improve on tomorrow?",
+  "What are your goals for the next week?",
+  "What are your long-term goals?",
+  "What are some things you're proud of?",
+  "What are some things you're looking forward to?",
+  "What are some things you're worried about?"
+];
+
+const creativeProducts = ["video", "poem", "story", "haiku", "drawing", "comic strip", "song", "photograph"];
+const themes = ["trees", "dragons", "nature", "friendship", "adventure", "the moon", "memories", "magic", "oceans", "mysteries"];
+const styles = ["funny", "heartfelt", "serious", "whimsical", "dramatic", "uplifting", "nostalgic", "playful"];
+
 let breathCount = 0;
 let moodChart = null;
 
@@ -16,14 +34,15 @@ const defaultUserData = {
   username: "Guest",
   moodTracker: [],
   journal: [],
+  quotes: [],
 };
-
-let userData = loadUserData();
 
 if (!localStorage.getItem("userData")) {
   localStorage.setItem("userData", JSON.stringify(defaultUserData));
   console.log("Default user data initialized.");
 }
+
+let userData = loadUserData();
 
 function loadUserData() {
   try {
@@ -32,7 +51,7 @@ function loadUserData() {
     if (storedUserData) {
       const parsedData = JSON.parse(storedUserData);
       console.log("User data successfully loaded:", parsedData);
-      return parsedData;
+      return {...userData, ...parsedData };
     } else {
       console.log("No existing user data found. Using default.");
       return { ...defaultUserData };
@@ -81,6 +100,7 @@ function resetAccount() {
   }
 }
 
+// --- Daily Mood Tracking Function ---
 function addMood(mood) {
   const today = new Date().toISOString().split("T")[0];
   const moodTracker = userData.moodTracker;
@@ -142,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Website initialized with User Data", userData);
 });
 
-// --- Mood Tracker Functions ---
+// --- Mood Tracker Simulation Functions ---
 function simulateMoodPatternForPastDates(mood, days = 5) {
   const today = new Date();
   const todayString = today.toISOString().split("T")[0]; // Current date as a string
@@ -239,6 +259,48 @@ function showNewAffirmation() {
   affirmationDisplay.textContent = randomAffirmation;
 }
 
+// --- Reflection Question Feature ---
+function ReflectionQuestion() {
+  const reflectionDisplay = document.getElementById('reflection-display');
+  const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
+  reflectionDisplay.textContent = randomQuestion;
+}
+
+// --- Creative Prompt Generator ---
+function generatePrompt() {
+  const product = creativeProducts[Math.floor(Math.random() * creativeProducts.length)];
+  const theme = themes[Math.floor(Math.random() * themes.length)];
+  const style = styles[Math.floor(Math.random() * styles.length)];
+
+  const prompt = `Make a ${style} ${product} about ${theme}.`;
+  document.getElementById("prompt").innerText = prompt;
+}
+
+// --- Quote Functions ---
+function addQuoteEntry() {
+  const entry = prompt("Write your quote:");
+  if (entry) {
+    if (!userData || !Array.isArray(userData.quotes)) {
+      console.error("userData or userData.quotes is not defined");
+      return;
+    }
+
+    userData.quotes.push({ date: new Date().toISOString(), entry });
+    console.log("Current userData before saving:", userData);
+    localStorage.setItem("userData", JSON.stringify(userData));
+    alert("Quote saved!");
+  }
+}
+
+
+function viewQuotes() {
+  if (userData.quotes.length > 0) {
+    alert(userData.quotes.map(q => `${q.date.split("T")[0]}: ${q.entry}`).join("\n"));
+  } else {
+    alert("No quotes yet.");
+  }
+}
+
 // --- Journal Functions ---
 function addJournalEntry() {
   const entry = prompt("Write your journal entry:");
@@ -265,6 +327,14 @@ function clearJournal() {
   }
 }
 
+function clearQuotes() {
+  if (confirm("Are you sure you want to clear all quote entries?")) {
+    userData.quotes = [];
+    localStorage.setItem("userData", JSON.stringify(userData));
+    alert("Quotes cleared!");
+  }
+}
+
 // --- Initialization ---
 document.addEventListener("DOMContentLoaded", () => {
   // Function to generate a new daily challenge
@@ -285,7 +355,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const randomIndex = Math.floor(Math.random() * challenges.length);
     const newChallenge = challenges[randomIndex];
-    const challengeTextElement = document.getElementById('challenge-text');
+    const challengeTextElement = document.getElementById('challenge-display');
     if (challengeTextElement) {
       console.log("challenge-text element found in the DOM");
       challengeTextElement.innerText = newChallenge;
@@ -307,7 +377,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const newChallengeBtn = document.getElementById('new-challenge-btn');
   if (newChallengeBtn) {
     console.log("new-challenge-btn found in the DOM");
-    newChallengeBtn.addEventListener('click', generateNewChallenge);
+    newChallengeBtn.addEventListener('click', wellnessQuest);
   } else {
     console.error("new-challenge-btn not found in the DOM");
   }

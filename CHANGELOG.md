@@ -1,3 +1,12 @@
+## 2024 - 12 - 12
+- Separated features into their own sections based on general function
+    - Better code readability, and looks better on the website too.
+- Added Initial Implementation of Teacher Support Features
+    - Currently very barebones, will continue working on these.
+- Several new features added to Student Support
+    - Mood Boost Music, Reflection Questions, Quotes, Creative Prompts
+- Other improvements
+
 ## 2024 - 12 - 10 Released on 2024 - 12 - 11
 - Removed all previous additions and changes made trying to integrate AI.
     - This integration takes a lot more than I initially thought, and I don't want to keep adding to this list with things that aren't working. 

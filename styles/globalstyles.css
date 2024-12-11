@@ -200,6 +200,7 @@ Button Styling
 /* -----------------
 Info Icons and Tooltips
 ----------------- */
+
 .info-icon {
     position: absolute;
     top: 10px;
@@ -260,4 +261,21 @@ Embeds Styling
     height: 400px;
     border: none;
     border-radius: 10px;
+}
+
+/* -----------------
+Text Container Styling
+----------------- */
+
+.text-container {
+    background-color: var(--primary-light);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.text-container p {
+    font-family: 'Comfortaa', sans-serif;
 }

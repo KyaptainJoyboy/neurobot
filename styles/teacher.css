@@ -265,3 +265,21 @@ Button and Dropdown Styling
 .grid-container .btn-group a:hover {
     color: aqua;
 }
+
+#breathing-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+}
+
+.breathing {
+    animation: breathe 4s ease-in-out infinite;
+}
+
+#breathing-text {
+    margin-top: 10px;
+    color: var(--primary-color);
+    text-align: center;
+}

@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="styles/globalstyles.css">
     <link rel="stylesheet" href="styles/teacher.css">
+    <div class="chatbox-container"></div>
+    
+    <script src="chatbox.js" defer></script>
+    <script src="animations.js" defer></script>
     <script src="functions.js"></script>
     <script src="chatbox.js" defer></script>
     <script src="animations.js" defer></script>
@@ -115,7 +119,6 @@
                     <button id="meditationButton" onclick="startMeditationTimer()" class="btn">Start Timer</button>
                 </div>
             </div>
-
             <div class="grid-container-item">
                 <span class="info-icon"
                     data-tooltip="Relax your body and mind with guided breathing techniques.">ℹ</span>
@@ -123,7 +126,7 @@
                     Breathing Exercises
                 </h2>
                 <p>Let's take a moment to relax!</p>
-                <div id="breathing-circle"></div>
+                <div id="breathing-circle" class="breathing"></div>
                 <div id="breathing-text">
                     <p>Click to start!</p>
                 </div>
@@ -132,7 +135,6 @@
                     <button class="btn" onclick="resetBreathingExercise()">Reset Exercise!</button>
                 </div>
             </div>
-        </div>
     </div>
 
     <div class="container">

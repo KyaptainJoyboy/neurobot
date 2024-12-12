@@ -7,23 +7,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="styles/globalstyles.css">
     <link rel="stylesheet" href="styles/teacher.css">
-<script src="functions.js"></script>
-<script src="chatbox.js" defer></script>
+    <script src="functions.js"></script>
+    <script src="chatbox.js" defer></script>
     <script src="animations.js" defer></script>
 </head>
 <body class="teacher">
     <header>
         <h1>PAULI AID</h1>
     </header>
-<nav class="nav-bar">
-    <a href="home.html">Home</a>
-    <a href="student.html">Student Support</a>
-    <a href="teacher.html" class="active">Teacher Support</a>
-    <a href="wiki.html">Health Wiki</a>
-    <a href="about.html">About</a>
-    <a href="account.html">Account</a>
-    <a href="web_meet.html">Web Meet</a>
-</nav>
+    <nav class="nav-bar">
+        <a href="home.html">Home</a>
+        <a href="student.html">Student Support</a>
+        <a href="teacher.html" class="active">Teacher Support</a>
+        <a href="wiki.html">Health Wiki</a>
+        <a href="about.html">About</a>
+        <a href="account.html">Account</a>
+        <a href="web_meet.html">Web Meet</a>
+    </nav>
 
     <div class="container">
         <div class="grid-container-item">
@@ -34,135 +34,83 @@
     </div>
 
     <div class="container">
-        <h2>Professional Development</h2>
+        <h2>Mental Health Support</h2>
         <div class="grid-container">
             <div class="grid-container-item">
-                <span class="info-icon" data-tooltip="Resources to help with your teaching.">ℹ</span>
+                <span class="info-icon" data-tooltip="Learn strategies to handle stress effectively and regain calm.">ℹ</span>
                 <h2>
-                    Interactive Workshops
+                    Stress Management
                 </h2>
-                <p>Teachers also learn!</p>
+                <p>Learn about Stress Management!</p>
                 <div class="btn-group">
-                    <!-- National Education Association -->
-                    <button onclick="toggleContainer(this)" class="dropbtn">National Education Association</button>
+                    <button onclick="toggleContainer(this)" class="dropbtn">Videos</button>
                     <div class="dropdown-content">
-                        <h3>National Education Association</h3>
-                        <a href="https://www.nea.org/" target="_blank" rel="noopener noreferrer">The National Education Association (NEA) offer a variety of professional development opportunities, including webinars and workshops.</a>
+                        <h3>Science of Stress</h3>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/a4opDJOCEKA?si=qNl32E36gCBBryeU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h3>Dealing with Stress</h3>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/sTpo1FuYQ9I?si=yB03L4UvcGlw_lCB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
-                    <!-- American Society for Curriculum and Development -->
-                    <button onclick="toggleContainer(this)" class="dropbtn">American Society for Curriculum and Development</button>
+                </div>
+                <div class="btn-group">
+                    <button onclick="toggleContainer(this)" class="dropbtn">Articles</button>
                     <div class="dropdown-content">
-                        <h3>American Society for Curriculum and Development</h3>
-                        <a href="https://www.ascd.org/" target="_blank" rel="noopener noreferrer">The American Society for Curriculum and Development (ASCD) features workshops, conferences, and online courses for educators.</a>
+                        <h3>Stress Management: How to Reduce, Prevent, and Cope with Stress</h3>
+                        <a href="https://www.apa.org/topics/stress" target="_blank" rel="noopener noreferrer">This article offers evidence-based strategies such as exercising, relaxing, connecting with others, managing time, and practicing mindfulness. It provides practical tips that anyone can incorporate into their daily routine to help manage stress.</a>
+                        <h3>Stress Management Skills</h3>
+                        <a href="https://mcpress.mayoclinic.org/mental-health/stress-management-skills-7-low-and-no-cost-strategies-to-feel-better/">This article offers evidence-based strategies such as exercising, relaxing, connecting with others, managing time, and practicing mindfulness. It provides practical tips that anyone can incorporate into their daily routine to help manage stress.</a>
                     </div>
-                    <!-- American Federation of Teachers -->
-                    <button onclick="toggleContainer(this)" class="dropbtn">American Federation of Teachers</button>
+                </div>
+                <div class="btn-group">
+                    <button onclick="toggleContainer(this)" class="dropbtn">Tips</button>
                     <div class="dropdown-content">
-                        <h3>American Federation of Teachers</h3>
-                        <a href="https://www.aft.org/" target="_blank" rel="noopener noreferrer">The American Federation of Teachers (AFT) have a dedicated section for professional development and offer resources for both members and non-members.</a>
-                    </div>
-                    <!-- Subject Specific Websites -->
-                    <!-- English -->
-                    <button onclick="toggleContainer(this)" class="dropbtn">Subject Specific</button>
-                    <div class="dropdown-content">
-                        <h3>English</h3>
-                        <a href="https://www.ncte.org/" target="_blank" rel="noopener noreferrer">The National Council of Teachers of English (NCTE) offers workshops, conferences, and online resources specifically for English language arts teachers.</a>
-                        <h3>Science</h3>
-                        <a href="https://www.nsta.org/" target="_blank" rel="noopener noreferrer">The National Science Teachers Association offers workshops, conferences, and webinars specifically for Science.</a>
-                        <h3>Mathematics</h3>
-                        <a href="https://www.nctm.org/" target="_blank" rel="noopener noreferrer">The National Council of Teachers of Mathematics offers resources specifically for teaching Mathematics.</a>
+                        <h3>Take a walk!</h3>
+                        <p>Physical movement, even something as simple as a walk, can significantly reduce stress. It helps you disconnect from stressful situations, gives you a change of scenery, and allows your mind to reset. Whether it's a short stroll or a longer walk in a park, this can help rejuvenate your body and mind.</p>
+                        <h3>Connect with Others</h3>
+                        <p>Reaching out to a friend or family member can be incredibly beneficial when you're feeling stressed. Social interaction can offer support, provide a mental distraction, and help you put your problems into perspective. Even just talking to someone you trust can reduce stress levels significantly.</p>
                     </div>
                 </div>
             </div>
-    
+
             <div class="grid-container-item">
-                <span class="info-icon" data-tooltip="Free resources for teachers.">ℹ</span>
+                <span class="info-icon" data-tooltip="Find peace with guided meditations designed to ease your mind.">ℹ</span>
                 <h2>
-                    Resource Libraries
+                    Meditation
                 </h2>
-                <p>Resources for teachers, by teachers!</p>
+                <p>Stay on track!</p>
                 <div class="btn-group">
-                    <button onclick="toggleContainer(this)" class="dropbtn">CommonLit</button>
+                    <button onclick="toggleContainer(this)" class="dropbtn">Guide</button>
                     <div class="dropdown-content">
-                        <h3>CommonLit</h3>
-                        <a href="https://www.commonlit.org/en" target="_blank" rel="noopener noreferrer">CommonLit offers a free collection of reading passages and instructional materials for grades 3-12.</a>
+                        <h2>How to meditate?</h2>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/inpok4MKVLM?si=2Oe8fPiPmEp7_bvJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
-                    <button onclick="toggleContainer(this)" class="dropbtn">Khan Academy</button>
-                    <div class="dropdown-content">
-                        <h3>Khan Academy</h3>
-                        <a href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">Khan Academy provides free educational resources, including videos, exercises, and lessons on a wide range of subjects.</a>
-                    </div>
-                    <button onclick="toggleContainer(this)" class="dropbtn">CK-12 Foundation</button>
-                    <div class="dropdown-content">
-                        <h3>CK-12 Foundation/h3>
-                        <a href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">CK-12 Foundation offers free educational content, including textbooks, simulations, and interactive activities.</a>
-                    </div>
-                    <button onclick="toggleContainer(this)" class="dropbtn">ReadWorks</button>
-                    <div class="dropdown-content">
-                        <h3>ReadWorks</h3>
-                        <a href="https://www.readworks.org/" target="_blank" rel="noopener noreferrer">ReadWorks provides free reading comprehension resources for K-12 teachers.</a>
-                    </div>
+                </div>
+                <div id="timer" class="btn-group">
+                    <button id="meditationButton" onclick="startMeditationTimer()" class="btn">Start Timer</button>
                 </div>
             </div>
-    
+
             <div class="grid-container-item">
-                <span class="info-icon" data-tooltip="Connect with other teachers.">ℹ</span>
+                <span class="info-icon" data-tooltip="Relax your body and mind with guided breathing techniques.">ℹ</span>
                 <h2>
-                    P2P Mentorship
+                    Breathing Exercises
                 </h2>
-                <p>Learn from other teachers!</p>
+                <p>Let's take a moment to relax!</p>
+                <div id="breathing-circle"></div>
+                <div id="breathing-text">
+                    <p>Click to start!</p>
+                </div>
                 <div class="btn-group">
-                    <button onclick="toggleContainer(this)" class="dropbtn">TeachersConnect</button>
-                    <div class="dropdown-content">
-                        <h3>TeachersConnect</h3>
-                        <a href="https://www.teachersconnect.com/" target="_blank" rel="noopener noreferrer">TeachersConnect is a platform designed specifically for teacher mentorship, allowing educators to connect, ask questions, and share advice.</a>
-                    </div>
-                    <button onclick="toggleContainer(this)" class="dropbtn">Edutopia</button>
-                    <div class="dropdown-content">
-                        <h3>Edutopia</h3>
-                        <a href="https://www.edutopia.org/" target="_blank" rel="noopener noreferrer">Edutopia offers a community section where teachers can connect, share resources, and discuss educational strategies.</a>
-                    </div>
-                    <button onclick="toggleContainer(this)" class="dropbtn">BetterLesson</button>
-                    <div class="dropdown-content">
-                        <h3>BetterLesson</h3>
-                        <a href="https://www.edutopia.org/" target="_blank" rel="noopener noreferrer">Edutopia offers a community section where teachers can connect, share resources, and discuss educational strategies.</a>
-                    </div>
-                    <button onclick="toggleContainer(this)" class="dropbtn">Teacher2Teacher</button>
-                    <div class="dropdown-content">
-                        <h3>Teacher2Teacher</h3>
-                        <a href="https://www.edutopia.org/" target="_blank" rel="noopener noreferrer">Teacher2Teacher is a A community by the U.S. Department of Education that connects teachers for collaboration and support.</a>
-                    </div>
+                    <button class="btn" onclick="startBreathingExercise()">Start Exercise!</button>
+                    <button class="btn" onclick="resetBreathingExercise()">Reset Exercise!</button>
                 </div>
             </div>
-    
+            
             <div class="grid-container-item">
-                <span class="info-icon" data-tooltip="Strategies to help you make your learning more effective.">ℹ</span>
+                <span class="info-icon" data-tooltip="Relax your body and mind with guided breathing techniques.">ℹ</span>
                 <h2>
-                    Teaching Strategies
+                    Mood Boosting Games
                 </h2>
-                <p>Teachers also learn!</p>
-                <div class="btn-group">
-                    <button onclick="toggleContainer(this)" class="dropbtn">Reading Rockets</button>
-                    <div class="dropdown-content">
-                        <h3>Reading Rockets</h3>
-                        <a href="https://www.readingrockets.org/" target="_blank" rel="noopener noreferrer">Reading Rockets focuses on reading and literacy strategies, offering articles, videos, and classroom resources.</a>
-                    </div>
-                    <button onclick="toggleContainer(this)" class="dropbtn">TeachThought</button>
-                    <div class="dropdown-content">
-                        <h3>TeachThought</h3>
-                        <a href="https://www.readingrockets.org/" target="_blank" rel="noopener noreferrer">TeachThought provides innovative teaching strategies, lesson plans, and resources for educators.</a>
-                    </div>
-                    <button onclick="toggleContainer(this)" class="dropbtn">MindShift</button>
-                    <div class="dropdown-content">
-                        <h3>MindShift</h3>
-                        <a href="https://www.readingrockets.org/" target="_blank" rel="noopener noreferrer">MindShift is a blog by KQED that focuses on innovative teaching strategies and educational technology.</a>
-                    </div>
-                    <button onclick="toggleContainer(this)" class="dropbtn">Educational Leadership</button>
-                    <div class="dropdown-content">
-                        <h3>Educational Leadership</h3>
-                        <a href="https://www.readingrockets.org/" target="_blank" rel="noopener noreferrer">Education Leadership is a magazine by ASCD that offers articles on effective teaching strategies and educational leadership.</a>
-                    </div>
-                </div>
+                <p>It's time to play!</p>
             </div>
         </div>
     </div>
@@ -197,18 +145,134 @@
                 </div>
             </div>
     
-<div class="grid-container-item">
-    <span class="info-icon" data-tooltip="Finish on time.">ℹ</span>
-    <h2>
-        Classroom Activity Timer
-    </h2>
-    <p>A timer for your activities.</p>
-</div>
+            <div class="grid-container-item">
+                <span class="info-icon" data-tooltip="Finish on time.">ℹ</span>
+                <h2>
+                    Classroom Activity Timer
+                </h2>
+                <p>A timer for your activities.</p>
+            </div>
         </div>
     </div>
 
     <div class="container">
-        <h2>Stress Management</h2>
+        <h2>Mental Health Support</h2>
+        <div class="grid-container">
+            <div class="grid-container-item">
+                <span class="info-icon" data-tooltip="Learn strategies to handle stress effectively and regain calm.">ℹ</span>
+                <h2>
+                    Stress Management
+                </h2>
+                <p>Learn about Stress Management!</p>
+                <div class="btn-group">
+                    <button onclick="toggleContainer(this)" class="dropbtn">Videos</button>
+                    <div class="dropdown-content">
+                        <h3>Science of Stress</h3>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/a4opDJOCEKA?si=qNl32E36gCBBryeU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h3>Dealing with Stress</h3>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/sTpo1FuYQ9I?si=yB03L4UvcGlw_lCB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button onclick="toggleContainer(this)" class="dropbtn">Articles</button>
+                    <div class="dropdown-content">
+                        <h3>Stress Management: How to Reduce, Prevent, and Cope with Stress</h3>
+                        <a href="https://www.apa.org/topics/stress" target="_blank" rel="noopener noreferrer">This article offers evidence-based strategies such as exercising, relaxing, connecting with others, managing time, and practicing mindfulness. It provides practical tips that anyone can incorporate into their daily routine to help manage stress.</a>
+                        <h3>Stress Management Skills</h3>
+                        <a href="https://mcpress.mayoclinic.org/mental-health/stress-management-skills-7-low-and-no-cost-strategies-to-feel-better/">This article offers evidence-based strategies such as exercising, relaxing, connecting with others, managing time, and practicing mindfulness. It provides practical tips that anyone can incorporate into their daily routine to help manage stress.</a>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button onclick="toggleContainer(this)" class="dropbtn">Tips</button>
+                    <div class="dropdown-content">
+                        <h3>Take a walk!</h3>
+                        <p>Physical movement, even something as simple as a walk, can significantly reduce stress. It helps you disconnect from stressful situations, gives you a change of scenery, and allows your mind to reset. Whether it's a short stroll or a longer walk in a park, this can help rejuvenate your body and mind.</p>
+                        <h3>Connect with Others</h3>
+                        <p>Reaching out to a friend or family member can be incredibly beneficial when you're feeling stressed. Social interaction can offer support, provide a mental distraction, and help you put your problems into perspective. Even just talking to someone you trust can reduce stress levels significantly.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-container-item">
+                <span class="info-icon" data-tooltip="Find peace with guided meditations designed to ease your mind.">ℹ</span>
+                <h2>
+                    Meditation
+                </h2>
+                <p>Stay on track!</p>
+                <div class="btn-group">
+                    <button onclick="toggleContainer(this)" class="dropbtn">Guide</button>
+                    <div class="dropdown-content">
+                        <h2>How to meditate?</h2>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/inpok4MKVLM?si=2Oe8fPiPmEp7_bvJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div id="timer" class="btn-group">
+                    <button id="meditationButton" onclick="startMeditationTimer()" class="btn">Start Timer</button>
+                </div>
+            </div>
+            <div class="grid-container-item">
+                <span class="info-icon" data-tooltip="Relax your body and mind with guided breathing techniques.">ℹ</span>
+                <h2>
+                    Breathing Exercises
+                </h2>
+                <p>Let's take a moment to relax!</p>
+                <div id="breathing-circle"></div>
+                <div id="breathing-text">
+                    <p>Click to start!</p>
+                </div>
+                <div class="btn-group">
+                    <button class="btn" onclick="startBreathingExercise()">Start Exercise!</button>
+                    <button class="btn" onclick="resetBreathingExercise()">Reset Exercise!</button>
+                </div>
+            </div>
+            <div class="grid-container-item">
+                <span class="info-icon" data-tooltip="Relax your body and mind with guided breathing techniques.">ℹ</span>
+                <h2>
+                    Mood Boosting Games
+                </h2>
+                <p>It's time to play!</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Professional Development</h2>
+        <div class="grid-container-item">
+            <span class="info-icon" data-tooltip="Resources to help with your teaching.">ℹ</span>
+            <h2>
+                Interactive Workshops
+            </h2>
+            <p>Teachers also learn!</p>
+            <div class="btn-group">
+                <!-- National Education Association -->
+                <button onclick="toggleContainer(this)" class="dropbtn">National Education Association</button>
+                <div class="dropdown-content">
+                    <h3>National Education Association</h3>
+                    <a href="https://www.nea.org/" target="_blank" rel="noopener noreferrer">The National Education Association (NEA) offer a variety of professional development opportunities, including webinars and workshops.</a>
+                </div>
+                <!-- American Society for Curriculum and Development -->
+                <button onclick="toggleContainer(this)" class="dropbtn">American Society for Curriculum and Development</button>
+                <div class="dropdown-content">
+                    <h3>American Society for Curriculum and Development</h3>
+                    <a href="https://www.ascd.org/" target="_blank" rel="noopener noreferrer">The American Society for Curriculum and Development (ASCD) features workshops, conferences, and online courses for educators.</a>
+                </div>
+                <!-- American Federation of Teachers -->
+                <button onclick="toggleContainer(this)" class="dropbtn">American Federation of Teachers</button>
+                <div class="dropdown-content">
+                    <h3>American Federation of Teachers</h3>
+                    <a href="https://www.aft.org/" target="_blank" rel="noopener noreferrer">The American Federation of Teachers (AFT) have a dedicated section for professional development and offer resources for both members and non-members.</a>
+                </div>
+                <!-- Subject Specific Websites -->
+                <!-- English -->
+                <button onclick="toggleContainer(this)" class="dropbtn">Subject Specific</button>
+                <div class="dropdown-content">
+                    <h3>English</h3>
+                    <a href="https://www.ncte.org/" target="_blank" rel="noopener noreferrer">The National Council of Teachers of English (NCTE) offers workshops, conferences, and online resources specifically for English language arts teachers.</a>
+                    <h3>Science</h3>
+                    <a href="https://www.nsta.org/" target="_blank" rel="noopener noreferrer">The National Science Teachers Association offers workshops, conferences, and webinars specifically for Science.</a>
+                    <h3>Mathematics</h3>
+                    <a href="https://www.nctm.org/" target="_blank" rel="noopener noreferrer">The National Council of Teachers of Mathematics offers resources specifically for teaching Mathematics.</a>
+                </div>
+            </div>
+        </div>
         <div class="grid-container">
             <div class="grid-container-item">
                 <span class="info-icon" data-tooltip="Missions to help you relax.">ℹ</span>

@@ -126,11 +126,35 @@
                 <h2>Daily Mood Tracker</h2>
                 <p>How are you feeling today?</p>
                 <div class="mood-btn-group">
-                    <button class="mood-btn" onclick="addMood('Very Happy')">😄</button>
-                    <button class="mood-btn" onclick="addMood('Happy')">🙂</button>
-                    <button class="mood-btn" onclick="addMood('Neutral')">😐</button>
-                    <button class="mood-btn" onclick="addMood('Sad')">🙁</button>
-                    <button class="mood-btn" onclick="addMood('Very Sad')">😢</button>
+                    <button class="mood-btn" onclick="handleMood('Very Happy')">😄</button>
+                    <button class="mood-btn" onclick="handleMood('Happy')">🙂</button>
+                    <button class="mood-btn" onclick="handleMood('Neutral')">😐</button>
+                    <button class="mood-btn" onclick="handleMood('Sad')">🙁</button>
+                    <button class="mood-btn" onclick="handleMood('Very Sad')">😢</button>
+
+<script>
+    function handleMood(mood) {
+        let message = "";
+        switch (mood) {
+            case 'Very Happy':
+                message = "That's fantastic! Keep spreading the joy! Consider sharing your happiness with others. You might enjoy the Wellness Quests to keep the positivity going!";
+                break;
+            case 'Happy':
+                message = "Great to hear! Why not treat yourself to something nice today? Check out the Mood Boosting Games for some fun!";
+                break;
+            case 'Neutral':
+                message = "It's okay to feel neutral. Maybe try a new activity or hobby to uplift your mood. The Self-Care Scheduler can help you plan some relaxing activities.";
+                break;
+            case 'Sad':
+                message = "I'm sorry to hear that. Remember, it's okay to feel sad. Consider talking to someone you trust. You might find comfort in the Meditation section.";
+                break;
+            case 'Very Sad':
+                message = "It's tough to feel this way. Please reach out for support or take some time for self-care. The Reflection Questions can help you process your feelings.";
+                break;
+        }
+        alert(message);
+    }
+</script>
                 </div>
             </div>
 

@@ -56,7 +56,14 @@ function addMessage(sender, message) {
 }
 
 function getBotResponse(userMessage) {
-    const botResponses = [
+    const isTeacher = document.querySelector('body').classList.contains('teacher'); // Check if in teacher context
+
+    const botResponses = isTeacher ? [
+        "As a teacher, it's important to engage with your students. How can I assist you in your teaching today?",
+        "Have you considered using the lesson planning tools available? They can help streamline your workflow.",
+        "It's great to see you here! Are you looking for resources to enhance your teaching methods?",
+        "Remember, you can track student progress using the features available in this platform."
+    ] : [
         "I'm here to listen. How can I help you today?",
         "It's great to talk to you. What's on your mind?",
         "Sometimes just talking about things can make them feel better. How are you feeling right now?",
@@ -79,27 +86,14 @@ function getBotResponse(userMessage) {
         "It's important to take a moment for yourself. How are you feeling today?"
     ];
 
-    const mentalHealthResponses = [
+    const mentalHealthResponses = isTeacher ? [
+        "I'm really sorry to hear that you're struggling. It's important to take care of yourself. Have you tried any of the features on this page? You can try the meditation or breathing exercises to help you relax.",
+        "As a teacher, it's crucial to manage your mental health. Have you considered using the wellness resources available for educators?",
+        "It's okay to feel overwhelmed. Remember to take breaks and utilize the support features designed for teachers."
+    ] : [
         "I'm really sorry to hear that you're struggling. It's important to take care of yourself. Have you tried any of the features on this page? You can try the meditation or breathing exercises to help you relax.",
         "I'm here for you. If you're feeling overwhelmed, you might find the mood tracker or the journal helpful. They can help you monitor your feelings and reflect on your day.",
-        "It's okay to feel this way. The mood boosting games and the wellness quests can be a fun way to lift your spirits. You might also find the reflection questions and the journal useful.",
-        "I'm here to support you. If you're feeling down, the mood boosting music and the breathing exercises can be really helpful. You can also try the journal to express your thoughts.",
-        "I understand that you're feeling anxious. The guided meditations and breathing exercises on this page can be very soothing. You might also find the mood tracker and journal helpful for tracking your feelings.",
-        "I'm here to support you. If you're feeling depressed, the mood boosting music and the breathing exercises can be really helpful. You can also try the journal to express your thoughts.",
-        "It's important to take care of yourself. The mood boosting games and the wellness quests can be a fun way to lift your spirits. You might also find the reflection questions and the journal useful.",
-        "I'm here for you. If you're feeling overwhelmed, the guided meditations and breathing exercises can be very soothing. You might also find the mood tracker and journal helpful for tracking your feelings.",
-        "I understand that you're feeling anxious. The mood boosting music and the breathing exercises can be very helpful. You can also try the journal to express your thoughts.",
-        "I'm here to support you. If you're feeling depressed, the mood boosting games and the wellness quests can be a fun way to lift your spirits. You might also find the reflection questions and the journal useful.",
-        "It's important to take care of yourself. The guided meditations and breathing exercises can be very soothing. You might also find the mood tracker and journal helpful for tracking your feelings.",
-        "I'm here for you. If you're feeling overwhelmed, the mood boosting music and the breathing exercises can be really helpful. You can also try the journal to express your thoughts.",
-        "I understand that you're feeling anxious. The mood boosting games and the wellness quests can be a fun way to lift your spirits. You might also find the reflection questions and the journal useful.",
-        "I'm here to support you. If you're feeling depressed, the guided meditations and breathing exercises can be very soothing. You might also find the mood tracker and journal helpful for tracking your feelings.",
-        "It's important to take care of yourself. The mood boosting music and the breathing exercises can be very helpful. You can also try the journal to express your thoughts.",
-        "I'm here for you. If you're feeling overwhelmed, the mood boosting games and the wellness quests can be a fun way to lift your spirits. You might also find the reflection questions and the journal useful.",
-        "I understand that you're feeling anxious. The guided meditations and breathing exercises can be very soothing. You might also find the mood tracker and journal helpful for tracking your feelings.",
-        "I'm here to support you. If you're feeling depressed, the mood boosting music and the breathing exercises can be really helpful. You can also try the journal to express your thoughts.",
-        "It's important to take care of yourself. The mood boosting games and the wellness quests can be a fun way to lift your spirits. You might also find the reflection questions and the journal useful.",
-        "I'm here for you. If you're feeling overwhelmed, the guided meditations and breathing exercises can be very soothing. You might also find the mood tracker and journal helpful for tracking your feelings."
+        "It's okay to feel this way. The mood boosting games and the wellness quests can be a fun way to lift your spirits. You might also find the reflection questions and the journal useful."
     ];
 
     if (userMessage.toLowerCase().includes('struggling') || userMessage.toLowerCase().includes('mental health') || userMessage.toLowerCase().includes('overwhelmed') || userMessage.toLowerCase().includes('sad') || userMessage.toLowerCase().includes('feeling down') || userMessage.toLowerCase().includes('anxiety') || userMessage.toLowerCase().includes('depression')) {

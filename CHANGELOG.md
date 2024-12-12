@@ -1,4 +1,8 @@
 ## 2024 - 12 - 12
+- Added Floating Chatbox
+    - Very primitive, will improve in the fturu
+
+## 2024 - 12 - 12
 - Separated features into their own sections based on general function
     - Better code readability, and looks better on the website too.
 - Added Initial Implementation of Teacher Support Features

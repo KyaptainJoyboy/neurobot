@@ -22,12 +22,93 @@ const questions = [
   "What are some things you're worried about?"
 ];
 
+const icebreakerGames = [
+  {
+      "name": "Two Truths and a Lie",
+      "description": "Each person shares three statements about themselves—two true and one false. The group discusses and guesses which statement is the lie.",
+      "instructions": "1. Each participant thinks of two true facts about themselves and one false fact. 2. Participants share their three statements with the group. 3. The group discusses and guesses which statement is the lie. 4. The participant reveals the lie."
+  },
+  {
+      "name": "Who Am I?",
+      "description": "Each person writes a famous person's name on a sticky note and places it on their forehead without seeing it. They ask yes/no questions to guess their identity.",
+      "instructions": "1. Each participant writes the name of a famous person on a sticky note. 2. Participants place the sticky note on their forehead without looking at it. 3. Participants ask yes/no questions to the group to guess their identity. 4. The group answers the questions until the participant guesses correctly."
+  },
+  {
+      "name": "Would You Rather",
+      "description": "Participants are given two hypothetical scenarios and must choose one. This can be done in pairs or as a group discussion.",
+      "instructions": "1. Prepare a list of 'Would You Rather' questions. 2. Participants choose one of the two scenarios. 3. Discuss the choices and reasons behind them."
+  },
+  {
+      "name": "Human Bingo",
+      "description": "Create bingo cards with various characteristics or experiences. Participants find others who match the characteristics and get their signatures.",
+      "instructions": "1. Create bingo cards with different characteristics or experiences. 2. Participants find others who match the characteristics and get their signatures. 3. The first person to complete a row (horizontally, vertically, or diagonally) shouts 'Bingo!'"
+  },
+  {
+      "name": "Name, Place, Animal, Thing",
+      "description": "Participants think of a name, place, animal, and thing that starts with a specific letter. They share their answers with the group.",
+      "instructions": "1. Choose a letter. 2. Participants think of a name, place, animal, and thing that starts with that letter. 3. Participants share their answers with the group."
+  },
+  {
+      "name": "Line Up",
+      "description": "Participants line up in order based on a specific criterion (e.g., height, birthday) without speaking.",
+      "instructions": "1. Choose a criterion (e.g., height, birthday). 2. Participants line up in order based on the criterion without speaking. 3. Once lined up, participants can introduce themselves to their neighbors."
+  },
+  {
+      "name": "Find Someone Who",
+      "description": "Participants are given a list of characteristics and must find someone who matches each one. They introduce themselves and ask questions to find matches.",
+      "instructions": "1. Create a list of characteristics. 2. Participants find someone who matches each characteristic. 3. Participants introduce themselves and ask questions to find matches."
+  },
+  {
+      "name": "Desert Island",
+      "description": "Participants are asked what three items they would bring to a desert island and why. This can be done in pairs or as a group discussion.",
+      "instructions": "1. Ask participants what three items they would bring to a desert island and why. 2. Discuss the choices and reasons behind them."
+  },
+  {
+      "name": "Alphabet Introduction",
+      "description": "Participants introduce themselves by saying their name and an adjective that starts with the same letter as their name (e.g., 'Jolly Jane').",
+      "instructions": "1. Participants introduce themselves by saying their name and an adjective that starts with the same letter as their name. 2. Participants can also share a fun fact or hobby related to the adjective."
+  },
+  {
+      "name": "Common Ground",
+      "description": "Participants find something they have in common with each person in the group. This can be done in pairs or as a group discussion.",
+      "instructions": "1. Participants find something they have in common with each person in the group. 2. Discuss the commonalities and how they relate to each other."
+  },
+  {
+      "name": "Time Capsule",
+      "description": "Participants imagine they are creating a time capsule to be opened in 50 years. They share what items they would include and why.",
+      "instructions": "1. Ask participants to imagine creating a time capsule to be opened in 50 years. 2. Participants share what items they would include and why. 3. Discuss the choices and reasons behind them."
+  },
+  {
+      "name": "Speed Networking",
+      "description": "Participants have a set amount of time to introduce themselves to as many people as possible. This can be done in pairs or small groups.",
+      "instructions": "1. Set a timer for a specific amount of time (e.g., 2 minutes). 2. Participants introduce themselves to as many people as possible within the time limit. 3. After the time is up, participants can share what they learned about each other."
+  },
+  {
+      "name": "Personal Coat of Arms",
+      "description": "Participants design a personal coat of arms that represents their values, interests, and goals. They share their design with the group.",
+      "instructions": "1. Ask participants to design a personal coat of arms that represents their values, interests, and goals. 2. Participants share their design with the group and explain the significance of each element."
+  },
+  {
+      "name": "Bucket List",
+      "description": "Participants share one item from their bucket list and why it's important to them. This can be done in pairs or as a group discussion.",
+      "instructions": "1. Ask participants to share one item from their bucket list and why it's important to them. 2. Discuss the choices and reasons behind them."
+  },
+  {
+      "name": "Marooned",
+      "description": "Participants are asked to imagine they are marooned on an island with a group of famous people. They must decide who to keep and who to vote off the island.",
+      "instructions": "1. Provide a list of famous people. 2. Participants imagine they are marooned on an island with this group. 3. Participants decide who to keep and who to vote off the island, discussing their reasons."
+  }
+]
+
 const creativeProducts = ["video", "poem", "story", "haiku", "drawing", "comic strip", "song", "photograph"];
 const themes = ["trees", "dragons", "nature", "friendship", "adventure", "the moon", "memories", "magic", "oceans", "mysteries"];
 const styles = ["funny", "heartfelt", "serious", "whimsical", "dramatic", "uplifting", "nostalgic", "playful"];
 
+let studentBehavior = {};
 let breathCount = 0;
 let moodChart = null;
+let timerInterval;
+let remainingTime = 25 * 60; // Default 25 minutes in seconds
 
 // --- User Data Management ---
 const defaultUserData = {
@@ -276,6 +357,14 @@ function generatePrompt() {
   document.getElementById("prompt").innerText = prompt;
 }
 
+// --- Icebreaker Games Generator ---
+function generateRandomGame() {
+  const randomIndex = Math.floor(Math.random() * icebreakerGames.length);
+  const randomGame = icebreakerGames[randomIndex];
+
+  alert(`Game: ${randomGame.name}\n\nDescription: ${randomGame.description}\n\nInstructions: ${randomGame.instructions}`);
+}
+
 // --- Quote Functions ---
 function addQuoteEntry() {
   const entry = prompt("Write your quote:");
@@ -332,6 +421,48 @@ function clearQuotes() {
     userData.quotes = [];
     localStorage.setItem("userData", JSON.stringify(userData));
     alert("Quotes cleared!");
+  }
+}
+
+// Student Behavior Tracking
+function displayStudentBehavior() {
+  // Get the element to display the student behavior
+  let behaviorDisplay = document.getElementById('behavior-display');
+
+  // Clear the existing display
+  behaviorDisplay.innerHTML = '';
+
+  // Loop through the student behavior object and display each student's behavior
+  for (let student in studentBehavior) {
+    let behavior = studentBehavior[student];
+    let studentBehaviorHTML = `
+      <p>Student: ${student}</p>
+      <p>Behavior: ${behavior}</p>
+      <hr>
+    `;
+    behaviorDisplay.innerHTML += studentBehaviorHTML;
+  }
+}
+
+// Add event listener to the submit button
+document.getElementById('submit-button').addEventListener('click', trackStudentBehavior);
+
+function trackStudentBehavior() {
+  let studentName = document.getElementById('student-name').value;
+  let behavior = document.getElementById('behavior').value;
+
+  if (studentName in studentBehavior) {
+    let confirmOverwrite = confirm('Student ${studentName} already exists. Do you want to overwrite?');
+    if (confirmOverwrite) {
+      studentBehavior[studentName] = behavior;
+    } else {
+      studentBehavior[studentName] = behavior;
+    }
+
+    document.getElementById('student-name').value = '';
+    document.getElementById('behavior').value = '';
+
+    displayStudentBehavior();
   }
 }
 
@@ -426,10 +557,6 @@ function resetBreathingExercise() {
 }
 
 // --- Timer Functions ---
-let timerInterval;
-let remainingTime = 25 * 60; // Default 25 minutes in seconds
-
-
 // Function to start Self-care Scheduler Timer
 function startSelfCareTimer() {
     const customTimeInput = document.getElementById('custom-time-input');
@@ -496,6 +623,7 @@ function startMeditationTimer() {
       }
   }, 1000);
 }
+
 
 // --- Dropdown Button Function ---
 function toggleContainer(button) {

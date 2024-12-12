@@ -1,6 +1,9 @@
 ## 2024 - 12 - 12
 - Added Floating Chatbox
-    - Very primitive, will improve in the fturu
+    - Very primitive, will improve in the future
+- Cross-shared some features in both Student Support and Teacher Support
+- Reformatted Everything using VSC's Built-in Formatter
+    - Chesu figured this out today, it's a godsend - chesu
 
 ## 2024 - 12 - 12
 - Separated features into their own sections based on general function

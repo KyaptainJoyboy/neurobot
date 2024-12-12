@@ -22,81 +22,94 @@ const questions = [
   "What are some things you're worried about?"
 ];
 
+const challenges = [
+  "Take a 10-minute walk outside.",
+  "Practice deep breathing for 5 minutes.",
+  "Write down three things you are grateful for.",
+  "Call a friend or family member.",
+  "Read a chapter of a book.",
+  "Do a 10-minute yoga session.",
+  "Drink a glass of water.",
+  "Meditate for 10 minutes.",
+  "Write a positive affirmation.",
+  "Do a random act of kindness."
+];
+
 const icebreakerGames = [
   {
-      "name": "Two Truths and a Lie",
-      "description": "Each person shares three statements about themselves—two true and one false. The group discusses and guesses which statement is the lie.",
-      "instructions": "1. Each participant thinks of two true facts about themselves and one false fact. 2. Participants share their three statements with the group. 3. The group discusses and guesses which statement is the lie. 4. The participant reveals the lie."
+    "name": "Two Truths and a Lie",
+    "description": "Each person shares three statements about themselves—two true and one false. The group discusses and guesses which statement is the lie.",
+    "instructions": "1. Each participant thinks of two true facts about themselves and one false fact. 2. Participants share their three statements with the group. 3. The group discusses and guesses which statement is the lie. 4. The participant reveals the lie."
   },
   {
-      "name": "Who Am I?",
-      "description": "Each person writes a famous person's name on a sticky note and places it on their forehead without seeing it. They ask yes/no questions to guess their identity.",
-      "instructions": "1. Each participant writes the name of a famous person on a sticky note. 2. Participants place the sticky note on their forehead without looking at it. 3. Participants ask yes/no questions to the group to guess their identity. 4. The group answers the questions until the participant guesses correctly."
+    "name": "Who Am I?",
+    "description": "Each person writes a famous person's name on a sticky note and places it on their forehead without seeing it. They ask yes/no questions to guess their identity.",
+    "instructions": "1. Each participant writes the name of a famous person on a sticky note. 2. Participants place the sticky note on their forehead without looking at it. 3. Participants ask yes/no questions to the group to guess their identity. 4. The group answers the questions until the participant guesses correctly."
   },
   {
-      "name": "Would You Rather",
-      "description": "Participants are given two hypothetical scenarios and must choose one. This can be done in pairs or as a group discussion.",
-      "instructions": "1. Prepare a list of 'Would You Rather' questions. 2. Participants choose one of the two scenarios. 3. Discuss the choices and reasons behind them."
+    "name": "Would You Rather",
+    "description": "Participants are given two hypothetical scenarios and must choose one. This can be done in pairs or as a group discussion.",
+    "instructions": "1. Prepare a list of 'Would You Rather' questions. 2. Participants choose one of the two scenarios. 3. Discuss the choices and reasons behind them."
   },
   {
-      "name": "Human Bingo",
-      "description": "Create bingo cards with various characteristics or experiences. Participants find others who match the characteristics and get their signatures.",
-      "instructions": "1. Create bingo cards with different characteristics or experiences. 2. Participants find others who match the characteristics and get their signatures. 3. The first person to complete a row (horizontally, vertically, or diagonally) shouts 'Bingo!'"
+    "name": "Human Bingo",
+    "description": "Create bingo cards with various characteristics or experiences. Participants find others who match the characteristics and get their signatures.",
+    "instructions": "1. Create bingo cards with different characteristics or experiences. 2. Participants find others who match the characteristics and get their signatures. 3. The first person to complete a row (horizontally, vertically, or diagonally) shouts 'Bingo!'"
   },
   {
-      "name": "Name, Place, Animal, Thing",
-      "description": "Participants think of a name, place, animal, and thing that starts with a specific letter. They share their answers with the group.",
-      "instructions": "1. Choose a letter. 2. Participants think of a name, place, animal, and thing that starts with that letter. 3. Participants share their answers with the group."
+    "name": "Name, Place, Animal, Thing",
+    "description": "Participants think of a name, place, animal, and thing that starts with a specific letter. They share their answers with the group.",
+    "instructions": "1. Choose a letter. 2. Participants think of a name, place, animal, and thing that starts with that letter. 3. Participants share their answers with the group."
   },
   {
-      "name": "Line Up",
-      "description": "Participants line up in order based on a specific criterion (e.g., height, birthday) without speaking.",
-      "instructions": "1. Choose a criterion (e.g., height, birthday). 2. Participants line up in order based on the criterion without speaking. 3. Once lined up, participants can introduce themselves to their neighbors."
+    "name": "Line Up",
+    "description": "Participants line up in order based on a specific criterion (e.g., height, birthday) without speaking.",
+    "instructions": "1. Choose a criterion (e.g., height, birthday). 2. Participants line up in order based on the criterion without speaking. 3. Once lined up, participants can introduce themselves to their neighbors."
   },
   {
-      "name": "Find Someone Who",
-      "description": "Participants are given a list of characteristics and must find someone who matches each one. They introduce themselves and ask questions to find matches.",
-      "instructions": "1. Create a list of characteristics. 2. Participants find someone who matches each characteristic. 3. Participants introduce themselves and ask questions to find matches."
+    "name": "Find Someone Who",
+    "description": "Participants are given a list of characteristics and must find someone who matches each one. They introduce themselves and ask questions to find matches.",
+    "instructions": "1. Create a list of characteristics. 2. Participants find someone who matches each characteristic. 3. Participants introduce themselves and ask questions to find matches."
   },
   {
-      "name": "Desert Island",
-      "description": "Participants are asked what three items they would bring to a desert island and why. This can be done in pairs or as a group discussion.",
-      "instructions": "1. Ask participants what three items they would bring to a desert island and why. 2. Discuss the choices and reasons behind them."
+    "name": "Desert Island",
+    "description": "Participants are asked what three items they would bring to a desert island and why. This can be done in pairs or as a group discussion.",
+    "instructions": "1. Ask participants what three items they would bring to a desert island and why. 2. Discuss the choices and reasons behind them."
   },
   {
-      "name": "Alphabet Introduction",
-      "description": "Participants introduce themselves by saying their name and an adjective that starts with the same letter as their name (e.g., 'Jolly Jane').",
-      "instructions": "1. Participants introduce themselves by saying their name and an adjective that starts with the same letter as their name. 2. Participants can also share a fun fact or hobby related to the adjective."
+    "name": "Alphabet Introduction",
+    "description": "Participants introduce themselves by saying their name and an adjective that starts with the same letter as their name (e.g., 'Jolly Jane').",
+    "instructions": "1. Participants introduce themselves by saying their name and an adjective that starts with the same letter as their name. 2. Participants can also share a fun fact or hobby related to the adjective."
   },
   {
-      "name": "Common Ground",
-      "description": "Participants find something they have in common with each person in the group. This can be done in pairs or as a group discussion.",
-      "instructions": "1. Participants find something they have in common with each person in the group. 2. Discuss the commonalities and how they relate to each other."
+    "name": "Common Ground",
+    "description": "Participants find something they have in common with each person in the group. This can be done in pairs or as a group discussion.",
+    "instructions": "1. Participants find something they have in common with each person in the group. 2. Discuss the commonalities and how they relate to each other."
   },
   {
-      "name": "Time Capsule",
-      "description": "Participants imagine they are creating a time capsule to be opened in 50 years. They share what items they would include and why.",
-      "instructions": "1. Ask participants to imagine creating a time capsule to be opened in 50 years. 2. Participants share what items they would include and why. 3. Discuss the choices and reasons behind them."
+    "name": "Time Capsule",
+    "description": "Participants imagine they are creating a time capsule to be opened in 50 years. They share what items they would include and why.",
+    "instructions": "1. Ask participants to imagine creating a time capsule to be opened in 50 years. 2. Participants share what items they would include and why. 3. Discuss the choices and reasons behind them."
   },
   {
-      "name": "Speed Networking",
-      "description": "Participants have a set amount of time to introduce themselves to as many people as possible. This can be done in pairs or small groups.",
-      "instructions": "1. Set a timer for a specific amount of time (e.g., 2 minutes). 2. Participants introduce themselves to as many people as possible within the time limit. 3. After the time is up, participants can share what they learned about each other."
+    "name": "Speed Networking",
+    "description": "Participants have a set amount of time to introduce themselves to as many people as possible. This can be done in pairs or small groups.",
+    "instructions": "1. Set a timer for a specific amount of time (e.g., 2 minutes). 2. Participants introduce themselves to as many people as possible within the time limit. 3. After the time is up, participants can share what they learned about each other."
   },
   {
-      "name": "Personal Coat of Arms",
-      "description": "Participants design a personal coat of arms that represents their values, interests, and goals. They share their design with the group.",
-      "instructions": "1. Ask participants to design a personal coat of arms that represents their values, interests, and goals. 2. Participants share their design with the group and explain the significance of each element."
+    "name": "Personal Coat of Arms",
+    "description": "Participants design a personal coat of arms that represents their values, interests, and goals. They share their design with the group.",
+    "instructions": "1. Ask participants to design a personal coat of arms that represents their values, interests, and goals. 2. Participants share their design with the group and explain the significance of each element."
   },
   {
-      "name": "Bucket List",
-      "description": "Participants share one item from their bucket list and why it's important to them. This can be done in pairs or as a group discussion.",
-      "instructions": "1. Ask participants to share one item from their bucket list and why it's important to them. 2. Discuss the choices and reasons behind them."
+    "name": "Bucket List",
+    "description": "Participants share one item from their bucket list and why it's important to them. This can be done in pairs or as a group discussion.",
+    "instructions": "1. Ask participants to share one item from their bucket list and why it's important to them. 2. Discuss the choices and reasons behind them."
   },
   {
-      "name": "Marooned",
-      "description": "Participants are asked to imagine they are marooned on an island with a group of famous people. They must decide who to keep and who to vote off the island.",
-      "instructions": "1. Provide a list of famous people. 2. Participants imagine they are marooned on an island with this group. 3. Participants decide who to keep and who to vote off the island, discussing their reasons."
+    "name": "Marooned",
+    "description": "Participants are asked to imagine they are marooned on an island with a group of famous people. They must decide who to keep and who to vote off the island.",
+    "instructions": "1. Provide a list of famous people. 2. Participants imagine they are marooned on an island with this group. 3. Participants decide who to keep and who to vote off the island, discussing their reasons."
   }
 ]
 
@@ -132,7 +145,7 @@ function loadUserData() {
     if (storedUserData) {
       const parsedData = JSON.parse(storedUserData);
       console.log("User data successfully loaded:", parsedData);
-      return {...userData, ...parsedData };
+      return { ...userData, ...parsedData };
     } else {
       console.log("No existing user data found. Using default.");
       return { ...defaultUserData };
@@ -217,18 +230,18 @@ document.addEventListener("DOMContentLoaded", () => {
     simulateButton.addEventListener("click", () => {
       const mood = document.getElementById("simulateMood").value; // Get the selected mood
       const days = parseInt(document.getElementById("simulateDays").value, 10); // Get the number of days
-  
+
       if (days < 1 || days > 5) {
         alert("Please enter a valid number of days (1-5).");
         return;
       }
-  
+
       simulateMoodPatternForPastDates(mood, days);
-  
+
       // After simulation, check mood pattern and show message if necessary
       const moodTracker = userData.moodTracker || [];
       checkMoodPattern(moodTracker); // Check for patterns based on updated mood tracker
-  
+
       // Reload user data and render the updated graph
       userData = loadUserData();
       renderMoodGraph();
@@ -271,7 +284,7 @@ function simulateMoodPatternForPastDates(mood, days = 5) {
 
   // Check for patterns after simulation
   checkMoodPattern(simulatedMoodTracker);
-}  
+}
 
 // --- Graph Rendering ---
 function renderMoodGraph() {
@@ -468,130 +481,104 @@ function trackStudentBehavior() {
 
 // --- Initialization ---
 document.addEventListener("DOMContentLoaded", () => {
-  // Function to generate a new daily challenge
-  function wellnessQuest() {
-    console.log("wellnessQuest function called");
-    const challenges = [
-      "Take a 10-minute walk outside.",
-      "Practice deep breathing for 5 minutes.",
-      "Write down three things you are grateful for.",
-      "Call a friend or family member.",
-      "Read a chapter of a book.",
-      "Do a 10-minute yoga session.",
-      "Drink a glass of water.",
-      "Meditate for 10 minutes.",
-      "Write a positive affirmation.",
-      "Do a random act of kindness."
-    ];
+  function displayRandomChallenge() {
+    console.log("displayRandomChallenge function called");
 
     const randomIndex = Math.floor(Math.random() * challenges.length);
     const newChallenge = challenges[randomIndex];
+
     const challengeTextElement = document.getElementById('challenge-display');
     if (challengeTextElement) {
-      console.log("challenge-text element found in the DOM");
+      console.log("challenge-display element found in the DOM");
       challengeTextElement.innerText = newChallenge;
     } else {
-      console.error("challenge-text element not found in the DOM");
+      console.error("challenge-display element not found in the DOM");
     }
   }
 
-  // Event listener for the wellness quest button
-  const wellnessQuestBtn = document.getElementById('wellness-quest-btn');
-  if (wellnessQuestBtn) {
-    console.log("wellness-quest-btn found in the DOM");
-    wellnessQuestBtn.addEventListener('click', wellnessQuest);
-  } else {
-    console.error("wellness-quest-btn not found in the DOM");
-  }
-
-  // Event listener for the new challenge button
-  const newChallengeBtn = document.getElementById('new-challenge-btn');
+  const newchallengeBtn = document.getElementById('new-challenge-btn');
   if (newChallengeBtn) {
-    console.log("new-challenge-btn found in the DOM");
-    newChallengeBtn.addEventListener('click', wellnessQuest);
+    console.log('Challenge button found in the DOM')
+    newChallengeBtn.addEventListener('click', displayRandomChallenge);
   } else {
-    console.error("new-challenge-btn not found in the DOM");
+    console.error('Challenge button not found in the DOM')
   }
-
-  userData = loadUserData();
-  renderMoodGraph();
-  console.log("Website initialized with User Data", userData);
 });
 
 // --- Breathing Exercise Functions ---
 function startBreathingExercise() {
-    const breathingCircle = document.getElementById('breathing-circle');
-    const breathingText = document.getElementById('breathing-text');
-    
-    // Start the breathing animation
-    breathingCircle.classList.add('breathing');
-    breathingText.textContent = 'Inhale...';
-    // Start breathing cycle
-    loopBreathingCycle(breathingCircle, breathingText);
+  const breathingCircle = document.getElementById('breathing-circle');
+  const breathingText = document.getElementById('breathing-text');
+
+  // Start the breathing animation
+  breathingCircle.classList.add('breathing');
+  breathingText.textContent = 'Inhale...';
+  // Start breathing cycle
+  loopBreathingCycle(breathingCircle, breathingText);
 }
 function loopBreathingCycle(breathingCircle, breathingText) {
+  setTimeout(() => {
+    breathingText.textContent = 'Exhale...';
     setTimeout(() => {
-        breathingText.textContent = 'Exhale...';
+      breathCount++;
+      if (breathCount < 5) {
+        breathingText.textContent = 'Inhale...';
+        loopBreathingCycle(breathingCircle, breathingText);
+      } else {
+        breathingCircle.classList.remove('breathing');
+        breathingText.textContent = 'Great Job! Take a short break.';
+        breathCount = 0;
         setTimeout(() => {
-            breathCount++;
-            if (breathCount < 5) {
-                breathingText.textContent = 'Inhale...';
-                loopBreathingCycle(breathingCircle, breathingText);
-            } else {
-                breathingCircle.classList.remove('breathing');
-                breathingText.textContent = 'Great Job! Take a short break.';
-                breathCount = 0;
-                setTimeout(() => {
-                    breathingText.textContent = 'Click to start';
-                }, 3000);
-            }
-        }, 2000);
+          breathingText.textContent = 'Click to start';
+        }, 3000);
+      }
     }, 2000);
+  }, 2000);
 }
 function resetBreathingExercise() {
-    const breathingCircle = document.getElementById('breathing-circle');
-    const breathingText = document.getElementById('breathing-text');
-    
-    breathingCircle.classList.remove('breathing');
-    breathingText.textContent = 'Click to start';
+  const breathingCircle = document.getElementById('breathing-circle');
+  const breathingText = document.getElementById('breathing-text');
+
+  breathingCircle.classList.remove('breathing');
+  breathingText.textContent = 'Click to start';
 }
 
 // --- Timer Functions ---
 // Function to start Self-care Scheduler Timer
 function startSelfCareTimer() {
-    const customTimeInput = document.getElementById('custom-time-input');
-    if (customTimeInput.value) {
-        remainingTime = parseInt(customTimeInput.value, 10) * 60; // Convert minutes to seconds
+  const customTimeInput = document.getElementById('custom-time-input');
+  if (customTimeInput.value) {
+    remainingTime = parseInt(customTimeInput.value, 10) * 60; // Convert minutes to seconds
+  }
+  if (timerInterval) return; // Prevent multiple intervals
+  document.getElementById('timer-display').innerText = formatTime(remainingTime);
+  timerInterval = setInterval(() => {
+    if (remainingTime > 0) {
+      remainingTime--;
+      document.getElementById('timer-display').innerText = formatTime(remainingTime);
+    } else {
+      stopTimer();
     }
-    if (timerInterval) return; // Prevent multiple intervals
-    document.getElementById('timer-display').innerText = formatTime(remainingTime);
-    timerInterval = setInterval(() => {
-        if (remainingTime > 0) {
-            remainingTime--;
-            document.getElementById('timer-display').innerText = formatTime(remainingTime);
-        } else {
-            stopTimer();
-        }
-    }, 1000);
+  }, 1000);
 }
 
 function resetTimer() {
-    clearInterval(timerInterval);
-    timerInterval = null;
-    remainingTime = 25 * 60; // Reset to 25 minutes
-    document.getElementById('timer-display').innerText = formatTime(remainingTime);
-    document.getElementById('custom-time-input').value = ''; // Clear the custom time input
+  clearInterval(timerInterval);
+  timerInterval = null;
+  remainingTime = 25 * 60; // Reset to 25 minutes
+  document.getElementById('timer-display').innerText = formatTime(remainingTime);
+  document.getElementById('custom-time-input').value = ''; // Clear the custom time input
 }
 
 function stopTimer() {
-    clearInterval(timerInterval);
-    timerInterval = null;
+  clearInterval(timerInterval);
+  timerInterval = null;
 }
 
 function formatTime(seconds) {
-    const minutes = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${minutes < 10 ? '0' : ''}${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+  const minutes = Math.floor(seconds / 60);
+  const secs = seconds % 60;
+  return `${minutes < 10 ? '0' : ''}${minutes}:${secs < 10 ? '0' : ''}${secs}`;
 }
 
 // Function to start Meditation Timer
@@ -608,19 +595,19 @@ function startMeditationTimer() {
   timerButton.innerText = formatTime(remainingTime);
 
   const timerInterval = setInterval(() => {
-      remainingTime--;
+    remainingTime--;
 
-      // Update the button text during the countdown
-      timerButton.innerText = formatTime(remainingTime);
+    // Update the button text during the countdown
+    timerButton.innerText = formatTime(remainingTime);
 
-      if (remainingTime <= 0) {
-          clearInterval(timerInterval);
+    if (remainingTime <= 0) {
+      clearInterval(timerInterval);
 
-          // Reset button after the timer ends
-          timerButton.innerText = 'Start Meditation';
-          timerButton.disabled = false;
-          timerButton.classList.remove('disabled');
-      }
+      // Reset button after the timer ends
+      timerButton.innerText = 'Start Meditation';
+      timerButton.disabled = false;
+      timerButton.classList.remove('disabled');
+    }
   }, 1000);
 }
 

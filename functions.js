@@ -1,4 +1,3 @@
-// --- Global Variables ---
 const affirmations = [
   "You are capable of amazing things.",
   "Believe in yourself and all that you are.",
@@ -457,6 +456,26 @@ function displayStudentBehavior() {
   }
 }
 
+// ---- Wellness Quest ---
+
+function displayRandomChallenge() {
+    const challenges = [
+        "Take a 10-minute walk outside.",
+        "Practice deep breathing for 5 minutes.",
+        "Write down three things you are grateful for.",
+        "Call a friend or family member.",
+        "Read a chapter of a book.",
+        "Do a 10-minute yoga session.",
+        "Drink a glass of water.",
+        "Meditate for 10 minutes.",
+        "Write a positive affirmation.",
+        "Do a random act of kindness."
+    ];
+
+    const randomChallenge = challenges[Math.floor(Math.random() * challenges.length)];
+    document.getElementById("challenge-display").textContent = randomChallenge;
+}
+
 // Add event listener to the submit button
 document.getElementById('submit-button').addEventListener('click', trackStudentBehavior);
 
@@ -481,27 +500,12 @@ function trackStudentBehavior() {
 
 // --- Initialization ---
 document.addEventListener("DOMContentLoaded", () => {
-  function displayRandomChallenge() {
-    console.log("displayRandomChallenge function called");
-
-    const randomIndex = Math.floor(Math.random() * challenges.length);
-    const newChallenge = challenges[randomIndex];
-
-    const challengeTextElement = document.getElementById('challenge-display');
-    if (challengeTextElement) {
-      console.log("challenge-display element found in the DOM");
-      challengeTextElement.innerText = newChallenge;
-    } else {
-      console.error("challenge-display element not found in the DOM");
-    }
-  }
-
-  const newchallengeBtn = document.getElementById('new-challenge-btn');
+  const newChallengeBtn = document.getElementById('new-challenge-btn');
   if (newChallengeBtn) {
-    console.log('Challenge button found in the DOM')
+    console.log('Challenge button found in the DOM');
     newChallengeBtn.addEventListener('click', displayRandomChallenge);
   } else {
-    console.error('Challenge button not found in the DOM')
+    console.error('Challenge button not found in the DOM');
   }
 });
 

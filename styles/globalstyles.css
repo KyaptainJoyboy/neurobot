@@ -6,46 +6,80 @@ Global Styling
 Global Colors
 ----------------- */
 :root {
-    --primary-color: #4CAF50; /* Original green */
-    --secondary-color: #2196F3; /* Original blue */
-    --accent-color: #FFC107; /* Original yellow */
-    --background-color: #F0F4F8; /* Soft light gray */
-    --text-color: #333; /* Dark text color */
+    --primary-color: #4CAF50;
+    /* Original green */
+    --secondary-color: #2196F3;
+    /* Original blue */
+    --accent-color: #FFC107;
+    /* Original yellow */
+    --background-color: #F0F4F8;
+    /* Soft light gray */
+    --text-color: #333;
+    /* Dark text color */
 
     /* New colors */
-    --primary-light: #81C784; /* Light green for softer tones */
-    --primary-dark: #388E3C; /* Darker green for depth */
-    --secondary-light: #64B5F6; /* Light blue for a calmer feel */
-    --secondary-dark: #1565C0; /* Darker blue for contrast */
-    --accent-light: #FFEB3B; /* Lighter yellow for gentler highlights */
-    --accent-dark: #FFA000; /* Darker yellow for emphasis */
-    --background-light: #FFFFFF; /* White for a clean, minimal look */
-    --background-dark: #E0E0E0; /* Light gray for alternative backgrounds */
-    --text-light: #555555; /* Softer text color for ease on eyes */
-    --error-color: #F44336; /* Modern red for error messages */
-    --success-color: #8BC34A; /* Fresh green for success indicators */
-    --warning-color: #FF9800; /* Modern orange for warnings */
+    --primary-light: #81C784;
+    /* Light green for softer tones */
+    --primary-dark: #388E3C;
+    /* Darker green for depth */
+    --secondary-light: #64B5F6;
+    /* Light blue for a calmer feel */
+    --secondary-dark: #1565C0;
+    /* Darker blue for contrast */
+    --accent-light: #FFEB3B;
+    /* Lighter yellow for gentler highlights */
+    --accent-dark: #FFA000;
+    /* Darker yellow for emphasis */
+    --background-light: #FFFFFF;
+    /* White for a clean, minimal look */
+    --background-dark: #E0E0E0;
+    /* Light gray for alternative backgrounds */
+    --text-light: #555555;
+    /* Softer text color for ease on eyes */
+    --error-color: #F44336;
+    /* Modern red for error messages */
+    --success-color: #8BC34A;
+    /* Fresh green for success indicators */
+    --warning-color: #FF9800;
+    /* Modern orange for warnings */
 
     /* Modern greys */
-    --grey-lightest: #FAFAFA; /* Very light grey for subtle backgrounds */
-    --grey-lighter: #E0E0E0; /* Light grey for borders or dividers */
-    --grey-light: #BDBDBD; /* Soft grey for background sections */
-    --grey: #9E9E9E; /* Neutral mid-tone grey for general use */
-    --grey-dark: #616161; /* Dark grey for less prominent text or accents */
-    --grey-darker: #424242; /* Darker grey for deep accents or header text */
-    --grey-darkest: #212121; /* Almost black grey for high contrast elements */
+    --grey-lightest: #FAFAFA;
+    /* Very light grey for subtle backgrounds */
+    --grey-lighter: #E0E0E0;
+    /* Light grey for borders or dividers */
+    --grey-light: #BDBDBD;
+    /* Soft grey for background sections */
+    --grey: #9E9E9E;
+    /* Neutral mid-tone grey for general use */
+    --grey-dark: #616161;
+    /* Dark grey for less prominent text or accents */
+    --grey-darker: #424242;
+    /* Darker grey for deep accents or header text */
+    --grey-darkest: #212121;
+    /* Almost black grey for high contrast elements */
 
     /* Background colors */
-    --bg-primary-light: #d1ead0; /* Very light greenish white for a soft, almost white look */
-    --bg-primary-dark: #cbf1cd; /* Soft, muted green close to a pale mint for a subtle dark contrast */
-    --bg-secondary-light: #E3F2FD; /* Light blue for a serene, peaceful look */
-    --bg-secondary-dark: #BBDEFB; /* Slightly darker blue for areas needing focus */
-    --bg-accent-light: #FFF8E1; /* Light yellow for warmth without overwhelming */
-    --bg-accent-dark: #FFECB3; /* Darker yellow for sections needing more emphasis */
-    --bg-neutral-light: #F5F5F5; /* A very soft light grey for neutral sections */
-    --bg-neutral-dark: #E1E1E1; /* Slightly darker grey for quiet background areas */
-    --bg-soft-dark: #D6D6D6; /* Soft mid-grey for subtle background blocks */
-    --bg-darkest: #C1C1C1; /* Darker grey for deeper background contrasts */
+    --bg-primary-light: #d1ead0;
+    /* Very light greenish white for a soft, almost white look */
+    --bg-primary-dark: #cbf1cd;
+    /* Soft, muted green close to a pale mint for a subtle dark contrast */
+    --bg-secondary-light: #E3F2FD;
+    /* Light blue for a serene, peaceful look */
+    --bg-secondary-dark: #BBDEFB;
+    /* Slightly darker blue for areas needing focus */
+    --bg-accent-light: #FFF8E1;
+    /* Light yellow for warmth without overwhelming */
+    --bg-accent-dark: #FFECB3;
+    /* Darker yellow for sections needing more emphasis */
+    --bg-neutral-light: #F5F5F5;
+    /* A very soft light grey for neutral sections */
+    --bg-neutral-dark: #E1E1E1;
+    /* Slightly darker grey for quiet background areas */
+    --bg-soft-dark: #D6D6D6;
+    /* Soft mid-grey for subtle background blocks */
+    --bg-darkest: #C1C1C1;
+    /* Darker grey for deeper background contrasts */
 }
 
 /* -----------------
@@ -56,6 +90,7 @@ Global Animations
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -67,6 +102,7 @@ Global Animations
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -78,6 +114,7 @@ Global Animations
         opacity: 0;
         transform: translateX(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -89,6 +126,7 @@ Global Animations
         opacity: 0;
         transform: translateX(10px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -133,7 +171,10 @@ Navigation Bar Styling
     transform: scale(1.1);
 }
 
-.nav-bar, .nav-bar a, .nav-bar a.active, .nav-bar a:hover {
+.nav-bar,
+.nav-bar a,
+.nav-bar a.active,
+.nav-bar a:hover {
     font-family: Helvetica, sans-serif;
 }
 

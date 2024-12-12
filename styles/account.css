@@ -28,7 +28,7 @@ Header Styling
 
 .account h1 {
     text-align: center;
-    font-size: 24px;    
+    font-size: 24px;
     animation: global-slide-down 0.65s ease-in-out;
 }
 
@@ -80,7 +80,7 @@ body.account .grid-container {
     display: grid;
     grid-auto-rows: max-content 1fr;
     grid-template-columns: repeat(3, 1fr);
-    gap:  20px;
+    gap: 20px;
     overflow: visible;
 }
 
@@ -88,7 +88,7 @@ body.account .moodgraph-grid-container {
     display: grid;
     grid-auto-rows: max-content 1fr;
     grid-template-columns: repeat(1, 1fr);
-    gap:  20px;
+    gap: 20px;
     overflow: visible;
 }
 
@@ -131,11 +131,13 @@ body.account .moodgraph-grid-container .grid-container-item-moodgraph {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
 }
 
-body.account .grid-container-item-highlight, .grid-container-item-moodgraph-highlight {
+body.account .grid-container-item-highlight,
+.grid-container-item-moodgraph-highlight {
     border: 2px solid var(--primary-color);
 }
 
-body.account .grid-container-item:hover, .grid-container-item-moodgraph:hover {
+body.account .grid-container-item:hover,
+.grid-container-item-moodgraph:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }

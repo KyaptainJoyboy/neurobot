@@ -86,7 +86,7 @@ body.index .grid-container {
     display: grid;
     grid-auto-rows: max-content 1fr;
     grid-template-columns: repeat(3, 1fr);
-    gap:  20px;
+    gap: 20px;
 }
 
 body.index .center-text {

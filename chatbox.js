@@ -2,7 +2,7 @@ function createChatbox() {
     const chatboxContainer = document.createElement('div');
     chatboxContainer.className = 'chatbox-container';
 
-    const chatboxHeader = document.createElement('div'); 
+    const chatboxHeader = document.createElement('div');
     chatboxHeader.className = 'chatbox-header';
     chatboxHeader.textContent = 'Mental Health Chatbot';
 
@@ -13,9 +13,9 @@ function createChatbox() {
     chatboxInput.className = 'chatbox-input';
     chatboxInput.placeholder = 'Type your message...';
 
-    const chatboxSendButton = document.createElement('button'); 
-    chatboxSendButton.className = 'chatbox-send-button'; 
-    chatboxSendButton.textContent = 'Send'; 
+    const chatboxSendButton = document.createElement('button');
+    chatboxSendButton.className = 'chatbox-send-button';
+    chatboxSendButton.textContent = 'Send';
 
     chatboxContainer.appendChild(chatboxHeader);
     chatboxContainer.appendChild(chatboxBody);

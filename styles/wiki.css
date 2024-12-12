@@ -28,7 +28,7 @@ Header Styling
 
 .wiki h1 {
     text-align: center;
-    font-size: 24px;    
+    font-size: 24px;
     animation: global-slide-down 0.65s ease-in-out;
 }
 
@@ -80,7 +80,7 @@ body.wiki .grid-container {
     display: grid;
     grid-auto-rows: max-content 1fr;
     grid-template-columns: repeat(2, 1fr);
-    gap:  20px;
+    gap: 20px;
 }
 
 body.wiki .center-text {

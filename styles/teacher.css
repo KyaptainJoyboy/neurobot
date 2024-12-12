@@ -26,7 +26,11 @@ For separating, declare animations separately.
 
 /* Separated Animations */
 
-header, h1, h2, h3, p { 
+header,
+h1,
+h2,
+h3,
+p {
     animation: global-slide-down 0.65s ease-in-out;
 }
 
@@ -41,9 +45,11 @@ header {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.teacher h1, h2, h3 {
+.teacher h1,
+h2,
+h3 {
     color: var(--grey-darker);
-    text-align: center; 
+    text-align: center;
     font-family: 'Segoe UI', sans-serif;
 }
 
@@ -76,7 +82,7 @@ body.teacher .grid-container {
     display: grid;
     grid-auto-rows: max-content 1fr;
     grid-template-columns: repeat(4, 1fr);
-    gap:  20px;
+    gap: 20px;
 }
 
 body.teacher .center-text {
@@ -231,7 +237,7 @@ Button and Dropdown Styling
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
-  
+
 .grid-container-item .dropdown-content {
     display: none;
     padding: 20px 20px;
@@ -241,12 +247,11 @@ Button and Dropdown Styling
     border-radius: 10px;
     transition: all 0.3s ease;
 }
-  
-.grid-container-item .dropdown .dropdown-content a {
+
+.grid-container-item .btn-group .dropdown-content a {
     color: black;
     text-decoration: none;
     margin: 10px 0;
-    text-decoration: none;
     display: block;
 }
 
@@ -256,7 +261,7 @@ Button and Dropdown Styling
     margin-top: 20px;
     margin-bottom: 20px;
 }
-  
-.grid-container .dropdown a:hover {
-    background-color: #ddd;
+
+.grid-container .btn-group a:hover {
+    color: aqua;
 }

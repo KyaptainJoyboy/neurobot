@@ -78,10 +78,13 @@ Animations
 ----------------- */
 
 @keyframes breathe {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
         background-color: var(--primary-color);
     }
+
     50% {
         transform: scale(1.5);
         background-color: #FFC107;
@@ -112,7 +115,10 @@ For separating, declare animations separately.
 
 /* Separated Animations */
 
-header, h1, h3, p {
+header,
+h1,
+h3,
+p {
     animation: global-slide-down 0.65s ease-in-out;
 }
 
@@ -127,9 +133,11 @@ Header Styling
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.student h1, h2, h3 {
+.student h1,
+h2,
+h3 {
     color: var(--grey-darker);
-    text-align: center;   
+    text-align: center;
     font-family: 'Segoe UI', sans-serif;
 }
 
@@ -161,7 +169,7 @@ body.student .grid-container {
     display: grid;
     grid-auto-rows: max-content 1fr;
     grid-template-columns: repeat(4, 1fr);
-    gap:  20px;
+    gap: 20px;
     overflow: visible;
 }
 
@@ -209,7 +217,7 @@ body.student .grid-container-voice {
     display: grid;
     grid-auto-rows: max-content 1fr;
     grid-template-columns: repeat(1, 1fr);
-    gap:  20px;
+    gap: 20px;
     overflow: visible;
 }
 
@@ -293,7 +301,9 @@ Button Styling
     margin-top: 10px;
 }
 
-.grid-container-item .btn, .AI-btn, .timer-btn {
+.grid-container-item .btn,
+.AI-btn,
+.timer-btn {
     display: inline-block;
     border: none;
     padding: 10px 20px;
@@ -313,7 +323,9 @@ Button Styling
     opacity: 0.6;
 }
 
-.grid-container-item .btn:hover, .AI-btn:hover, .timer-btn:hover {
+.grid-container-item .btn:hover,
+.AI-btn:hover,
+.timer-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
@@ -322,7 +334,7 @@ Button Styling
 Custom Time Input Styling
 ----------------- */
 
-#custom-time-input{
+#custom-time-input {
     padding: 10px;
     border: 2px solid #FFC107;
     border-radius: 10px;
@@ -364,7 +376,7 @@ Button and Dropdown Styling
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
-  
+
 .grid-container-item .dropdown-content {
     display: none;
     padding: 20px 20px;
@@ -374,7 +386,7 @@ Button and Dropdown Styling
     border-radius: 10px;
     transition: all 0.3s ease;
 }
-  
+
 .grid-container-item .btn-group .dropdown-content a {
     color: black;
     text-decoration: none;
@@ -389,7 +401,7 @@ Button and Dropdown Styling
     margin-top: 20px;
     margin-bottom: 20px;
 }
-  
+
 .grid-container .btn-group a:hover {
     color: aqua;
 }
@@ -420,8 +432,8 @@ Chart Styling
     width: 100%;
     max-width: 600px;
     margin: auto;
-  }
-  
-  canvas {
+}
+
+canvas {
     border: 1px solid #ccc;
-  }
+}

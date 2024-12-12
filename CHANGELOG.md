@@ -1,12 +1,14 @@
 ## 2024 - 12 - 12
 - Added Floating Chatbox
-    - Very primitive, will improve in the future
+    - Very primitive, will improve in the future.
 - Cross-shared some features in both Student Support and Teacher Support
 - Reformatted Everything using VSC's Built-in Formatter
-    - Chesu figured this out today, it's a godsend - chesu
+    - Chesu figured this out today, it's a godsend. - chesu
 - Removed Latest News Box in Home Page
-    - GitHub changelogs are better, unless I find a way to make it work
-    automatically
+    - GitHub changelogs are better, unless I find a way to make it work automatically.
+- Removed About page
+    - Moved to the lower part of the home page.
+- Added Initial About panel
 
 ## 2024 - 12 - 12
 - Separated features into their own sections based on general function

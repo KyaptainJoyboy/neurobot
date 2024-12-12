@@ -380,7 +380,6 @@ Button and Dropdown Styling
     text-decoration: none;
     margin-top: 10px;
     margin-bottom: 10px;
-    text-decoration: none;
     display: block;
 }
 
@@ -391,7 +390,9 @@ Button and Dropdown Styling
     margin-bottom: 20px;
 }
   
-.grid-container .btn-group a:hover {color: aqua;}
+.grid-container .btn-group a:hover {
+    color: aqua;
+}
 
 /* -----------------
 Timer Styling

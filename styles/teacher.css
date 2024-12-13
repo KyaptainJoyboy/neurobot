@@ -334,3 +334,52 @@ Timer Styling
 #timer {
     font-size: 24px;
 }
+
+/* -----------------
+Time and Task Management Styling
+----------------- */
+
+#daily-tasks input[type="text"],
+#gradebook-planner input[type="text"],
+#gradebook-planner input[type="number"] {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#daily-tasks button,
+#gradebook-planner button {
+    padding: 8px 12px;
+    margin: 5px 0;
+    background-color: #FFC107;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#daily-tasks ul,
+#gradebook-planner ul,
+#activity-schedule ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#daily-tasks li,
+#gradebook-planner li,
+#activity-schedule li {
+    background-color: var(--bg-primary-light);
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#pomodoro-timer {
+    font-size: 24px;
+    margin-bottom: 10px;
+}

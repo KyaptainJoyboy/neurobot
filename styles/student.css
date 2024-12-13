@@ -448,3 +448,38 @@ Chart Styling
 canvas {
     border: 1px solid #ccc;
 }
+
+/* -----------------
+Text Container Styling
+----------------- */
+.text-container {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.text-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--grey-darker);
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.text-container input[type="date"],
+.text-container input[type="text"],
+.text-container textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Comfortaa', sans-serif;
+    margin-bottom: 10px;
+    background-color: var(--bg-primary-dark);
+    color: var(--text-color);
+}
+
+.text-container textarea {
+    height: 100px;
+    resize: vertical;
+}

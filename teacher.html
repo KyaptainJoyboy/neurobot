@@ -332,11 +332,22 @@
         <h2>Classroom Management</h2>
         <div class="grid-container">
             <div class="grid-container-item">
-                <span class="info-icon" data-tooltip="Keep track of your students.">ℹ</span>
+                <span class="info-icon" data-tooltip="Keep track of your behavior.">ℹ</span>
                 <h2>
                     Student Behaviour Tracker
                 </h2>
-                <p>Teachers also learn!</p>
+                <p>Track their behavior!</p>
+                <div class="text-container">
+                    <label for="behavior-date">Date:</label>
+                    <input type="date" id="behavior-date" name="behavior-date">
+                </div>
+                <div class="text-container">
+                    <label for="behavior-notes">Notes:</label>
+                    <textarea id="behavior-notes" name="behavior-notes" placeholder="Enter behavior notes"></textarea>
+                </div>
+                <div class="btn-group">
+                    <button class="btn" onclick="trackStudentBehavior()">Save Behavior</button>
+                </div>
             </div>
 
             <div class="grid-container-item">
@@ -515,6 +526,11 @@
                     Daily Tasks
                 </h2>
                 <p>Teachers also learn!</p>
+                <div id="daily-tasks">
+                    <input type="text" id="new-task" placeholder="Add a task">
+                    <button onclick="addTask()">Add</button>
+                    <ul id="task-list"></ul>
+                </div>
             </div>
 
             <div class="grid-container-item">
@@ -522,7 +538,13 @@
                 <h2>
                     Gradebook Planner
                 </h2>
-                <p>Teachers also learn!</p>
+                 <p>Teachers also learn!</p>
+                <div id="gradebook-planner">
+                    <input type="text" id="student-name" placeholder="Student Name">
+                    <input type="number" id="grade-input" placeholder="Grade">
+                    <button onclick="addGrade()">Add Grade</button>
+                    <ul id="grade-list"></ul>
+                </div>
             </div>
 
             <div class="grid-container-item">
@@ -531,6 +553,15 @@
                     Activity Schedule
                 </h2>
                 <p>Teachers also learn!</p>
+                 <div id="activity-schedule">
+                    <p>Current Schedule:</p>
+                    <ul id="schedule-list">
+                        <li>Monday: 9:00 AM - Math</li>
+                        <li>Monday: 10:00 AM - Science</li>
+                        <li>Tuesday: 9:00 AM - English</li>
+                        <li>Tuesday: 10:00 AM - History</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="grid-container-item">
@@ -539,6 +570,13 @@
                     Focus Mode
                 </h2>
                 <p>Teachers also learn!</p>
+                <div id="focus-mode">
+                    <div id="pomodoro-timer">25:00</div>
+                    <div class="btn-group">
+                        <button onclick="startPomodoro()" class="btn">Start</button>
+                        <button onclick="resetPomodoro()" class="btn">Reset</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

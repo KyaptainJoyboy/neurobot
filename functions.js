@@ -727,3 +727,46 @@ function displayLessonPlans() {
     lessonPlansContainer.appendChild(planElement);
   });
 }
+
+// --- Task Management Functions ---
+function addTask() {
+    const taskInput = document.getElementById('new-task');
+    const taskList = document.getElementById('task-list');
+    const taskText = taskInput.value.trim();
+
+    if (taskText) {
+        const listItem = document.createElement('li');
+        listItem.textContent = taskText;
+        taskList.appendChild(listItem);
+        taskInput.value = '';
+    }
+}
+
+// --- Gradebook Functions ---
+function addGrade() {
+    const studentNameInput = document.getElementById('student-name');
+    const gradeInput = document.getElementById('grade-input');
+    const gradeList = document.getElementById('grade-list');
+
+    const studentName = studentNameInput.value.trim();
+    const grade = gradeInput.value.trim();
+
+    if (studentName && grade) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${studentName}: ${grade}`;
+        gradeList.appendChild(listItem);
+        studentNameInput.value = '';
+        gradeInput.value = '';
+    }
+}
+
+// --- Pomodoro Timer Functions ---
+function startPomodoro() {
+    startTimer(25, () => {
+        alert('Pomodoro timer finished! Take a short break.');
+    });
+}
+
+function resetPomodoro() {
+    resetTimer(25);
+}

@@ -55,6 +55,25 @@ function addMessage(sender, message) {
     }
 }
 
+// Function to get the voice list and pick a specific voice
+function getVoiceByName(name) {
+    const voices = speechSynthesis.getVoices();
+    return voices.find(voice => voice.name.includes(name)) || voices[0]; // Fallback to default
+}
+
+// Speak text with a selected voice
+function speakText(text, voiceName = "Microsoft Zira Desktop", delay = 0) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            const utterance = new SpeechSynthesisUtterance(text);
+            const voice = getVoiceByName(voiceName);
+            if (voice) utterance.voice = voice;
+            utterance.onend = resolve; // Resolve when the speaking ends
+            speechSynthesis.speak(utterance);
+        }, delay);
+    });
+}
+
 function getBotResponse(userMessage) {
     const isTeacher = document.querySelector('body').classList.contains('teacher'); // Check if in teacher context
 
@@ -96,13 +115,16 @@ function getBotResponse(userMessage) {
         "It's okay to feel this way. The mood boosting games and the wellness quests can be a fun way to lift your spirits. You might also find the reflection questions and the journal useful."
     ];
 
+    let botMessage;
     if (userMessage.toLowerCase().includes('struggling') || userMessage.toLowerCase().includes('mental health') || userMessage.toLowerCase().includes('overwhelmed') || userMessage.toLowerCase().includes('sad') || userMessage.toLowerCase().includes('feeling down') || userMessage.toLowerCase().includes('anxiety') || userMessage.toLowerCase().includes('depression')) {
         const randomIndex = Math.floor(Math.random() * mentalHealthResponses.length);
-        addMessage('bot', mentalHealthResponses[randomIndex]);
+        botMessage = mentalHealthResponses[randomIndex];
     } else {
         const randomIndex = Math.floor(Math.random() * botResponses.length);
-        addMessage('bot', botResponses[randomIndex]);
+        botMessage = botResponses[randomIndex];
     }
+    addMessage('bot', botMessage);
+    speakText(botMessage, "Microsoft Zira Desktop");
 }
 
 document.addEventListener('DOMContentLoaded', () => {

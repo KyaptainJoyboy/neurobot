@@ -309,7 +309,8 @@ Text Container Styling
 ----------------- */
 
 .text-container {
-    background-color: var(--primary-light);
+    background-color: var(--bg-primary-dark);
+    border: 1px solid #4CAF50;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
@@ -319,4 +320,17 @@ Text Container Styling
 
 .text-container p {
     font-family: 'Comfortaa', sans-serif;
+}
+
+/* -----------------
+Clickable Header Styling
+----------------- */
+
+header a {
+    text-decoration: none;
+    font-size: 40px;
+    color: var(--text-color);
+    padding: 30px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
 }

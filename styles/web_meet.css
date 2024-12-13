@@ -10,7 +10,7 @@ body.web_meet {
 }
 
 .web_meet header {
-    background-color: var(--primary-color);
+    background-color: var(--primary-light);
     color: white;
     padding: 1em;
     text-align: center;

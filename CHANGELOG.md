@@ -1,3 +1,8 @@
+## 2024 - 12 - 13
+- Fixed Wellness Quests and Title Headers - kyaptain
+    - Wellness Quests by kyaptain, title headers improved by chesu
+- Other small changes
+
 ## 2024 - 12 - 12
 - Added Floating Chatbox
     - Very primitive, will improve in the future.

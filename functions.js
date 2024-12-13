@@ -621,3 +621,65 @@ function toggleContainer(button) {
   const container = button.nextElementSibling; // Get the container next to the button
   container.style.display = (container.style.display === 'block') ? 'none' : 'block'; // Toggle visibility
 }
+
+// Function to save the lesson plan
+function saveLessonPlan() {
+  const date = document.getElementById('lesson-date').value;
+  const subject = document.getElementById('lesson-subject').value;
+  const objectives = document.getElementById('lesson-objectives').value;
+  const notes = document.getElementById('lesson-notes').value;
+
+  if (!date || !subject || !objectives || !notes) {
+      alert("Please fill in all fields.");
+      return;
+  }
+
+    // Create lesson plan object
+    const lessonPlan = {
+      date: date,
+      subject: subject,
+      objectives: objectives,
+      notes: notes
+  };
+
+  // Get existing lesson plans from localStorage
+  let lessonPlans = JSON.parse(localStorage.getItem('lessonPlans')) || [];
+
+  // Add the new lesson plan to the array
+  lessonPlans.push(lessonPlan);
+
+  // Save the updated lesson plans back to localStorage
+  localStorage.setItem('lessonPlans', JSON.stringify(lessonPlans));
+
+  // Clear input fields after saving
+  document.getElementById('lesson-date').value = '';
+  document.getElementById('lesson-subject').value = '';
+  document.getElementById('lesson-objectives').value = '';
+  document.getElementById('lesson-notes').value = '';
+}    
+
+function displayLessonPlans() {
+  const lessonPlansContainer = document.getElementById('lesson-list');
+  lessonPlansContainer.innerHTML = ''; // Clear existing content
+
+  // Get existing lesson plans from localStorage
+  const lessonPlans = JSON.parse(localStorage.getItem('lessonPlans')) || [];
+
+  if (lessonPlans.length === 0) {
+    lessonPlansContainer.innerHTML = '<p>No lesson plans saved.</p>';
+    return;
+  }
+
+  lessonPlans.forEach(plan => {
+    const planElement = document.createElement('div');
+    planElement.classList.add('lesson-plan');
+    planElement.innerHTML = `
+      <h3>${plan.subject}</h3>
+      <p><strong>Date:</strong> ${plan.date}</p>
+      <p><strong>Objectives:</strong> ${plan.objectives}</p>
+      <p><strong>Notes:</strong> ${plan.notes}</p>
+      <hr>
+    `;
+    lessonPlansContainer.appendChild(planElement);
+  });
+}

@@ -180,38 +180,6 @@ body.teacher .grid-container-item:hover {
 }
 
 /* -----------------
-Button Styling
------------------ */
-
-.grid-container-item .btn-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.grid-container-item .btn {
-    width: 100%;
-    display: inline-block;
-    border: none;
-    padding: 10px 20px;
-    background-color: #FFC107;
-    color: white;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-    text-decoration: none;
-    cursor: pointer;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-.grid-container-item .btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* -----------------
 Button and Dropdown Styling
 ----------------- */
 
@@ -282,4 +250,36 @@ Button and Dropdown Styling
     margin-top: 10px;
     color: var(--primary-color);
     text-align: center;
+}
+
+/* -----------------
+Header Styling
+----------------- */
+
+.text-container label {
+    display: block;
+    font-weight: bold;
+    font-family: 'Comfortaa', sans-serif;
+}
+.text-container input, .text-container textarea {
+    width: 92%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.text-container textarea {
+    resize: none;
+}
+
+.grid-container-item .lesson-list {
+    margin-top: 20px;
+}
+
+.grid-container-item .lesson-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }

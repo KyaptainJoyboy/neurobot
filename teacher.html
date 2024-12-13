@@ -345,6 +345,31 @@
                     Lesson Plan Organizer
                 </h2>
                 <p>Teachers also learn!</p>
+
+                <div class="text-container">
+                    <label for="lesson-date">Date:</label>
+                    <input type="date" id="lesson-date" name="lesson-date">
+                </div>
+
+                <div class="text-container">
+                    <label for="lesson-subject">Subject:</label>
+                    <input type="text" id="lesson-subject" name="lesson-subject">
+                </div>
+
+                <div class="text-container">
+                    <label for="lesson-objectives">Objectives:</label>
+                    <textarea id="lesson-objectives" name="lesson-objectives"></textarea>
+                </div>
+
+                <div class="text-container">
+                    <label for="lesson-notes">Notes:</label>
+                    <textarea name="lesson-notes" id="lesson-notes" placeholder="Additional Notes for the lesson"></textarea>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn" onclick="saveLessonPlan()">Save Lesson Plan</button>
+                    <a href="account.html" class="btn">View Saved Lessons</a>
+                </div>
             </div>
 
             <div class="grid-container-item">

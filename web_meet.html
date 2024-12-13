@@ -4,40 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Therapy Session</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap">
+    <title>PAULI AID: Web Meet</title>
     <link rel="stylesheet" href="styles/globalstyles.css">
     <link rel="stylesheet" href="styles/web_meet.css">
-    <script src="https://meet.jit.si/external_api.js"></script>
+
+    <script src="animations.js" defer></script>
+    <script src="animations.js" defer></script>
 </head>
 
-<body>
-    <header>
-    <a href="index.html" class="clickable-title" style="font-weight: bold; text-decoration: none; color: #000;">Virtual Therapy Session</a>
-    </header>
-    <main>
-        <div id="meet"></div>
-    </main>
-    <footer>
-        <p>&copy; 2023 Pauli Aid</p>
-    </footer>
-    <script>
-        const domain = 'meet.jit.si';
-        const options = {
-            roomName: 'virtual-therapy-session',
-            width: '100%',
-            height: '100%',
-            parentNode: document.querySelector('#meet'),
-            configOverwrite: {
-                startWithVideoMuted: true,
-                startWithAudioMuted: true
-            },
-            interfaceConfigOverwrite: {
-                SHOW_JITSI_WATERMARK: false,
-                SHOW_BRAND_WATERMARK: false
-            }
-        };
-        const api = new JitsiMeetExternalAPI(domain, options);
-    </script>
+<body class="web_meet">
+<header>
+    <a href="index.html" class="clickable-title" style="font-weight: bold; text-decoration: none; color: var(--text-color);">PAULI AID</a>
+</header>
+<nav class="nav-bar">
+    <a href="home.html">Home</a>
+    <a href="student.html">Student Support</a>
+    <a href="teacher.html">Teacher Support</a>
+    <a href="wiki.html">Health Wiki</a>
+    <a href="account.html">Account</a>
+    <a href="web_meet.html" class="active">Web Meet</a>
+</nav>
+
+<main>
+    <div class="container">
+        <div id="video-container">
+            <iframe src="https://meet.jit.si/YourUniqueRoomName" style="width: 495%; height: 100%; border: none;"></iframe>
+        </div>
+    </div>
+</main>
 </body>
 
 </html>

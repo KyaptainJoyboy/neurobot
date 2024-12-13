@@ -139,8 +139,8 @@ Navigation Bar Styling
 
 .nav-bar {
     background-color: var(--secondary-color);
-    padding: 10px;
-    max-width: 90%;
+    padding: 15px;
+    max-width: 95%;
     margin: 15px auto;
     border-radius: 20px;
     display: flex;

@@ -37,50 +37,53 @@
         window.location.href = 'home.html';
     }
 
-        // Function to get the voice list and pick a specific voice
-        function getVoiceByName(name) {
-            const voices = speechSynthesis.getVoices();
-            return voices.find(voice => voice.name.includes(name)) || voices[0]; // Fallback to default
-        }
+    async function speakText(text, delay = 0, voice = "Microsoft Zira Desktop", rate = 200) {
+        return new Promise(resolve => {
+            setTimeout(async () => {
+                const img = document.querySelector('.full-screen-gif');
+                img.src = 'images/robot_face_open.gif';
+                try {
+                    const response = await fetch('/api/tts', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ text: text, voice: voice, rate: rate })
+                    });
 
-        // Speak text with a selected voice
-        function speakText(text, voiceName = "Microsoft Zira Desktop", delay = 0) {
-            return new Promise(resolve => {
-                setTimeout(() => {
-                    const img = document.querySelector('.full-screen-gif');
-                    img.src = 'images/robot_face_open.gif';
-                    const utterance = new SpeechSynthesisUtterance(text);
-                    const voice = getVoiceByName(voiceName);
-                    if (voice) utterance.voice = voice;
-                    utterance.onend = () => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    const data = await response.json();
+                    const audioBase64 = data.audio;
+                    const audio = new Audio(`data:audio/mp3;base64,${audioBase64}`);
+                    audio.onended = () => {
                         img.src = 'images/robot_face.gif';
                         resolve();
                     };
-                    speechSynthesis.speak(utterance);
-                }, delay);
-            });
-        }
+                    audio.play();
+                } catch (error) {
+                    console.error('Error during TTS:', error);
+                    img.src = 'images/robot_face.gif';
+                    resolve();
+                }
+            }, delay);
+        });
+    }
 
         // Queue messages with delays
         async function speakMessages() {
-            await speakText("Hello! I am Pauli Aid", "Microsoft Zira Desktop", 2500);
-            await speakText("How may I help you?.", "Microsoft Zira Desktop", 2500);
-            await speakText("Have a wonderful day!", "Microsoft Zira Desktop", 2500);
-            await speakText("How are you feeling today?", "Microsoft Zira Desktop", 2500);
-            await speakText("I am here to assist you.", "Microsoft Zira Desktop", 2500);
+            await speakText("Hello! I am Pauli Aid", 2500, "Microsoft Zira Desktop", 200);
+            await speakText("How may I help you?.", 2500, "Microsoft Zira Desktop", 200);
+            await speakText("Have a wonderful day!", 2500, "Microsoft Zira Desktop", 200);
+            await speakText("How are you feeling today?", 2500, "Microsoft Zira Desktop", 200);
+            await speakText("I am here to assist you.", 2500, "Microsoft Zira Desktop", 200);
         }
 
         // Automatically start speaking on page load
         window.addEventListener("DOMContentLoaded", () => {
-            // Ensure voices are loaded
-            window.speechSynthesis.onvoiceschanged = () => {
-                speakMessages();
-            };
-
-            // In case voices are already loaded
-            if (speechSynthesis.getVoices().length > 0) {
-                speakMessages();
-            }
+            speakMessages();
         });
 </script>
 <img src="images/robot_face.gif" alt="Robot Face" class="full-screen-gif" onclick="testRedirect()">

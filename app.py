@@ -1,12 +1,21 @@
-
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import sqlite3
 import os
 import hashlib
+import pyttsx3
+import base64
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
+
+# Initialize pyttsx3
+engine = pyttsx3.init()
+voices = engine.getProperty('voices')  # getting details of current voice
+#engine.setProperty('voice', voices[0].id)  # changing index, changes voices. 0 for male
+engine.setProperty('voice', voices[1].id)  # changing index, changes voices. 1 for female
+newVoiceRate = 200
+engine.setProperty('rate', newVoiceRate)
 
 # Database initialization
 def init_db():
@@ -163,6 +172,33 @@ def delete_task(task_id):
     conn.close()
 
     return jsonify({"message": "Task deleted successfully"}), 200
+
+# Text-to-speech endpoint
+@app.route('/api/tts', methods=['POST'])
+def tts():
+    data = request.json
+    text = data.get('text')
+    voice = data.get('voice')
+    rate = data.get('rate')
+
+    if not text:
+        return jsonify({"error": "Missing text"}), 400
+
+    if voice:
+        engine.setProperty('voice', voice)
+    if rate:
+        engine.setProperty('rate', int(rate))
+
+    engine.save_to_file(text, 'audio.mp3')
+    engine.runAndWait()
+    
+    with open('audio.mp3', 'rb') as f:
+        audio_bytes = f.read()
+        audio_base64 = base64.b64encode(audio_bytes).decode('utf-8')
+    
+    os.remove('audio.mp3')
+
+    return jsonify({"audio": audio_base64}), 200
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

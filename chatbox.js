@@ -55,24 +55,29 @@ function addMessage(sender, message) {
     }
 }
 
-// Function to get the voice list and pick a specific voice
-function getVoiceByName(name) {
-    const voices = speechSynthesis.getVoices();
-    return voices.find(voice => voice.name.includes(name)) || voices[0]; // Fallback to default
+async function speakText(text, voice = "Microsoft Zira Desktop", rate = 150) {
+    try {
+        const response = await fetch('/api/tts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ text: text, voice: voice, rate: rate })
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const audioBase64 = data.audio;
+        const audio = new Audio(`data:audio/mp3;base64,${audioBase64}`);
+        audio.play();
+    } catch (error) {
+        console.error('Error during TTS:', error);
+    }
 }
 
-// Speak text with a selected voice
-function speakText(text, voiceName = "Microsoft Zira Desktop", delay = 0) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            const utterance = new SpeechSynthesisUtterance(text);
-            const voice = getVoiceByName(voiceName);
-            if (voice) utterance.voice = voice;
-            utterance.onend = resolve; // Resolve when the speaking ends
-            speechSynthesis.speak(utterance);
-        }, delay);
-    });
-}
 
 function getBotResponse(userMessage) {
     const isTeacher = document.querySelector('body').classList.contains('teacher'); // Check if in teacher context
@@ -124,7 +129,7 @@ function getBotResponse(userMessage) {
         botMessage = botResponses[randomIndex];
     }
     addMessage('bot', botMessage);
-    speakText(botMessage, "Microsoft Zira Desktop");
+    speakText(botMessage);
 }
 
 document.addEventListener('DOMContentLoaded', () => {

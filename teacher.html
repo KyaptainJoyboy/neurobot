@@ -40,7 +40,7 @@
         <div class="grid-container">
             <div class="grid-container-item">
                 <span class="info-icon"
-                    data-tooltip="Learn strategies to handle stress effectively and regain calm.">ℹ</span>
+                    data-tooltip="Learn strategies to handle stress effectively and regain focus.">ℹ</span>
                 <h2>
                     Stress Management
                 </h2>
@@ -227,7 +227,7 @@
                     <button onclick="toggleContainer(this)" class="dropbtn">CK-12 Foundation</button>
                     <div class="dropdown-content">
                         <h3>CK-12 Foundation</h3>
-                        <a href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">CK-12
+                        <a href="https://www.ck12.org/teacher/" target="_blank" rel="noopener noreferrer">CK-12
                             Foundation offers free educational content, including textbooks, simulations,
                             and
                             interactive activities.</a>
@@ -268,7 +268,7 @@
                     <button onclick="toggleContainer(this)" class="dropbtn">BetterLesson</button>
                     <div class="dropdown-content">
                         <h3>BetterLesson</h3>
-                        <a href="https://www.edutopia.org/" target="_blank" rel="noopener noreferrer">Edutopia
+                        <a href="https://betterlesson.com/" target="_blank" rel="noopener noreferrer">Edutopia
                             offers a
                             community section where teachers can connect, share resources, and discuss
                             educational
@@ -277,8 +277,8 @@
                     <button onclick="toggleContainer(this)" class="dropbtn">Teacher2Teacher</button>
                     <div class="dropdown-content">
                         <h3>Teacher2Teacher</h3>
-                        <a href="https://www.edutopia.org/" target="_blank" rel="noopener noreferrer">Teacher2Teacher is
-                            a A community by the U.S. Department of Education that connects teachers for
+                        <a href="https://www.facebook.com/tchr2tchr/" target="_blank" rel="noopener noreferrer">Teacher2Teacher is
+                            a community by the U.S. Department of Education that connects teachers for
                             collaboration
                             and support.</a>
                     </div>
@@ -389,6 +389,16 @@
                     Classroom Activity Timer
                 </h2>
                 <p>A timer for your activities.</p>
+                <div id="timer-container">
+                    <div id="timer-display">30:00</div>
+                        <input type="number" id="custom-time-input" class="custom-time-input"
+                        placeholder="Activity Time (minutes)" min="1" max="120">
+                    <div class="btn-group">
+                        <button onclick="handleCustomTimerStart()" class="btn">Start</button>
+                        <button onclick="resetTimer()" class="btn">Reset</button>
+                        <button onclick="stopTimer()" class="btn">Stop</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -397,11 +407,22 @@
         <h2>Stress Management</h2>
         <div class="grid-container">
             <div class="grid-container-item">
-                <span class="info-icon" data-tooltip="Missions to help you relax.">ℹ</span>
+                <span class="info-icon"
+                    data-tooltip="Engage in fun, actionable tasks to boost your overall well-being.">ℹ</span>
                 <h2>
-                    Relaxation Mission
+                    Relaxation Missions
                 </h2>
-                <p>Teachers also learn!</p>
+                <p>Your path to being relaxed.</p>
+                <div class="text-container">
+                    <p id="challenge-display">Your mission will appear here.</p>
+                </div>
+                <div id="daily-challenge">
+                    <div class="btn-group">
+                        <button id="new-challenge-btn" class="btn" onclick="displayRandomMission()">New
+                            Challenge</button>
+                    </div>
+                    <p id="challenge-text">Click the button to get a new daily challenge!</p>
+                </div>
             </div>
 
             <div class="grid-container-item">
@@ -410,14 +431,43 @@
                     Relaxation Exercises
                 </h2>
                 <p>Teachers also learn!</p>
+                <div class="btn-group">
+                    <button onclick="toggleContainer(this)" class="dropbtn">Mayo Clinic</button>
+                    <div class="dropdown-content">
+                        <h3>Mayo Clinic</h3>
+                        <a href="https://www.mayoclinic.org/healthy-lifestyle/stress-management/in-depth/relaxation-technique/art-20045368" target="_blank" rel="noopener noreferrer">They offer a guide to relaxation techniques like deep breathing, progressive muscle relaxation, guided imagery, and mindfulness meditation. These techniques are explained step-by-step, focusing on managing stress and anxiety effectively.</a>
+                    </div>
+                    <button onclick="toggleContainer(this)" class="dropbtn">Verywell Mind</button>
+                    <div class="dropdown-content">
+                        <h3>Verywell Mind</h3>
+                        <a href="https://www.verywellmind.com/stress-management-overview-4581770" target="_blank" rel="noopener noreferrer">This site provides practical instructions for exercises such as deep breathing and progressive muscle relaxation, tailored for stress reduction. It also includes explanations on how these exercises work and tips for incorporating them into daily routines.</a>
+                    </div>
+                    <button onclick="toggleContainer(this)" class="dropbtn">Therapist Aid</button>
+                    <div class="dropdown-content">
+                        <h3>Therapist Aid</h3>
+                        <a href="https://www.therapistaid.com/tools/stress" target="_blank" rel="noopener noreferrer">They share tools like guided audio sessions for deep breathing and progressive muscle relaxation, along with printable scripts. The site focuses on helping individuals practice these techniques regularly to experience long-term benefits.</a>
+                    </div>
+                </div>
             </div>
 
             <div class="grid-container-item">
-                <span class="info-icon" data-tooltip="Videos to help reduce stress.">ℹ</span>
+                <span class="info-icon" data-tooltip="Media to help reduce stress.">ℹ</span>
                 <h2>
                     Stress Relief Media
                 </h2>
                 <p>Teachers also learn!</p>
+                <div class="btn-group">
+                    <button onclick="toggleContainer(this)" class="dropbtn">Calm</button>
+                    <div class="dropdown-content">
+                        <h3>Calm.com</h3>
+                        <a href="https://www.calm.com/" target="_blank" rel="noopener noreferrer">Calm offers guided meditation, sleep aids, and mindfulness exercises tailored for stress relief. The website provides a range of audio and video content, including daily meditation and relaxing sounds.</a>
+                    </div>
+                    <button onclick="toggleContainer(this)" class="dropbtn">Headspace</button>
+                    <div class="dropdown-content">
+                        <h3>Headspace</h3>
+                        <a href="https://www.headspace.com/" target="_blank" rel="noopener noreferrer">Calm offers guided meditation, sleep aids, and mindfulness exercises tailored for stress relief. The website provides a range of audio and video content, including daily meditation and relaxing sounds.</a>
+                    </div>
+                </div>
             </div>
 
             <div class="grid-container-item">
@@ -426,6 +476,32 @@
                     Professional Counseling Services
                 </h2>
                 <p>Teachers also learn!</p>
+                <div class="btn-group">
+                    <button onclick="toggleContainer(this)" class="dropbtn">American Federation of
+                        Teachers</button>
+                    <div class="dropdown-content">
+                        <h3>American Federation of Teachers</h3>
+                        <a href="https://www.aft.org/" target="_blank" rel="noopener noreferrer">The American
+                            AFT offers free trauma counseling for its members. This service provides access to highly trained therapists
+                            through various communication methods, including phone, text, and video. It covers work-related trauma as well
+                            as other personal challenges.</a>
+                    </div>
+                    <button onclick="toggleContainer(this)" class="dropbtn">Talkspace</button>
+                    <div class="dropdown-content">
+                        <h3>Talkspace</h3>
+                        <a href="https://www.talkspace.com/" target="_blank" rel="noopener noreferrer">This platform provides therapy through
+                            video, audio, and text messaging with licensed therapists. It is a flexible and private option for ongoing support,
+                            with subscriptions starting around $69 per week, depending on the plan. It also accepts some insurance providers,
+                            which can reduce costs.</a>
+                    </div>
+                    <button onclick="toggleContainer(this)" class="dropbtn">BetterHelp</button>
+                    <div class="dropdown-content">
+                        <h3>BetterHelp</h3>
+                        <a href="https://www.talkspace.com/" target="_blank" rel="noopener noreferrer">A popular online therapy service offering
+                            unlimited messaging with licensed therapists and weekly live sessions through video, phone, or chat. Subscriptions
+                            cost between $60 and $90 per week, billed monthly, and financial aid may be available for eligible individuals.</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

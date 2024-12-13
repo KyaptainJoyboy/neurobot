@@ -41,7 +41,7 @@
         <div class="grid-container">
             <div class="grid-container-item">
                 <span class="info-icon"
-                    data-tooltip="Learn strategies to handle stress effectively and regain calm.">ℹ</span>
+                    data-tooltip="Learn strategies to handle stress effectively and regain focus.">ℹ</span>
                 <h2>
                     Stress Management
                 </h2>
@@ -121,7 +121,7 @@
 
             <div class="grid-container-item">
                 <span class="info-icon"
-                    data-tooltip="Relax your body and mind with guided breathing techniques.">ℹ</span>
+                    data-tooltip="Breathing exercises to help you relax.">ℹ</span>
                 <h2>
                     Breathing Exercises
                 </h2>
@@ -138,7 +138,7 @@
 
             <div class="grid-container-item">
                 <span class="info-icon"
-                    data-tooltip="Relax your body and mind with guided breathing techniques.">ℹ</span>
+                    data-tooltip="Fun and engaging games to pass the time.">ℹ</span>
                 <h2>
                     Mood Boosting Games
                 </h2>
@@ -217,13 +217,11 @@
                 </h2>
                 <p>Make sure to take breaks!</p>
                 <div id="timer-container">
-                    <div id="timer-display">25:00</div>
-                    <div class="self-care-timer">
+                    <div id="timer-display">30:00</div>
                         <input type="number" id="custom-time-input" class="custom-time-input"
-                            placeholder="Custom Time (minutes)" min="1" max="120">
-                    </div>
+                        placeholder="Custom Time (minutes)" min="1" max="120">
                     <div class="btn-group">
-                        <button onclick="startSelfCareTimer()" class="btn">Start</button>
+                        <button onclick="handleCustomTimerStart()" class="btn">Start</button>
                         <button onclick="resetTimer()" class="btn">Reset</button>
                         <button onclick="stopTimer()" class="btn">Stop</button>
                     </div>
@@ -330,7 +328,7 @@
             </div>
 
             <div class="grid-container-item">
-                <span class="info-icon" data-tooltip="Save quotes that intrigued you.">ℹ</span>
+                <span class="info-icon" data-tooltip="Release your creativity.">ℹ</span>
                 <h2>
                     Creative Prompts
                 </h2>

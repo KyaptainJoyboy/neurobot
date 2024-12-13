@@ -34,6 +34,19 @@ const challenges = [
   "Do a random act of kindness."
 ];
 
+const missions = [
+  "Take 10 slow deep breaths.",
+  "Go for a 10-minute walk.",
+  "Do a quick 5-minute stretch.",
+  "Listen to music and enjoy the moment.",
+  "Write an entry in the journal.",
+  "Perform one meditation session.",
+  "Drink water while taking deep breaths.",
+  "Spend some time drawing or doodling.",
+  "Read a short story.",
+  "Practice affirmations by repeating them to yourself."
+];
+
 const icebreakerGames = [
   {
     "name": "Two Truths and a Lie",
@@ -119,8 +132,8 @@ const styles = ["funny", "heartfelt", "serious", "whimsical", "dramatic", "uplif
 let studentBehavior = {};
 let breathCount = 0;
 let moodChart = null;
-let timerInterval;
-let remainingTime = 25 * 60; // Default 25 minutes in seconds
+let timerInterval = null;
+let remainingTime = 0;
 
 // --- User Data Management ---
 const defaultUserData = {
@@ -459,19 +472,6 @@ function displayStudentBehavior() {
 // ---- Wellness Quest ---
 
 function displayRandomChallenge() {
-    const challenges = [
-        "Take a 10-minute walk outside.",
-        "Practice deep breathing for 5 minutes.",
-        "Write down three things you are grateful for.",
-        "Call a friend or family member.",
-        "Read a chapter of a book.",
-        "Do a 10-minute yoga session.",
-        "Drink a glass of water.",
-        "Meditate for 10 minutes.",
-        "Write a positive affirmation.",
-        "Do a random act of kindness."
-    ];
-
     const randomChallenge = challenges[Math.floor(Math.random() * challenges.length)];
     document.getElementById("challenge-display").textContent = randomChallenge;
 }
@@ -496,6 +496,33 @@ function trackStudentBehavior() {
 
     displayStudentBehavior();
   }
+}
+
+function displayRandomMission() {
+  const randomMission = missions[Math.floor(Math.random() * missions.length)];
+  document.getElementById("challenge-display").textContent = randomMission;
+}
+
+// Add event listener to the submit button
+document.getElementById('submit-button').addEventListener('click', trackStudentBehavior);
+
+function trackStudentBehavior() {
+let studentName = document.getElementById('student-name').value;
+let behavior = document.getElementById('behavior').value;
+
+if (studentName in studentBehavior) {
+  let confirmOverwrite = confirm('Student ${studentName} already exists. Do you want to overwrite?');
+  if (confirmOverwrite) {
+    studentBehavior[studentName] = behavior;
+  } else {
+    studentBehavior[studentName] = behavior;
+  }
+
+  document.getElementById('student-name').value = '';
+  document.getElementById('behavior').value = '';
+
+  displayStudentBehavior();
+}
 }
 
 // --- Initialization ---
@@ -548,30 +575,37 @@ function resetBreathingExercise() {
 }
 
 // --- Timer Functions ---
-// Function to start Self-care Scheduler Timer
-function startSelfCareTimer() {
-  const customTimeInput = document.getElementById('custom-time-input');
-  if (customTimeInput.value) {
-    remainingTime = parseInt(customTimeInput.value, 10) * 60; // Convert minutes to seconds
-  }
+function startTimer(durationInMinutes, onTimerEnd) {
   if (timerInterval) return; // Prevent multiple intervals
+
+  if (isNaN(durationInMinutes) || durationInMinutes <= 0) {
+    console.error("Invalid duration provided. Duration must be a positive number.");
+    return;
+  }
+
+  remainingTime = durationInMinutes * 60; // Convert minutes to seconds
   document.getElementById('timer-display').innerText = formatTime(remainingTime);
+
   timerInterval = setInterval(() => {
     if (remainingTime > 0) {
       remainingTime--;
       document.getElementById('timer-display').innerText = formatTime(remainingTime);
     } else {
       stopTimer();
+      if (typeof onTimerEnd === 'function') {
+        onTimerEnd(); // Call the callback when the timer ends
+      }
     }
   }, 1000);
 }
 
-function resetTimer() {
+function resetTimer(defaultDurationInMinutes = 30) {
   clearInterval(timerInterval);
   timerInterval = null;
-  remainingTime = 25 * 60; // Reset to 25 minutes
+  remainingTime = defaultDurationInMinutes * 60; // Reset to the specified duration
   document.getElementById('timer-display').innerText = formatTime(remainingTime);
-  document.getElementById('custom-time-input').value = ''; // Clear the custom time input
+  const customTimeInput = document.getElementById('custom-time-input');
+  if (customTimeInput) customTimeInput.value = ''; // Clear the custom time input if it exists
 }
 
 function stopTimer() {
@@ -583,6 +617,16 @@ function formatTime(seconds) {
   const minutes = Math.floor(seconds / 60);
   const secs = seconds % 60;
   return `${minutes < 10 ? '0' : ''}${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+}
+
+// Example usage with an input box for custom time
+function handleCustomTimerStart() {
+  const customTimeInput = document.getElementById('custom-time-input');
+  const duration = customTimeInput && customTimeInput.value ? parseInt(customTimeInput.value, 10) : 30;
+
+  startTimer(duration, () => {
+    alert('Timer has ended!'); // Default callback when the timer ends
+  });
 }
 
 // Function to start Meditation Timer

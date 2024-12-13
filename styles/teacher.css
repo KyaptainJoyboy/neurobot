@@ -105,7 +105,9 @@ body.teacher .grid-container-item {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* Chatbox Styling */
+/* -----------------
+Chatbox Styling
+----------------- */
 .chatbox-container {
     position: fixed;
     bottom: 20px;
@@ -118,8 +120,10 @@ body.teacher .grid-container-item {
 }
 
 .chatbox-header {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--primary-light);
+    color: var(--grey-darker);
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
     padding: 10px;
     text-align: center;
     border-top-left-radius: 10px;
@@ -134,26 +138,33 @@ body.teacher .grid-container-item {
 }
 
 .chatbox-input {
-    width: calc(100% - 22px);
+    width: calc(93% - 22px);
     padding: 10px;
-    border: 1px solid var(--grey-light);
-    border-radius: 5px;
+    background-color: var(--bg-primary-dark);
+    border: 1px solid #4CAF50;
+    border-radius: 10px;
+    text-align: center;
     margin: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .chatbox-send-button {
-    width: 100%;
+    font-family: 'Comfortaa', sans-serif;
+    width: 93%;
     padding: 10px;
-    background-color: var(--primary-color);
+    background-color: #FFC107;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     margin: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .chatbox-send-button:hover {
-    background-color: var(--primary-dark);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .message {
@@ -166,12 +177,14 @@ body.teacher .grid-container-item {
     background-color: var(--primary-light);
     color: var(--text-color);
     text-align: right;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 .message.bot {
     background-color: var(--grey-light);
     color: var(--text-color);
     text-align: left;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 body.teacher .grid-container-item:hover {
@@ -184,7 +197,6 @@ Button and Dropdown Styling
 ----------------- */
 
 .grid-container-item .dropbtn {
-    margin-top: 10px;
     gap: 10px;
     width: 100%;
     display: inline-block;
@@ -195,7 +207,7 @@ Button and Dropdown Styling
     border-radius: 10px;
     text-align: center;
     font-size: 16px;
-    font-family: Arial, sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     text-decoration: none;
     cursor: pointer;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
@@ -282,4 +294,43 @@ Header Styling
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+/* -----------------
+Custom Time Input Styling
+----------------- */
+
+#custom-time-input {
+    padding: 10px;
+    border: 2px solid #FFC107;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    color: #FFC107;
+    background-color: transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.grid-container-item .custom-time-input:focus {
+    border-color: #FFC107;
+    color: #FFC107;
+    outline: none;
+}
+
+/* -----------------
+Timer Styling
+----------------- */
+
+#timer-display {
+    margin-top: 10px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 20px;
+}
+
+#custom-time-input {
+    width: 94%;
+}
+
+#timer {
+    font-size: 24px;
 }

@@ -1,4 +1,15 @@
 ## 2024 - 12 - 13
+## FINAL RELEASE (probably)
+- Added dropdowns to a couple of empty feature boxes
+- Fixed font styling on all of the buttons (hopefully)
+- Made Timers generalized instead of specific use
+
+- This will most likely be the final update from active development, and the next update will most probably take a really long time as we continue to move to other projects, still, this was a fun learning journey for everyone involved.
+
+- "Success is not final, failure is not fatal: It is the courage to continue that counts."
+    - Winston Churchill
+
+## 2024 - 12 - 13
 - Fixed Wellness Quests and Title Headers - kyaptain
     - Wellness Quests by kyaptain, title headers improved by chesu
 - Other small changes

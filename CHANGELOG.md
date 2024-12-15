@@ -1,3 +1,6 @@
+## Afterthoughts
+- This project was a blast to work on, it may seem quite primitive, but at heart it's a learning experience I'll remember for a very long part of my life. From initial setup to the final product, I've learned so much about the world of programming and how to approach it, even if it was slighty assisted by AI along the way. This won't be it's final version however, I plan on fleshing it out further, using modern frameworks such as tailwind, maybe. For now, that's all from me, chesugotgit.
+
 ## 2024 - 12 - 13
 ## FINAL RELEASE (probably)
 - Added dropdowns to a couple of empty feature boxes

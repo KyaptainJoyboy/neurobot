@@ -1,17 +1,16 @@
+# NEUROBOT
 
-# PAULI AID
-
-PAULI AID is a mental health support system for students and teachers, designed to run on a Raspberry Pi with a 3.5-inch touchscreen display.
+NEUROBOT is a mental health support system for students and teachers, designed to run on a Raspberry Pi with a 3.5-inch touchscreen display.
 
 You can now directly access the website here:
-https://chesugotgit.github.io/pauli-aid/
+https://chesugotgit.github.io/neurobot/
 
 ## Setup Instructions
 
 1. Clone this repository to your Raspberry Pi:
    ```
-   git clone https://github.com/your-username/pauli-aid.git
-   cd pauli-aid
+   git clone https://github.com/your-username/neurobot.git
+   cd neurobot
    ```
 
 2. Create and activate a virtual environment:
@@ -35,7 +34,7 @@ https://chesugotgit.github.io/pauli-aid/
 
 5. Make the startup script executable:
    ```
-   chmod +x start_pauli_aid.sh
+   chmod +x start_neurobot.sh
    ```
 
 6. Set up the system to run the script on startup:
@@ -44,7 +43,7 @@ https://chesugotgit.github.io/pauli-aid/
    ```
    Add the following line before the `exit 0` line:
    ```
-   /home/pi/pauli-aid/start_pauli_aid.sh &
+   /home/pi/neurobot/start_neurobot.sh &
    ```
 
 7. Reboot your Raspberry Pi:
@@ -52,7 +51,7 @@ https://chesugotgit.github.io/pauli-aid/
    sudo reboot
    ```
 
-After rebooting, the PAULI AID system should start automatically and be accessible via the touchscreen display.
+After rebooting, the NEUROBOT system should start automatically and be accessible via the touchscreen display.
 
 ## Usage
 
@@ -71,4 +70,3 @@ If the system doesn't start automatically:
 - This is a basic implementation and should not be used to store sensitive information without proper security measures.
 - Consider implementing HTTPS for production use.
 - Regularly update the system and dependencies to patch any security vulnerabilities.
-

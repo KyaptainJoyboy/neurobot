@@ -5,12 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neurobot</title>
-    <meta http-equiv="refresh" content="0; url=home.html">
     <link rel="stylesheet" href="styles/globalstyles.css">
     <link rel="stylesheet" href="styles/index.css">
+    <script>
+        window.onload = function() {
+            document.getElementById('loading-screen').style.display = 'none';
+            window.location.href = 'home.html';
+        };
+    </script>
 </head>
 
 <body>
+    <div id="loading-screen" class="loading-screen">
+        <h1>Loading...</h1>
+    </div>
     <header>
         <a href="home.html" class="clickable-title" style="font-weight: bold; text-decoration: none; color: var(--text-color);">Neurobot</a>
     </header>

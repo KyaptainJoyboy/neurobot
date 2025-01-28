@@ -105,13 +105,13 @@ Grid Item Styling
 
 body.account .grid-container-item {
     position: relative;
-    background-color: #e8f5e9;
+    background-color: #ebe8f5;;
     border-radius: 20px;
     padding: 20px;
     margin-top: 10px;
     margin-bottom: 20px;
     text-align: center;
-    border: 2px solid #4CAF50;
+    border: 2px solid #6326d4;
     height: fit-content;
     transition: margin-top 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
@@ -119,13 +119,13 @@ body.account .grid-container-item {
 
 body.account .moodgraph-grid-container .grid-container-item-moodgraph {
     position: relative;
-    background-color: #e8f5e9;
+    background-color: #ebe8f5;;
     border-radius: 20px;
     padding: 20px;
     margin-top: 10px;
     margin-bottom: 20px;
     text-align: center;
-    border: 2px solid #4CAF50;
+    border: 2px solid #6326d4;
     height: fit-content;
     transition: margin-top 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
@@ -157,7 +157,7 @@ Button and Dropdown Styling
     display: inline-block;
     border: none;
     padding: 10px 20px;
-    background-color: #FFC107;
+    background-color: #7941B2;
     color: white;
     border-radius: 10px;
     text-align: center;
@@ -181,7 +181,7 @@ Button and Dropdown Styling
     display: inline-block;
     border: none;
     padding: 10px 20px;
-    background-color: #FFC107;
+    background-color: #7941B2;
     color: white;
     border-radius: 10px;
     text-align: center;
@@ -240,7 +240,7 @@ Timer Styling
 Sample Account Details Styling
 ----------------- */
 .sample-account-details {
-    border: 2px solid #4CAF50;
+    border: 2px solid #6326d4;
     padding: 15px;
     margin-top: 10px;
     margin-bottom: 10px;

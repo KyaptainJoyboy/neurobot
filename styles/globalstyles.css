@@ -6,9 +6,9 @@ Global Styling
 Global Colors
 ----------------- */
 :root {
-    --primary-color: #4CAF50;
+    --primary-color: #8d8bea;
     /* Original green */
-    --secondary-color: #2196F3;
+    --secondary-color: #b86bcf;
     /* Original blue */
     --accent-color: #FFC107;
     /* Original yellow */
@@ -18,17 +18,17 @@ Global Colors
     /* Dark text color */
 
     /* New colors */
-    --primary-light: #81C784;
+    --primary-light: #8470ea;
     /* Light green for softer tones */
-    --primary-dark: #388E3C;
+    --primary-dark: #9256e5;
     /* Darker green for depth */
-    --secondary-light: #64B5F6;
+    --secondary-light: #c97bc9;
     /* Light blue for a calmer feel */
-    --secondary-dark: #1565C0;
+    --secondary-dark: #c347b0;
     /* Darker blue for contrast */
-    --accent-light: #FFEB3B;
+    --accent-light: #92b8fa;
     /* Lighter yellow for gentler highlights */
-    --accent-dark: #FFA000;
+    --accent-dark: #5385c9;
     /* Darker yellow for emphasis */
     --background-light: #FFFFFF;
     /* White for a clean, minimal look */
@@ -38,7 +38,7 @@ Global Colors
     /* Softer text color for ease on eyes */
     --error-color: #F44336;
     /* Modern red for error messages */
-    --success-color: #8BC34A;
+    --success-color: #b89bdd;
     /* Fresh green for success indicators */
     --warning-color: #FF9800;
     /* Modern orange for warnings */
@@ -60,17 +60,17 @@ Global Colors
     /* Almost black grey for high contrast elements */
 
     /* Background colors */
-    --bg-primary-light: #d1ead0;
+    --bg-primary-light: #d1b8ed;
     /* Very light greenish white for a soft, almost white look */
-    --bg-primary-dark: #cbf1cd;
+    --bg-primary-dark: #caa5ea;
     /* Soft, muted green close to a pale mint for a subtle dark contrast */
-    --bg-secondary-light: #E3F2FD;
+    --bg-secondary-light: #cf97c5;
     /* Light blue for a serene, peaceful look */
-    --bg-secondary-dark: #BBDEFB;
+    --bg-secondary-dark: #b590c3;
     /* Slightly darker blue for areas needing focus */
-    --bg-accent-light: #FFF8E1;
+    --bg-accent-light: #b1cbdd;
     /* Light yellow for warmth without overwhelming */
-    --bg-accent-dark: #FFECB3;
+    --bg-accent-dark: #90b4c5;
     /* Darker yellow for sections needing more emphasis */
     --bg-neutral-light: #F5F5F5;
     /* A very soft light grey for neutral sections */
@@ -214,7 +214,7 @@ Button Styling
 .grid-container .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #FFC107;
+    background-color: #7941B2;
     color: white;
     border-radius: 5px;
     text-align: center;
@@ -249,7 +249,7 @@ Info Icons and Tooltips
     left: 10px;
     width: 20px;
     height: 20px;
-    background-color: #FFC107;
+    background-color: #7941B2;
     color: white;
     font-size: 14px;
     font-weight: bold;
@@ -311,7 +311,7 @@ Text Container Styling
 
 .text-container {
     background-color: var(--bg-primary-dark);
-    border: 1px solid #4CAF50;
+    border: 1px solid #b19fdd;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);

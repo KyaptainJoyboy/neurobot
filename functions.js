@@ -331,8 +331,8 @@ function renderMoodGraph() {
         {
           label: "Mood over Time",
           data: moodValues,
-          borderColor: "#4CAF50",
-          backgroundColor: "rgba(76, 175, 80, 0.2)",
+          borderColor: "#6326d4",
+          backgroundColor: "rgba(122, 76, 175, 0.2)",
           borderWidth: 2,
           fill: true,
         },

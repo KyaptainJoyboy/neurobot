@@ -38,7 +38,7 @@ Chatbox Styling
     width: calc(93% - 22px);
     padding: 10px;
     background-color: var(--bg-primary-dark);
-    border: 1px solid #4CAF50;
+    border: 1px solid #bd9acb;
     border-radius: 10px;
     text-align: center;
     margin: 10px;
@@ -49,7 +49,7 @@ Chatbox Styling
     font-family: 'Comfortaa', sans-serif;
     width: 93%;
     padding: 10px;
-    background-color: #FFC107;
+    background-color: #7941B2;
     color: white;
     border: none;
     border-radius: 10px;
@@ -98,7 +98,7 @@ Animations
 
     50% {
         transform: scale(1.5);
-        background-color: #FFC107;
+        background-color: #7941B2;
     }
 }
 
@@ -247,7 +247,7 @@ body.student .grid-container-item {
     margin-top: 10px;
     margin-bottom: 20px;
     text-align: center;
-    border: 2px solid #4CAF50;
+    border: 2px solid #6326d4;
     height: fit-content;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
 }
@@ -318,7 +318,7 @@ Button Styling
     display: inline-block;
     border: none;
     padding: 10px 20px;
-    background-color: #FFC107;
+    background-color: #7941B2;
     color: white;
     border-radius: 10px;
     text-align: center;
@@ -347,18 +347,18 @@ Custom Time Input Styling
 
 #custom-time-input {
     padding: 10px;
-    border: 2px solid #FFC107;
+    border: 2px solid #7941B2;
     border-radius: 10px;
     font-size: 16px;
     text-align: center;
-    color: #FFC107;
+    color: #7941B2;
     background-color: transparent;
     transition: border-color 0.3s ease, color 0.3s ease;
 }
 
 .grid-container-item .custom-time-input:focus {
-    border-color: #FFC107;
-    color: #FFC107;
+    border-color: #7941B2;
+    color: #7941B2;
     outline: none;
 }
 
@@ -372,7 +372,7 @@ Button and Dropdown Styling
     display: inline-block;
     border: none;
     padding: 10px 20px;
-    background-color: #FFC107;
+    background-color: #7941B2;
     color: white;
     border-radius: 10px;
     text-align: center;
@@ -487,18 +487,18 @@ Custom Time Input Styling
 
 #custom-time-input {
     padding: 10px;
-    border: 2px solid #FFC107;
+    border: 2px solid #7941B2;
     border-radius: 10px;
     font-size: 16px;
     text-align: center;
-    color: #FFC107;
+    color: #7941B2;
     background-color: transparent;
     transition: border-color 0.3s ease, color 0.3s ease;
 }
 
 .grid-container-item .custom-time-input:focus {
-    border-color: #FFC107;
-    color: #FFC107;
+    border-color: #7941B2;
+    color: #7941B2;
     outline: none;
 }
 
@@ -539,7 +539,7 @@ Time and Task Management Styling
 #gradebook-planner button {
     padding: 8px 12px;
     margin: 5px 0;
-    background-color: #FFC107;
+    background-color: #7941B2;
     color: white;
     border: none;
     border-radius: 4px;
